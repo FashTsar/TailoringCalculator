@@ -1,11 +1,13 @@
 package com.company;
 
-import com.company.front.MainPage;
+import com.company.front.FirstDownload;
 
 public class Main {
 
-    public static void main(String[] args) {
-	MainPage start = new MainPage();
-	start.setVisible(true); // делаем форму видимой
+    public static void main(String[] args) throws InterruptedException {
+
+        // ------- запуск страницы загрузки -------
+        FirstDownload start = new FirstDownload();
+        start.FirstDownloadPage();
     }
 }
