@@ -1,6 +1,7 @@
 package com.company.front;
 
 import javax.swing.*;
+import javax.swing.text.NumberFormatter;
 import java.awt.*;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -31,9 +32,18 @@ public class PillowcaseData extends JFrame{
         // ------- создаём поля первой строки и распределяем поля по панели -------
         JLabel titlePillowcaseType1Lable_1 = new JLabel("Размер №1");
         JCheckBox activePillowcaseType1CheckBox_1 = new JCheckBox();
-        JTextField sideOne_1 = new JTextField(5);
         JLabel typeSeparator_1 = new JLabel("x");
-        JTextField sideTwo_1 = new JTextField(5);
+
+        NumberFormat number = new DecimalFormat("#"); // формат ввода в поле (только цифры)
+
+        JFormattedTextField sideOne_1 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideOne_1.setColumns(5);
+        sideOne_1.setValue(0);
+        JFormattedTextField sideTwo_1 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideTwo_1.setColumns(5);
+        sideTwo_1.setValue(0);
 
         PillowcaseDataPanel.add(titlePillowcaseType1Lable_1, new GridBagConstraints(0, 0, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
@@ -58,9 +68,16 @@ public class PillowcaseData extends JFrame{
         // ------- создаём поля второй строки и распределяем поля по панели -------
         JLabel titlePillowcaseType1Lable_2 = new JLabel("Размер №2");
         JCheckBox activePillowcaseType1CheckBox_2 = new JCheckBox();
-        JTextField sideOne_2 = new JTextField(5);
         JLabel typeSeparator_2 = new JLabel("x");
-        JTextField sideTwo_2 = new JTextField(5);
+
+        JFormattedTextField sideOne_2 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideOne_2.setColumns(5);
+        sideOne_2.setValue(0);
+        JFormattedTextField sideTwo_2 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideTwo_2.setColumns(5);
+        sideTwo_2.setValue(0);
 
         PillowcaseDataPanel.add(titlePillowcaseType1Lable_2, new GridBagConstraints(0, 1, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
@@ -85,9 +102,16 @@ public class PillowcaseData extends JFrame{
         // ------- создаём поля третьей строки и распределяем поля по панели -------
         JLabel titlePillowcaseType1Lable_3 = new JLabel("Размер №3");
         JCheckBox activePillowcaseType1CheckBox_3 = new JCheckBox();
-        JTextField sideOne_3 = new JTextField(5);
         JLabel typeSeparator_3 = new JLabel("x");
-        JTextField sideTwo_3 = new JTextField(5);
+
+        JFormattedTextField sideOne_3 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideOne_3.setColumns(5);
+        sideOne_3.setValue(0);
+        JFormattedTextField sideTwo_3 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideTwo_3.setColumns(5);
+        sideTwo_3.setValue(0);
 
         PillowcaseDataPanel.add(titlePillowcaseType1Lable_3, new GridBagConstraints(0, 2, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
@@ -112,9 +136,16 @@ public class PillowcaseData extends JFrame{
         // ------- создаём поля четвёртой строки и распределяем поля по панели -------
         JLabel titlePillowcaseType1Lable_4 = new JLabel("Размер №4");
         JCheckBox activePillowcaseType1CheckBox_4 = new JCheckBox();
-        JTextField sideOne_4 = new JTextField(5);
         JLabel typeSeparator_4 = new JLabel("x");
-        JTextField sideTwo_4 = new JTextField(5);
+
+        JFormattedTextField sideOne_4 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideOne_4.setColumns(5);
+        sideOne_4.setValue(0);
+        JFormattedTextField sideTwo_4 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideTwo_4.setColumns(5);
+        sideTwo_4.setValue(0);
 
         PillowcaseDataPanel.add(titlePillowcaseType1Lable_4, new GridBagConstraints(0, 3, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
@@ -139,9 +170,16 @@ public class PillowcaseData extends JFrame{
         // ------- создаём поля пятой строки и распределяем поля по панели -------
         JLabel titlePillowcaseType1Lable_5 = new JLabel("Размер №5");
         JCheckBox activePillowcaseType1CheckBox_5 = new JCheckBox();
-        JTextField sideOne_5 = new JTextField(5);
         JLabel typeSeparator_5 = new JLabel("x");
-        JTextField sideTwo_5 = new JTextField(5);
+
+        JFormattedTextField sideOne_5 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideOne_5.setColumns(5);
+        sideOne_5.setValue(0);
+        JFormattedTextField sideTwo_5 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideTwo_5.setColumns(5);
+        sideTwo_5.setValue(0);
 
         PillowcaseDataPanel.add(titlePillowcaseType1Lable_5, new GridBagConstraints(0, 4, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
