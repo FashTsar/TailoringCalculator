@@ -1,5 +1,7 @@
 package com.company.front;
 
+import com.company.GetPillowcaseData;
+
 import javax.swing.*;
 import javax.swing.text.NumberFormatter;
 import java.awt.*;
@@ -505,207 +507,226 @@ public class PillowcaseData extends JFrame{
         PillowcaseData.pack(); // оптимизировать размер окна
         PillowcaseData.setVisible(true); // показать окно
 
-        NextButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                boolean resultFillForm = true;
-                boolean resultFillForm_1_1 = true;
-                boolean resultFillForm_1_2 = true;
-                boolean resultFillForm_2_1 = true;
-                boolean resultFillForm_2_2 = true;
-                boolean resultFillForm_3_1 = true;
-                boolean resultFillForm_3_2 = true;
-                boolean resultFillForm_4_1 = true;
-                boolean resultFillForm_4_2 = true;
-                boolean resultFillForm_5_1 = true;
-                boolean resultFillForm_5_2 = true;
+            NextButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    boolean resultFillForm = true;
+                    boolean resultFillForm_1_1 = true;
+                    boolean resultFillForm_1_2 = true;
+                    boolean resultFillForm_2_1 = true;
+                    boolean resultFillForm_2_2 = true;
+                    boolean resultFillForm_3_1 = true;
+                    boolean resultFillForm_3_2 = true;
+                    boolean resultFillForm_4_1 = true;
+                    boolean resultFillForm_4_2 = true;
+                    boolean resultFillForm_5_1 = true;
+                    boolean resultFillForm_5_2 = true;
 
 
-                // проверки по Размеру №1
-                String valueSideOne_1 = sideOne_1.getText();
-                int nvalueSideOne_1 = parseInt(valueSideOne_1); // приводим строку к целому числу
-                //System.out.println(nvalueSideOne_1);
-                String valueSideTwo_1 = sideTwo_1.getText();
-                int nvalueSideTwo_1 = parseInt(valueSideTwo_1); // приводим строку к целому числу
-                //System.out.println(nvalueSideTwo_1);
-                if (nvalueSideOne_1 == 0 && nvalueSideTwo_1 != 0 || nvalueSideOne_1 != 0 && nvalueSideTwo_1 == 0 || nvalueSideOne_1 < 0 || nvalueSideTwo_1 < 0){
-                    //System.out.println("Ошибка: одна из сторон меньше или равна 0");
-                    ExceptionMessageLabel_1_1.setVisible(true);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_1_1 = false;
-                }
-                if (nvalueSideOne_1 == 0 && nvalueSideTwo_1 == 0 || nvalueSideOne_1 > 0 && nvalueSideTwo_1 > 0){
-                    //System.out.println("Корректно");
-                    ExceptionMessageLabel_1_1.setVisible(false);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_1_1 = true;
-                }
-                String valueQuantityTextField_1 = quantityTextField_1.getText();
-                int nvalueQuantityTextField_1 = parseInt(valueQuantityTextField_1); // приводим строку к целому числу
-                //System.out.println(nvalueQuantityTextField_1);
-                if (nvalueQuantityTextField_1 < 0){
-                    //System.out.println("Ошибка: одна из сторон меньше или равна 0");
-                    ExceptionMessageLabel_1_2.setVisible(true);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_1_2 = false;
-                }
-                if (nvalueQuantityTextField_1 >= 0){
-                    //System.out.println("Корректно");
-                    ExceptionMessageLabel_1_2.setVisible(false);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_1_2 = true;
-                }
+                    // проверки по Размеру №1
+                    String valueSideOne_1 = sideOne_1.getText();
+                    int nvalueSideOne_1 = parseInt(valueSideOne_1); // приводим строку к целому числу
+                    //System.out.println(nvalueSideOne_1);
+                    String valueSideTwo_1 = sideTwo_1.getText();
+                    int nvalueSideTwo_1 = parseInt(valueSideTwo_1); // приводим строку к целому числу
+                    //System.out.println(nvalueSideTwo_1);
+                    if (nvalueSideOne_1 == 0 && nvalueSideTwo_1 != 0 || nvalueSideOne_1 != 0 && nvalueSideTwo_1 == 0 || nvalueSideOne_1 < 0 || nvalueSideTwo_1 < 0) {
+                        //System.out.println("Ошибка: одна из сторон меньше или равна 0");
+                        ExceptionMessageLabel_1_1.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_1_1 = false;
+                    }
+                    if (nvalueSideOne_1 == 0 && nvalueSideTwo_1 == 0 || nvalueSideOne_1 > 0 && nvalueSideTwo_1 > 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_1_1.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_1_1 = true;
+                    }
+                    String valueQuantityTextField_1 = quantityTextField_1.getText();
+                    int nvalueQuantityTextField_1 = parseInt(valueQuantityTextField_1); // приводим строку к целому числу
+                    //System.out.println(nvalueQuantityTextField_1);
+                    if (nvalueQuantityTextField_1 < 0) {
+                        //System.out.println("Ошибка: одна из сторон меньше или равна 0");
+                        ExceptionMessageLabel_1_2.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_1_2 = false;
+                    }
+                    if (nvalueQuantityTextField_1 >= 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_1_2.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_1_2 = true;
+                    }
 
-                // проверки по Размеру №2
-                String valueSideOne_2 = sideOne_2.getText();
-                int nvalueSideOne_2 = parseInt(valueSideOne_2); // приводим строку к целому числу
-                //System.out.println(nvalueSideOne_2);
-                String valueSideTwo_2 = sideTwo_2.getText();
-                int nvalueSideTwo_2 = parseInt(valueSideTwo_2); // приводим строку к целому числу
-                //System.out.println(nvalueSideTwo_2);
-                if (nvalueSideOne_2 == 0 && nvalueSideTwo_2 != 0 || nvalueSideOne_2 != 0 && nvalueSideTwo_2 == 0 || nvalueSideOne_2 < 0 || nvalueSideTwo_2 < 0){
-                    //System.out.println("Ошибка: одна из сторон меньше или равна 0");
-                    ExceptionMessageLabel_2_1.setVisible(true);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_2_1 = false;
-                }
-                if (nvalueSideOne_2 == 0 && nvalueSideTwo_2 == 0 || nvalueSideOne_2 > 0 && nvalueSideTwo_2 > 0){
-                    //System.out.println("Корректно");
-                    ExceptionMessageLabel_2_1.setVisible(false);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_2_1 = true;
-                }
-                String valueQuantityTextField_2 = quantityTextField_2.getText();
-                int nvalueQuantityTextField_2 = parseInt(valueQuantityTextField_2); // приводим строку к целому числу
-                //System.out.println(nvalueQuantityTextField_2);
-                if (nvalueQuantityTextField_2 < 0){
-                    //System.out.println("Ошибка: одна из сторон меньше или равна 0");
-                    ExceptionMessageLabel_2_2.setVisible(true);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_2_2 = false;
-                }
-                if (nvalueQuantityTextField_2 >= 0){
-                    //System.out.println("Корректно");
-                    ExceptionMessageLabel_2_2.setVisible(false);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_2_2 = true;
-                }
+                    // проверки по Размеру №2
+                    String valueSideOne_2 = sideOne_2.getText();
+                    int nvalueSideOne_2 = parseInt(valueSideOne_2); // приводим строку к целому числу
+                    //System.out.println(nvalueSideOne_2);
+                    String valueSideTwo_2 = sideTwo_2.getText();
+                    int nvalueSideTwo_2 = parseInt(valueSideTwo_2); // приводим строку к целому числу
+                    //System.out.println(nvalueSideTwo_2);
+                    if (nvalueSideOne_2 == 0 && nvalueSideTwo_2 != 0 || nvalueSideOne_2 != 0 && nvalueSideTwo_2 == 0 || nvalueSideOne_2 < 0 || nvalueSideTwo_2 < 0) {
+                        //System.out.println("Ошибка: одна из сторон меньше или равна 0");
+                        ExceptionMessageLabel_2_1.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_2_1 = false;
+                    }
+                    if (nvalueSideOne_2 == 0 && nvalueSideTwo_2 == 0 || nvalueSideOne_2 > 0 && nvalueSideTwo_2 > 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_2_1.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_2_1 = true;
+                    }
+                    String valueQuantityTextField_2 = quantityTextField_2.getText();
+                    int nvalueQuantityTextField_2 = parseInt(valueQuantityTextField_2); // приводим строку к целому числу
+                    //System.out.println(nvalueQuantityTextField_2);
+                    if (nvalueQuantityTextField_2 < 0) {
+                        //System.out.println("Ошибка: одна из сторон меньше или равна 0");
+                        ExceptionMessageLabel_2_2.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_2_2 = false;
+                    }
+                    if (nvalueQuantityTextField_2 >= 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_2_2.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_2_2 = true;
+                    }
 
-                // проверки по Размеру №3
-                String valueSideOne_3 = sideOne_3.getText();
-                int nvalueSideOne_3 = parseInt(valueSideOne_3); // приводим строку к целому числу
-                //System.out.println(nvalueSideOne_3);
-                String valueSideTwo_3 = sideTwo_3.getText();
-                int nvalueSideTwo_3 = parseInt(valueSideTwo_3); // приводим строку к целому числу
-                //System.out.println(nvalueSideTwo_3);
-                if (nvalueSideOne_3 == 0 && nvalueSideTwo_3 != 0 || nvalueSideOne_3 != 0 && nvalueSideTwo_3 == 0 || nvalueSideOne_3 < 0 || nvalueSideTwo_3 < 0){
-                    //System.out.println("Ошибка: одна из сторон меньше или равна 0");
-                    ExceptionMessageLabel_3_1.setVisible(true);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_3_1 = false;
-                }
-                if (nvalueSideOne_3 == 0 && nvalueSideTwo_3 == 0 || nvalueSideOne_3 > 0 && nvalueSideTwo_3 > 0){
-                    //System.out.println("Корректно");
-                    ExceptionMessageLabel_3_1.setVisible(false);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_3_1 = true;
-                }
-                String valueQuantityTextField_3 = quantityTextField_3.getText();
-                int nvalueQuantityTextField_3 = parseInt(valueQuantityTextField_3); // приводим строку к целому числу
-                //System.out.println(nvalueQuantityTextField_3);
-                if (nvalueQuantityTextField_3 < 0){
-                    //System.out.println("Ошибка: одна из сторон меньше или равна 0");
-                    ExceptionMessageLabel_3_2.setVisible(true);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_3_2 = false;
-                }
-                if (nvalueQuantityTextField_3 >= 0){
-                    //System.out.println("Корректно");
-                    ExceptionMessageLabel_3_2.setVisible(false);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_3_2 = true;
-                }
+                    // проверки по Размеру №3
+                    String valueSideOne_3 = sideOne_3.getText();
+                    int nvalueSideOne_3 = parseInt(valueSideOne_3); // приводим строку к целому числу
+                    //System.out.println(nvalueSideOne_3);
+                    String valueSideTwo_3 = sideTwo_3.getText();
+                    int nvalueSideTwo_3 = parseInt(valueSideTwo_3); // приводим строку к целому числу
+                    //System.out.println(nvalueSideTwo_3);
+                    if (nvalueSideOne_3 == 0 && nvalueSideTwo_3 != 0 || nvalueSideOne_3 != 0 && nvalueSideTwo_3 == 0 || nvalueSideOne_3 < 0 || nvalueSideTwo_3 < 0) {
+                        //System.out.println("Ошибка: одна из сторон меньше или равна 0");
+                        ExceptionMessageLabel_3_1.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_3_1 = false;
+                    }
+                    if (nvalueSideOne_3 == 0 && nvalueSideTwo_3 == 0 || nvalueSideOne_3 > 0 && nvalueSideTwo_3 > 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_3_1.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_3_1 = true;
+                    }
+                    String valueQuantityTextField_3 = quantityTextField_3.getText();
+                    int nvalueQuantityTextField_3 = parseInt(valueQuantityTextField_3); // приводим строку к целому числу
+                    //System.out.println(nvalueQuantityTextField_3);
+                    if (nvalueQuantityTextField_3 < 0) {
+                        //System.out.println("Ошибка: одна из сторон меньше или равна 0");
+                        ExceptionMessageLabel_3_2.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_3_2 = false;
+                    }
+                    if (nvalueQuantityTextField_3 >= 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_3_2.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_3_2 = true;
+                    }
 
-                // проверки по Размеру №4
-                String valueSideOne_4 = sideOne_4.getText();
-                int nvalueSideOne_4 = parseInt(valueSideOne_4); // приводим строку к целому числу
-                //System.out.println(nvalueSideOne_4);
-                String valueSideTwo_4 = sideTwo_4.getText();
-                int nvalueSideTwo_4 = parseInt(valueSideTwo_4); // приводим строку к целому числу
-                //System.out.println(nvalueSideTwo_4);
-                if (nvalueSideOne_4 == 0 && nvalueSideTwo_4 != 0 || nvalueSideOne_4 != 0 && nvalueSideTwo_4 == 0 || nvalueSideOne_4 < 0 || nvalueSideTwo_4 < 0){
-                    //System.out.println("Ошибка: одна из сторон меньше или равна 0");
-                    ExceptionMessageLabel_4_1.setVisible(true);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_4_1 = false;
-                }
-                if (nvalueSideOne_4 == 0 && nvalueSideTwo_4 == 0 || nvalueSideOne_4 > 0 && nvalueSideTwo_4 > 0){
-                    //System.out.println("Корректно");
-                    ExceptionMessageLabel_4_1.setVisible(false);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_4_1 = true;
-                }
-                String valueQuantityTextField_4 = quantityTextField_4.getText();
-                int nvalueQuantityTextField_4 = parseInt(valueQuantityTextField_4); // приводим строку к целому числу
-                //System.out.println(nvalueQuantityTextField_4);
-                if (nvalueQuantityTextField_4 < 0){
-                    //System.out.println("Ошибка: одна из сторон меньше или равна 0");
-                    ExceptionMessageLabel_4_2.setVisible(true);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_4_2 = false;
-                }
-                if (nvalueQuantityTextField_4 >= 0){
-                    //System.out.println("Корректно");
-                    ExceptionMessageLabel_4_2.setVisible(false);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_4_2 = true;
-                }
+                    // проверки по Размеру №4
+                    String valueSideOne_4 = sideOne_4.getText();
+                    int nvalueSideOne_4 = parseInt(valueSideOne_4); // приводим строку к целому числу
+                    //System.out.println(nvalueSideOne_4);
+                    String valueSideTwo_4 = sideTwo_4.getText();
+                    int nvalueSideTwo_4 = parseInt(valueSideTwo_4); // приводим строку к целому числу
+                    //System.out.println(nvalueSideTwo_4);
+                    if (nvalueSideOne_4 == 0 && nvalueSideTwo_4 != 0 || nvalueSideOne_4 != 0 && nvalueSideTwo_4 == 0 || nvalueSideOne_4 < 0 || nvalueSideTwo_4 < 0) {
+                        //System.out.println("Ошибка: одна из сторон меньше или равна 0");
+                        ExceptionMessageLabel_4_1.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_4_1 = false;
+                    }
+                    if (nvalueSideOne_4 == 0 && nvalueSideTwo_4 == 0 || nvalueSideOne_4 > 0 && nvalueSideTwo_4 > 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_4_1.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_4_1 = true;
+                    }
+                    String valueQuantityTextField_4 = quantityTextField_4.getText();
+                    int nvalueQuantityTextField_4 = parseInt(valueQuantityTextField_4); // приводим строку к целому числу
+                    //System.out.println(nvalueQuantityTextField_4);
+                    if (nvalueQuantityTextField_4 < 0) {
+                        //System.out.println("Ошибка: одна из сторон меньше или равна 0");
+                        ExceptionMessageLabel_4_2.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_4_2 = false;
+                    }
+                    if (nvalueQuantityTextField_4 >= 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_4_2.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_4_2 = true;
+                    }
 
-                // проверки по Размеру №5
-                String valueSideOne_5 = sideOne_5.getText();
-                int nvalueSideOne_5 = parseInt(valueSideOne_5); // приводим строку к целому числу
-                //System.out.println(nvalueSideOne_5);
-                String valueSideTwo_5 = sideTwo_5.getText();
-                int nvalueSideTwo_5 = parseInt(valueSideTwo_5); // приводим строку к целому числу
-                //System.out.println(nvalueSideTwo_5);
-                if (nvalueSideOne_5 == 0 && nvalueSideTwo_5 != 0 || nvalueSideOne_5 != 0 && nvalueSideTwo_5 == 0 || nvalueSideOne_5 < 0 || nvalueSideTwo_5 < 0){
-                    //System.out.println("Ошибка: одна из сторон меньше или равна 0");
-                    ExceptionMessageLabel_5_1.setVisible(true);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_5_1 = false;
-                }
-                if (nvalueSideOne_5 == 0 && nvalueSideTwo_5 == 0 || nvalueSideOne_5 > 0 && nvalueSideTwo_5 > 0){
-                    //System.out.println("Корректно");
-                    ExceptionMessageLabel_5_1.setVisible(false);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_5_1 = true;
-                }
-                String valueQuantityTextField_5 = quantityTextField_5.getText();
-                int nvalueQuantityTextField_5 = parseInt(valueQuantityTextField_5); // приводим строку к целому числу
-                //System.out.println(nvalueQuantityTextField_5);
-                if (nvalueQuantityTextField_5 < 0){
-                    //System.out.println("Ошибка: одна из сторон меньше или равна 0");
-                    ExceptionMessageLabel_5_2.setVisible(true);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_5_2 = false;
-                }
-                if (nvalueQuantityTextField_5 >= 0){
-                    //System.out.println("Корректно");
-                    ExceptionMessageLabel_5_2.setVisible(false);
-                    PillowcaseData.pack(); // оптимизировать размер окна
-                    resultFillForm_5_2 = true;
-                }
+                    // проверки по Размеру №5
+                    String valueSideOne_5 = sideOne_5.getText();
+                    int nvalueSideOne_5 = parseInt(valueSideOne_5); // приводим строку к целому числу
+                    //System.out.println(nvalueSideOne_5);
+                    String valueSideTwo_5 = sideTwo_5.getText();
+                    int nvalueSideTwo_5 = parseInt(valueSideTwo_5); // приводим строку к целому числу
+                    //System.out.println(nvalueSideTwo_5);
+                    if (nvalueSideOne_5 == 0 && nvalueSideTwo_5 != 0 || nvalueSideOne_5 != 0 && nvalueSideTwo_5 == 0 || nvalueSideOne_5 < 0 || nvalueSideTwo_5 < 0) {
+                        //System.out.println("Ошибка: одна из сторон меньше или равна 0");
+                        ExceptionMessageLabel_5_1.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_5_1 = false;
+                    }
+                    if (nvalueSideOne_5 == 0 && nvalueSideTwo_5 == 0 || nvalueSideOne_5 > 0 && nvalueSideTwo_5 > 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_5_1.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_5_1 = true;
+                    }
+                    String valueQuantityTextField_5 = quantityTextField_5.getText();
+                    int nvalueQuantityTextField_5 = parseInt(valueQuantityTextField_5); // приводим строку к целому числу
+                    //System.out.println(nvalueQuantityTextField_5);
+                    if (nvalueQuantityTextField_5 < 0) {
+                        //System.out.println("Ошибка: одна из сторон меньше или равна 0");
+                        ExceptionMessageLabel_5_2.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_5_2 = false;
+                    }
+                    if (nvalueQuantityTextField_5 >= 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_5_2.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_5_2 = true;
+                    }
 
-                if(resultFillForm_1_1 != true || resultFillForm_1_2 != true
-                        || resultFillForm_2_1 != true || resultFillForm_2_2 != true
-                        || resultFillForm_3_1 != true || resultFillForm_3_2 != true
-                        || resultFillForm_4_1 != true || resultFillForm_4_2 != true
-                        || resultFillForm_5_1 != true || resultFillForm_5_2 != true){
-                    resultFillForm = false;
-                }
+                    if (resultFillForm_1_1 != true || resultFillForm_1_2 != true
+                            || resultFillForm_2_1 != true || resultFillForm_2_2 != true
+                            || resultFillForm_3_1 != true || resultFillForm_3_2 != true
+                            || resultFillForm_4_1 != true || resultFillForm_4_2 != true
+                            || resultFillForm_5_1 != true || resultFillForm_5_2 != true) {
+                        resultFillForm = false;
+                    }
 
-                System.out.println(resultFillForm);
-            }
-        });
+                    //System.out.println(resultFillForm);
+                    if (resultFillForm == true) {
+                        int[] arraySize = new int[]{nvalueSideOne_1, nvalueSideTwo_1,
+                                nvalueSideOne_2, nvalueSideTwo_2,
+                                nvalueSideOne_3, nvalueSideTwo_3,
+                                nvalueSideOne_4, nvalueSideTwo_4,
+                                nvalueSideOne_5, nvalueSideTwo_5};
+
+                        int[] arrayQuantity = new int[]{nvalueQuantityTextField_1,
+                                nvalueQuantityTextField_2,
+                                nvalueQuantityTextField_3,
+                                nvalueQuantityTextField_4,
+                                nvalueQuantityTextField_5};
+
+                        int[][] arrayResultFillForm = new int[][]{arraySize, arrayQuantity};
+
+                        GetPillowcaseData.arrayResult = arrayResultFillForm;
+
+                        PillowcaseData.setVisible(false); // скрыть окно
+                    }
+                }
+            });
     }
 }

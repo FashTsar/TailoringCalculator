@@ -12,7 +12,7 @@ public class Main {
         startFirstDownload.FirstDownloadPage();
 
         // ------- запуск страницы получения данных -------
-        PillowcaseData startImportDataPage = new PillowcaseData();
-        startImportDataPage.PillowcaseData();
+        PillowcaseData setPillowcaseData = new PillowcaseData();
+        setPillowcaseData.PillowcaseData(); // запускаем страницу заполнения данных
     }
 }
