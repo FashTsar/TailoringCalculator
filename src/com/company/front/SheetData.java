@@ -1,7 +1,7 @@
 package com.company.front;
 
-import com.company.GetPillowcaseData;
 import com.company.GetQuiltData;
+import com.company.GetSheetData;
 
 import javax.swing.*;
 import javax.swing.text.NumberFormatter;
@@ -13,12 +13,12 @@ import java.text.NumberFormat;
 
 import static java.lang.Integer.parseInt;
 
-public class QuiltData extends JFrame{
+public class SheetData extends JFrame{
 
-    public void QuiltData(){
+    public void SheetData(){
 
         // ------- создаём форму и задаём основные параметры -------
-        JFrame PillowcaseData = new JFrame("Шаг 2"); // создаём фрейм и задаём загаловок
+        JFrame PillowcaseData = new JFrame("Шаг 3"); // создаём фрейм и задаём загаловок
         PillowcaseData.setResizable(false); // запретить менять размер окна
         PillowcaseData.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // при нажатии на крестик заканчивать работу
         PillowcaseData.setLocationRelativeTo(null); // окно появляется посередине
@@ -27,7 +27,7 @@ public class QuiltData extends JFrame{
         // ------- создаём панель для загаловка -------
         JPanel TitlePagePanel = new JPanel();
         TitlePagePanel.setMinimumSize(TitlePagePanel.getPreferredSize()); // оптимальный минимальный размер
-        JLabel TitlePageLable = new JLabel("Размеры пододеяльников (в сантиметрах):");
+        JLabel TitlePageLable = new JLabel("Размеры простыней (в сантиметрах):");
         TitlePagePanel.add(TitlePageLable);
         TitlePagePanel.setVisible(true);
 
@@ -723,11 +723,11 @@ public class QuiltData extends JFrame{
 
                         int[][] arrayResultFillForm = new int[][]{arraySize, arrayQuantity};
 
-                        GetQuiltData.arrayResult = arrayResultFillForm;
+                        GetSheetData.arrayResult = arrayResultFillForm;
 
                         PillowcaseData.setVisible(false); // скрыть окно
-                        SheetData setSheetData = new SheetData();
-                        setSheetData.SheetData(); // запускаем страницу заполнения данных по пододеяльникам
+                        LastDate setLastData = new LastDate();
+                        setLastData.LastDate(); // запускаем страницу заполнения данных по пододеяльникам
                     }
                 }
             });
