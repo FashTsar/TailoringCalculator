@@ -1,6 +1,7 @@
 package com.company.front;
 
 import com.company.GetPillowcaseData;
+import com.company.GetQuiltData;
 
 import javax.swing.*;
 import javax.swing.text.NumberFormatter;
@@ -12,12 +13,12 @@ import java.text.NumberFormat;
 
 import static java.lang.Integer.parseInt;
 
-public class PillowcaseData extends JFrame{
+public class QuiltData extends JFrame{
 
-    public void PillowcaseData(){
+    public void QuiltData(){
 
         // ------- создаём форму и задаём основные параметры -------
-        JFrame PillowcaseData = new JFrame("Шаг 1"); // создаём фрейм и задаём загаловок
+        JFrame PillowcaseData = new JFrame("Шаг 2"); // создаём фрейм и задаём загаловок
         PillowcaseData.setResizable(false); // запретить менять размер окна
         PillowcaseData.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // при нажатии на крестик заканчивать работу
         PillowcaseData.setLocationRelativeTo(null); // окно появляется посередине
@@ -26,7 +27,7 @@ public class PillowcaseData extends JFrame{
         // ------- создаём панель для загаловка -------
         JPanel TitlePagePanel = new JPanel();
         TitlePagePanel.setMinimumSize(TitlePagePanel.getPreferredSize()); // оптимальный минимальный размер
-        JLabel TitlePageLable = new JLabel("Размеры наволочек (в сантиметрах):");
+        JLabel TitlePageLable = new JLabel("Размеры пододеяльников (в сантиметрах):");
         TitlePagePanel.add(TitlePageLable);
         TitlePagePanel.setVisible(true);
 
@@ -722,11 +723,9 @@ public class PillowcaseData extends JFrame{
 
                         int[][] arrayResultFillForm = new int[][]{arraySize, arrayQuantity};
 
-                        GetPillowcaseData.arrayResult = arrayResultFillForm;
+                        GetQuiltData.arrayResult = arrayResultFillForm;
 
                         PillowcaseData.setVisible(false); // скрыть окно
-                        QuiltData setQuiltData = new QuiltData();
-                        setQuiltData.QuiltData(); // запускаем страницу заполнения данных по пододеяльникам
                     }
                 }
             });
