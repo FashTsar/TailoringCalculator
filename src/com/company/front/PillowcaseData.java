@@ -920,7 +920,13 @@ public class PillowcaseData extends JFrame{
                                 nvalueQuantityTextField_4,
                                 nvalueQuantityTextField_5};
 
-                        int[][] arrayResultFillForm = new int[][]{arraySize, arrayQuantity};
+                        int[] arrayValve = new int[]{nvalueValveTextField_1,
+                                nvalueValveTextField_2,
+                                nvalueValveTextField_3,
+                                nvalueValveTextField_4,
+                                nvalueValveTextField_5};
+
+                        int[][] arrayResultFillForm = new int[][]{arraySize, arrayQuantity, arrayValve};
 
                         GetPillowcaseData.arrayResult = arrayResultFillForm;
 
