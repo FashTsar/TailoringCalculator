@@ -62,6 +62,10 @@ public class PillowcaseData extends JFrame{
                 new NumberFormatter(number));
         quantityTextField_1.setColumns(3);
         quantityTextField_1.setValue(0);
+        JFormattedTextField valveTextField_1 = new JFormattedTextField(
+                new NumberFormatter(number));
+        valveTextField_1.setColumns(3);
+        valveTextField_1.setValue(0);
 
         PillowcaseDataPanel.add(titlePillowcaseType1Lable_1, new GridBagConstraints(0, 0, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
@@ -92,6 +96,10 @@ public class PillowcaseData extends JFrame{
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(valveLable_1, new GridBagConstraints(7, 0, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valveTextField_1, new GridBagConstraints(8, 0, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
@@ -158,6 +166,10 @@ public class PillowcaseData extends JFrame{
                 new NumberFormatter(number));
         quantityTextField_2.setColumns(3);
         quantityTextField_2.setValue(0);
+        JFormattedTextField valveTextField_2 = new JFormattedTextField(
+                new NumberFormatter(number));
+        valveTextField_2.setColumns(3);
+        valveTextField_2.setValue(0);
 
         PillowcaseDataPanel.add(titlePillowcaseType1Lable_2, new GridBagConstraints(0, 10, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
@@ -188,6 +200,10 @@ public class PillowcaseData extends JFrame{
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(valveLable_2, new GridBagConstraints(7, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valveTextField_2, new GridBagConstraints(8, 10, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
@@ -254,6 +270,10 @@ public class PillowcaseData extends JFrame{
                 new NumberFormatter(number));
         quantityTextField_3.setColumns(3);
         quantityTextField_3.setValue(0);
+        JFormattedTextField valveTextField_3 = new JFormattedTextField(
+                new NumberFormatter(number));
+        valveTextField_3.setColumns(3);
+        valveTextField_3.setValue(0);
 
         PillowcaseDataPanel.add(titlePillowcaseType1Lable_3, new GridBagConstraints(0, 20, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
@@ -284,6 +304,10 @@ public class PillowcaseData extends JFrame{
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(valveLable_3, new GridBagConstraints(7, 20, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valveTextField_3, new GridBagConstraints(8, 20, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
@@ -350,6 +374,10 @@ public class PillowcaseData extends JFrame{
                 new NumberFormatter(number));
         quantityTextField_4.setColumns(3);
         quantityTextField_4.setValue(0);
+        JFormattedTextField valveTextField_4 = new JFormattedTextField(
+                new NumberFormatter(number));
+        valveTextField_4.setColumns(3);
+        valveTextField_4.setValue(0);
 
         PillowcaseDataPanel.add(titlePillowcaseType1Lable_4, new GridBagConstraints(0, 30, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
@@ -380,6 +408,10 @@ public class PillowcaseData extends JFrame{
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(valveLable_4, new GridBagConstraints(7, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valveTextField_4, new GridBagConstraints(8, 30, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
@@ -446,6 +478,10 @@ public class PillowcaseData extends JFrame{
                 new NumberFormatter(number));
         quantityTextField_5.setColumns(3);
         quantityTextField_5.setValue(0);
+        JFormattedTextField valveTextField_5 = new JFormattedTextField(
+                new NumberFormatter(number));
+        valveTextField_5.setColumns(3);
+        valveTextField_5.setValue(0);
 
         PillowcaseDataPanel.add(titlePillowcaseType1Lable_5, new GridBagConstraints(0, 40, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
@@ -476,6 +512,10 @@ public class PillowcaseData extends JFrame{
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(valveLable_5, new GridBagConstraints(7, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valveTextField_5, new GridBagConstraints(8, 40, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
