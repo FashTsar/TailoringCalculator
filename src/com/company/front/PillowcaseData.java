@@ -48,6 +48,7 @@ public class PillowcaseData extends JFrame{
         JLabel ExceptionMessageLabel_1_2 = new JLabel("Ошибка: количество меньше 0");
         ExceptionMessageLabel_1_2.setForeground(Color.RED);
         ExceptionMessageLabel_1_2.setVisible(false);
+        JLabel valveLable_1 = new JLabel("Клапан(см.):");
 
         JFormattedTextField sideOne_1 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -87,6 +88,10 @@ public class PillowcaseData extends JFrame{
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(quantityTextField_1, new GridBagConstraints(6, 0, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valveLable_1, new GridBagConstraints(7, 0, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
@@ -139,6 +144,7 @@ public class PillowcaseData extends JFrame{
         JLabel ExceptionMessageLabel_2_2 = new JLabel("Ошибка: количество меньше 0");
         ExceptionMessageLabel_2_2.setForeground(Color.RED);
         ExceptionMessageLabel_2_2.setVisible(false);
+        JLabel valveLable_2 = new JLabel("Клапан(см.):");
 
         JFormattedTextField sideOne_2 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -178,6 +184,10 @@ public class PillowcaseData extends JFrame{
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(quantityTextField_2, new GridBagConstraints(6, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valveLable_2, new GridBagConstraints(7, 10, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
@@ -230,6 +240,7 @@ public class PillowcaseData extends JFrame{
         JLabel ExceptionMessageLabel_3_2 = new JLabel("Ошибка: количество меньше 0");
         ExceptionMessageLabel_3_2.setForeground(Color.RED);
         ExceptionMessageLabel_3_2.setVisible(false);
+        JLabel valveLable_3 = new JLabel("Клапан(см.):");
 
         JFormattedTextField sideOne_3 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -269,6 +280,10 @@ public class PillowcaseData extends JFrame{
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(quantityTextField_3, new GridBagConstraints(6, 20, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valveLable_3, new GridBagConstraints(7, 20, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
@@ -321,6 +336,7 @@ public class PillowcaseData extends JFrame{
         JLabel ExceptionMessageLabel_4_2 = new JLabel("Ошибка: количество меньше 0");
         ExceptionMessageLabel_4_2.setForeground(Color.RED);
         ExceptionMessageLabel_4_2.setVisible(false);
+        JLabel valveLable_4 = new JLabel("Клапан(см.):");
 
         JFormattedTextField sideOne_4 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -360,6 +376,10 @@ public class PillowcaseData extends JFrame{
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(quantityTextField_4, new GridBagConstraints(6, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valveLable_4, new GridBagConstraints(7, 30, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
@@ -412,6 +432,7 @@ public class PillowcaseData extends JFrame{
         JLabel ExceptionMessageLabel_5_2 = new JLabel("Ошибка: количество меньше 0");
         ExceptionMessageLabel_5_2.setForeground(Color.RED);
         ExceptionMessageLabel_5_2.setVisible(false);
+        JLabel valveLable_5 = new JLabel("Клапан(см.):");
 
         JFormattedTextField sideOne_5 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -451,6 +472,10 @@ public class PillowcaseData extends JFrame{
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(quantityTextField_5, new GridBagConstraints(6, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valveLable_5, new GridBagConstraints(7, 40, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
