@@ -49,6 +49,9 @@ public class PillowcaseData extends JFrame{
         ExceptionMessageLabel_1_2.setForeground(Color.RED);
         ExceptionMessageLabel_1_2.setVisible(false);
         JLabel valveLable_1 = new JLabel("Клапан(см.):");
+        JLabel ExceptionMessageLabel_1_3 = new JLabel("Ошибка: размер клапана меньше 0");
+        ExceptionMessageLabel_1_3.setForeground(Color.RED);
+        ExceptionMessageLabel_1_3.setVisible(false);
 
         JFormattedTextField sideOne_1 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -111,17 +114,23 @@ public class PillowcaseData extends JFrame{
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
+        PillowcaseDataPanel.add(ExceptionMessageLabel_1_3, new GridBagConstraints(0, 3, 8, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
         // прописываем логику действия при клике на чекбокс
         boolean valueActivePillowcaseType1CheckBox_1 = activePillowcaseType1CheckBox_1.isSelected();
         if (valueActivePillowcaseType1CheckBox_1 == false){
             sideOne_1.setEditable(false);
             sideTwo_1.setEditable(false);
             quantityTextField_1.setEditable(false);
+            valveTextField_1.setEditable(false);
         }
         if (valueActivePillowcaseType1CheckBox_1 == true){
             sideOne_1.setEditable(true);
             sideTwo_1.setEditable(true);
             quantityTextField_1.setEditable(true);
+            valveTextField_1.setEditable(true);
         }
         activePillowcaseType1CheckBox_1.addActionListener(new ActionListener() {
             @Override
@@ -132,11 +141,13 @@ public class PillowcaseData extends JFrame{
                     sideOne_1.setEditable(false);
                     sideTwo_1.setEditable(false);
                     quantityTextField_1.setEditable(false);
+                    valveTextField_1.setEditable(false);
                 }
                 if (valueActivePillowcaseType1CheckBox_1 == true){
                     sideOne_1.setEditable(true);
                     sideTwo_1.setEditable(true);
                     quantityTextField_1.setEditable(true);
+                    valveTextField_1.setEditable(true);
                 }
             }
         });
@@ -153,6 +164,9 @@ public class PillowcaseData extends JFrame{
         ExceptionMessageLabel_2_2.setForeground(Color.RED);
         ExceptionMessageLabel_2_2.setVisible(false);
         JLabel valveLable_2 = new JLabel("Клапан(см.):");
+        JLabel ExceptionMessageLabel_2_3 = new JLabel("Ошибка: размер клапана меньше 0");
+        ExceptionMessageLabel_2_3.setForeground(Color.RED);
+        ExceptionMessageLabel_2_3.setVisible(false);
 
         JFormattedTextField sideOne_2 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -215,17 +229,23 @@ public class PillowcaseData extends JFrame{
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
+        PillowcaseDataPanel.add(ExceptionMessageLabel_2_3, new GridBagConstraints(0, 13, 8, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
         // прописываем логику действия при клике на чекбокс
         boolean valueActivePillowcaseType1CheckBox_2 = activePillowcaseType1CheckBox_2.isSelected();
         if (valueActivePillowcaseType1CheckBox_2 == false){
             sideOne_2.setEditable(false);
             sideTwo_2.setEditable(false);
             quantityTextField_2.setEditable(false);
+            valveTextField_2.setEditable(false);
         }
         if (valueActivePillowcaseType1CheckBox_2 == true){
             sideOne_2.setEditable(true);
             sideTwo_2.setEditable(true);
             quantityTextField_2.setEditable(true);
+            valveTextField_2.setEditable(true);
         }
         activePillowcaseType1CheckBox_2.addActionListener(new ActionListener() {
             @Override
@@ -236,11 +256,13 @@ public class PillowcaseData extends JFrame{
                     sideOne_2.setEditable(false);
                     sideTwo_2.setEditable(false);
                     quantityTextField_2.setEditable(false);
+                    valveTextField_2.setEditable(false);
                 }
                 if (valueActivePillowcaseType1CheckBox_2 == true){
                     sideOne_2.setEditable(true);
                     sideTwo_2.setEditable(true);
                     quantityTextField_2.setEditable(true);
+                    valveTextField_2.setEditable(true);
                 }
             }
         });
@@ -257,6 +279,9 @@ public class PillowcaseData extends JFrame{
         ExceptionMessageLabel_3_2.setForeground(Color.RED);
         ExceptionMessageLabel_3_2.setVisible(false);
         JLabel valveLable_3 = new JLabel("Клапан(см.):");
+        JLabel ExceptionMessageLabel_3_3 = new JLabel("Ошибка: размер клапана меньше 0");
+        ExceptionMessageLabel_3_3.setForeground(Color.RED);
+        ExceptionMessageLabel_3_3.setVisible(false);
 
         JFormattedTextField sideOne_3 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -319,17 +344,23 @@ public class PillowcaseData extends JFrame{
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
+        PillowcaseDataPanel.add(ExceptionMessageLabel_3_3, new GridBagConstraints(0, 23, 8, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
         // прописываем логику действия при клике на чекбокс
         boolean valueActivePillowcaseType1CheckBox_3 = activePillowcaseType1CheckBox_3.isSelected();
         if (valueActivePillowcaseType1CheckBox_3 == false){
             sideOne_3.setEditable(false);
             sideTwo_3.setEditable(false);
             quantityTextField_3.setEditable(false);
+            valveTextField_3.setEditable(false);
         }
         if (valueActivePillowcaseType1CheckBox_3 == true){
             sideOne_3.setEditable(true);
             sideTwo_3.setEditable(true);
             quantityTextField_3.setEditable(true);
+            valveTextField_3.setEditable(true);
         }
         activePillowcaseType1CheckBox_3.addActionListener(new ActionListener() {
             @Override
@@ -340,11 +371,13 @@ public class PillowcaseData extends JFrame{
                     sideOne_3.setEditable(false);
                     sideTwo_3.setEditable(false);
                     quantityTextField_3.setEditable(false);
+                    valveTextField_3.setEditable(false);
                 }
                 if (valueActivePillowcaseType1CheckBox_3 == true){
                     sideOne_3.setEditable(true);
                     sideTwo_3.setEditable(true);
                     quantityTextField_3.setEditable(true);
+                    valveTextField_3.setEditable(true);
                 }
             }
         });
@@ -361,6 +394,9 @@ public class PillowcaseData extends JFrame{
         ExceptionMessageLabel_4_2.setForeground(Color.RED);
         ExceptionMessageLabel_4_2.setVisible(false);
         JLabel valveLable_4 = new JLabel("Клапан(см.):");
+        JLabel ExceptionMessageLabel_4_3 = new JLabel("Ошибка: размер клапана меньше 0");
+        ExceptionMessageLabel_4_3.setForeground(Color.RED);
+        ExceptionMessageLabel_4_3.setVisible(false);
 
         JFormattedTextField sideOne_4 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -423,17 +459,23 @@ public class PillowcaseData extends JFrame{
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
+        PillowcaseDataPanel.add(ExceptionMessageLabel_4_3, new GridBagConstraints(0, 33, 8, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
         // прописываем логику действия при клике на чекбокс
         boolean valueActivePillowcaseType1CheckBox_4 = activePillowcaseType1CheckBox_4.isSelected();
         if (valueActivePillowcaseType1CheckBox_4 == false){
             sideOne_4.setEditable(false);
             sideTwo_4.setEditable(false);
             quantityTextField_4.setEditable(false);
+            valveTextField_4.setEditable(false);
         }
         if (valueActivePillowcaseType1CheckBox_4 == true){
             sideOne_4.setEditable(true);
             sideTwo_4.setEditable(true);
             quantityTextField_4.setEditable(true);
+            valveTextField_4.setEditable(true);
         }
         activePillowcaseType1CheckBox_4.addActionListener(new ActionListener() {
             @Override
@@ -444,11 +486,13 @@ public class PillowcaseData extends JFrame{
                     sideOne_4.setEditable(false);
                     sideTwo_4.setEditable(false);
                     quantityTextField_4.setEditable(false);
+                    valveTextField_4.setEditable(false);
                 }
                 if (valueActivePillowcaseType1CheckBox_4 == true){
                     sideOne_4.setEditable(true);
                     sideTwo_4.setEditable(true);
                     quantityTextField_4.setEditable(true);
+                    valveTextField_4.setEditable(true);
                 }
             }
         });
@@ -465,6 +509,9 @@ public class PillowcaseData extends JFrame{
         ExceptionMessageLabel_5_2.setForeground(Color.RED);
         ExceptionMessageLabel_5_2.setVisible(false);
         JLabel valveLable_5 = new JLabel("Клапан(см.):");
+        JLabel ExceptionMessageLabel_5_3 = new JLabel("Ошибка: размер клапана меньше 0");
+        ExceptionMessageLabel_5_3.setForeground(Color.RED);
+        ExceptionMessageLabel_5_3.setVisible(false);
 
         JFormattedTextField sideOne_5 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -527,17 +574,23 @@ public class PillowcaseData extends JFrame{
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
+        PillowcaseDataPanel.add(ExceptionMessageLabel_5_3, new GridBagConstraints(0, 43, 8, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
         // прописываем логику действия при клике на чекбокс
         boolean valueActivePillowcaseType1CheckBox_5 = activePillowcaseType1CheckBox_5.isSelected();
         if (valueActivePillowcaseType1CheckBox_5 == false){
             sideOne_5.setEditable(false);
             sideTwo_5.setEditable(false);
             quantityTextField_5.setEditable(false);
+            valveTextField_5.setEditable(false);
         }
         if (valueActivePillowcaseType1CheckBox_5 == true){
             sideOne_5.setEditable(true);
             sideTwo_5.setEditable(true);
             quantityTextField_5.setEditable(true);
+            valveTextField_5.setEditable(true);
         }
         activePillowcaseType1CheckBox_5.addActionListener(new ActionListener() {
             @Override
@@ -548,11 +601,13 @@ public class PillowcaseData extends JFrame{
                     sideOne_5.setEditable(false);
                     sideTwo_5.setEditable(false);
                     quantityTextField_5.setEditable(false);
+                    valveTextField_5.setEditable(false);
                 }
                 if (valueActivePillowcaseType1CheckBox_5 == true){
                     sideOne_5.setEditable(true);
                     sideTwo_5.setEditable(true);
                     quantityTextField_5.setEditable(true);
+                    valveTextField_5.setEditable(true);
                 }
             }
         });
@@ -578,14 +633,19 @@ public class PillowcaseData extends JFrame{
                     boolean resultFillForm = true;
                     boolean resultFillForm_1_1 = true;
                     boolean resultFillForm_1_2 = true;
+                    boolean resultFillForm_1_3 = true;
                     boolean resultFillForm_2_1 = true;
                     boolean resultFillForm_2_2 = true;
+                    boolean resultFillForm_2_3 = true;
                     boolean resultFillForm_3_1 = true;
                     boolean resultFillForm_3_2 = true;
+                    boolean resultFillForm_3_3 = true;
                     boolean resultFillForm_4_1 = true;
                     boolean resultFillForm_4_2 = true;
+                    boolean resultFillForm_4_3 = true;
                     boolean resultFillForm_5_1 = true;
                     boolean resultFillForm_5_2 = true;
+                    boolean resultFillForm_5_3 = true;
 
 
                     // проверки по Размеру №1
@@ -622,6 +682,21 @@ public class PillowcaseData extends JFrame{
                         PillowcaseData.pack(); // оптимизировать размер окна
                         resultFillForm_1_2 = true;
                     }
+                    String valueValveTextField_1 = valveTextField_1.getText();
+                    int nvalueValveTextField_1 = parseInt(valueValveTextField_1); // приводим строку к целому числу
+                    //System.out.println(nvalueQuantityTextField_1);
+                    if (nvalueValveTextField_1 < 0) {
+                        //System.out.println("Ошибка: клапан меньше 0");
+                        ExceptionMessageLabel_1_3.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_1_3 = false;
+                    }
+                    if (nvalueValveTextField_1 >= 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_1_3.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_1_3 = true;
+                    }
 
                     // проверки по Размеру №2
                     String valueSideOne_2 = sideOne_2.getText();
@@ -656,6 +731,21 @@ public class PillowcaseData extends JFrame{
                         ExceptionMessageLabel_2_2.setVisible(false);
                         PillowcaseData.pack(); // оптимизировать размер окна
                         resultFillForm_2_2 = true;
+                    }
+                    String valueValveTextField_2 = valveTextField_2.getText();
+                    int nvalueValveTextField_2 = parseInt(valueValveTextField_2); // приводим строку к целому числу
+                    //System.out.println(nvalueQuantityTextField_2);
+                    if (nvalueValveTextField_2 < 0) {
+                        //System.out.println("Ошибка: клапан меньше 0");
+                        ExceptionMessageLabel_2_3.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_2_3 = false;
+                    }
+                    if (nvalueValveTextField_2 >= 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_2_3.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_2_3 = true;
                     }
 
                     // проверки по Размеру №3
@@ -692,6 +782,21 @@ public class PillowcaseData extends JFrame{
                         PillowcaseData.pack(); // оптимизировать размер окна
                         resultFillForm_3_2 = true;
                     }
+                    String valueValveTextField_3 = valveTextField_3.getText();
+                    int nvalueValveTextField_3 = parseInt(valueValveTextField_3); // приводим строку к целому числу
+                    //System.out.println(nvalueQuantityTextField_3);
+                    if (nvalueValveTextField_3 < 0) {
+                        //System.out.println("Ошибка: клапан меньше 0");
+                        ExceptionMessageLabel_3_3.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_3_3 = false;
+                    }
+                    if (nvalueValveTextField_3 >= 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_3_3.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_3_3 = true;
+                    }
 
                     // проверки по Размеру №4
                     String valueSideOne_4 = sideOne_4.getText();
@@ -726,6 +831,21 @@ public class PillowcaseData extends JFrame{
                         ExceptionMessageLabel_4_2.setVisible(false);
                         PillowcaseData.pack(); // оптимизировать размер окна
                         resultFillForm_4_2 = true;
+                    }
+                    String valueValveTextField_4 = valveTextField_4.getText();
+                    int nvalueValveTextField_4 = parseInt(valueValveTextField_4); // приводим строку к целому числу
+                    //System.out.println(nvalueQuantityTextField_4);
+                    if (nvalueValveTextField_4 < 0) {
+                        //System.out.println("Ошибка: клапан меньше 0");
+                        ExceptionMessageLabel_4_3.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_4_3 = false;
+                    }
+                    if (nvalueValveTextField_4 >= 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_4_3.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_4_3 = true;
                     }
 
                     // проверки по Размеру №5
@@ -762,12 +882,27 @@ public class PillowcaseData extends JFrame{
                         PillowcaseData.pack(); // оптимизировать размер окна
                         resultFillForm_5_2 = true;
                     }
+                    String valueValveTextField_5 = valveTextField_5.getText();
+                    int nvalueValveTextField_5 = parseInt(valueValveTextField_5); // приводим строку к целому числу
+                    //System.out.println(nvalueQuantityTextField_5);
+                    if (nvalueValveTextField_5 < 0) {
+                        //System.out.println("Ошибка: клапан меньше 0");
+                        ExceptionMessageLabel_5_3.setVisible(true);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_5_3 = false;
+                    }
+                    if (nvalueValveTextField_5 >= 0) {
+                        //System.out.println("Корректно");
+                        ExceptionMessageLabel_5_3.setVisible(false);
+                        PillowcaseData.pack(); // оптимизировать размер окна
+                        resultFillForm_5_3 = true;
+                    }
 
-                    if (resultFillForm_1_1 != true || resultFillForm_1_2 != true
-                            || resultFillForm_2_1 != true || resultFillForm_2_2 != true
-                            || resultFillForm_3_1 != true || resultFillForm_3_2 != true
-                            || resultFillForm_4_1 != true || resultFillForm_4_2 != true
-                            || resultFillForm_5_1 != true || resultFillForm_5_2 != true) {
+                    if (resultFillForm_1_1 != true || resultFillForm_1_2 != true || resultFillForm_1_3 != true
+                            || resultFillForm_2_1 != true || resultFillForm_2_2 != true || resultFillForm_2_3 != true
+                            || resultFillForm_3_1 != true || resultFillForm_3_2 != true || resultFillForm_3_3 != true
+                            || resultFillForm_4_1 != true || resultFillForm_4_2 != true || resultFillForm_4_3 != true
+                            || resultFillForm_5_1 != true || resultFillForm_5_2 != true || resultFillForm_5_3 != true){
                         resultFillForm = false;
                     }
 
