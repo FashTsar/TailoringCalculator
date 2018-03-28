@@ -10,7 +10,7 @@ public class GetLastData {
     }
 
     public int getSeam(){
-        int Seam = nvalueWidthFabric;
+        int Seam = nvalueSeam;
         return Seam;
     }
 }

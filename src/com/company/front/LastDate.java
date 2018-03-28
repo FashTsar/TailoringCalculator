@@ -2,7 +2,6 @@ package com.company.front;
 
 import com.company.Calculation;
 import com.company.GetLastData;
-import com.company.GetQuiltData;
 
 import javax.swing.*;
 import javax.swing.text.NumberFormatter;
@@ -62,7 +61,7 @@ public class LastDate extends JFrame {
                 new Insets(2, 2, 2, 2), 0, 0));
 
         // ------- создаём поля первой строки и распределяем поля по панели -------
-        JLabel titlePillowcaseType1Lable_2 = new JLabel("Запас на шов(см.):");
+        JLabel titlePillowcaseType1Lable_2 = new JLabel("Запас ткани на шов(см.):");
         JLabel ExceptionMessageLabel_2_1 = new JLabel("Ошибка: значение меньше 0");
         ExceptionMessageLabel_2_1.setForeground(Color.RED);
         ExceptionMessageLabel_2_1.setVisible(false);
