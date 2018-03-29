@@ -2,6 +2,7 @@ package com.company.front;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseListener;
 
 public class FirstDownload extends JFrame{
 
@@ -49,6 +50,7 @@ public class FirstDownload extends JFrame{
         // ------- создаём ссылку -------
         com.company.front.SwingLink linkSwingLink = new com.company.front.SwingLink("www.bestchange.ru", "https://www.bestchange.ru/?p=33505");
         linkPanel.add(linkSwingLink);
+        linkSwingLink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR)); // меняем курсор на руку
 
         // ------- создаём баннер -------
         PartnersBanner panel = new PartnersBanner();
