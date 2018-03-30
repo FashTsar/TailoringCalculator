@@ -126,13 +126,6 @@ public class ResultPage extends JFrame {
         int resultPillowcaseType1 = PillowcaseType1.CalculationPillowcase(nvaluePillowcaseSideOne_1, nvaluePillowcaseSideTwo_1,
                 nvaluePillowcaseValveTextField_1, nvaluePillowcaseQuantityTextField_1,
                 seam, widthFabric);
-        //System.out.println(resultPillowcaseType1);
-
-        float fresultPillowcaseType1 = (float) resultPillowcaseType1;
-        //System.out.println(fresultPillowcaseType1);
-
-        //System.out.println(f.format(resultPillowcaseType1/100.00));
-
 
         JLabel titlePillowcaseType1Lable = new JLabel("Размер наволочек: "+
                 nvaluePillowcaseSideOne_1+" x "+nvaluePillowcaseSideTwo_1+" Количество: "+nvaluePillowcaseQuantityTextField_1
@@ -166,11 +159,6 @@ public class ResultPage extends JFrame {
         int resultPillowcaseType2 = PillowcaseType2.CalculationPillowcase(nvaluePillowcaseSideOne_2, nvaluePillowcaseSideTwo_2,
                 nvaluePillowcaseValveTextField_2, nvaluePillowcaseQuantityTextField_2,
                 seam, widthFabric);
-        //System.out.println(resultPillowcaseType2);
-
-        float fresultPillowcaseType2 = (float) resultPillowcaseType2;
-        //System.out.println(fresultPillowcaseType2);
-        //System.out.println(f.format(resultPillowcaseType2/100.00));
 
         JLabel titlePillowcaseType2Lable = new JLabel("Размер наволочек: "+
                 nvaluePillowcaseSideOne_2+" x "+nvaluePillowcaseSideTwo_2+" Количество: "+nvaluePillowcaseQuantityTextField_2
@@ -204,11 +192,6 @@ public class ResultPage extends JFrame {
         int resultPillowcaseType3 = PillowcaseType3.CalculationPillowcase(nvaluePillowcaseSideOne_3, nvaluePillowcaseSideTwo_3,
                 nvaluePillowcaseValveTextField_3, nvaluePillowcaseQuantityTextField_3,
                 seam, widthFabric);
-        //System.out.println(resultPillowcaseType3);
-
-        float fresultPillowcaseType3 = (float) resultPillowcaseType3;
-        //System.out.println(fresultPillowcaseType3);
-        //System.out.println(f.format(resultPillowcaseType3/100.00));
 
         JLabel titlePillowcaseType3Lable = new JLabel("Размер наволочек: "+
                 nvaluePillowcaseSideOne_3+" x "+nvaluePillowcaseSideTwo_3+" Количество: "+nvaluePillowcaseQuantityTextField_3
@@ -242,11 +225,6 @@ public class ResultPage extends JFrame {
         int resultPillowcaseType4 = PillowcaseType4.CalculationPillowcase(nvaluePillowcaseSideOne_4, nvaluePillowcaseSideTwo_4,
                 nvaluePillowcaseValveTextField_4, nvaluePillowcaseQuantityTextField_4,
                 seam, widthFabric);
-        //System.out.println(resultPillowcaseType4);
-
-        float fresultPillowcaseType4 = (float) resultPillowcaseType4;
-        //System.out.println(fresultPillowcaseType4);
-        //System.out.println(f.format(resultPillowcaseType4/100.00));
 
         JLabel titlePillowcaseType4Lable = new JLabel("Размер наволочек: "+
                 nvaluePillowcaseSideOne_4+" x "+nvaluePillowcaseSideTwo_4+" Количество: "+nvaluePillowcaseQuantityTextField_4
@@ -280,11 +258,6 @@ public class ResultPage extends JFrame {
         int resultPillowcaseType5 = PillowcaseType5.CalculationPillowcase(nvaluePillowcaseSideOne_5, nvaluePillowcaseSideTwo_5,
                 nvaluePillowcaseValveTextField_5, nvaluePillowcaseQuantityTextField_5,
                 seam, widthFabric);
-        //System.out.println(resultPillowcaseType5);
-
-        float fresultPillowcaseType5 = (float) resultPillowcaseType5;
-        //System.out.println(fresultPillowcaseType5);
-        //System.out.println(f.format(resultPillowcaseType5/100.00));
 
         JLabel titlePillowcaseType5Lable = new JLabel("Размер наволочек: "+
                 nvaluePillowcaseSideOne_5+" x "+nvaluePillowcaseSideTwo_5+" Количество: "+nvaluePillowcaseQuantityTextField_5
