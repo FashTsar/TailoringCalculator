@@ -148,8 +148,8 @@ public class LastDate extends JFrame {
                     GetLastData.nvalueSeam = nvalueSeam;
 
                     PageData.setVisible(false); // скрыть окно
-                    Calculation startCalculation = new Calculation();
-                    startCalculation.Calculation(); // запускаем страницу рассчёта
+                    ResultPage resultPage = new ResultPage();
+                    resultPage.ResultPage(); // запускаем страницу
                 }
             }
         });
