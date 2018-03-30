@@ -138,6 +138,7 @@ public class ResultPage extends JFrame {
                 nvaluePillowcaseSideOne_1+" x "+nvaluePillowcaseSideTwo_1+" Количество: "+nvaluePillowcaseQuantityTextField_1
                 +" шт. Необходимо = "
                 +f.format(resultPillowcaseType1/100.00)+" метров");
+        titlePillowcaseType1Lable.setVisible(false);
 
         JLabel exeptionPillowcaseType1Lable = new JLabel("Наволочки "+
                 nvaluePillowcaseSideOne_1+" x "+nvaluePillowcaseSideTwo_1+" - стороны наволочки шире ткани");
@@ -213,6 +214,7 @@ public class ResultPage extends JFrame {
                 nvaluePillowcaseSideOne_3+" x "+nvaluePillowcaseSideTwo_3+" Количество: "+nvaluePillowcaseQuantityTextField_3
                 +" шт. Необходимо = "
                 +f.format(resultPillowcaseType3/100.00)+" метров");
+        titlePillowcaseType3Lable.setVisible(false);
 
         JLabel exeptionPillowcaseType3Lable = new JLabel("Наволочки "+
                 nvaluePillowcaseSideOne_3+" x "+nvaluePillowcaseSideTwo_3+" - стороны наволочки шире ткани");
@@ -250,6 +252,7 @@ public class ResultPage extends JFrame {
                 nvaluePillowcaseSideOne_4+" x "+nvaluePillowcaseSideTwo_4+" Количество: "+nvaluePillowcaseQuantityTextField_4
                 +" шт. Необходимо = "
                 +f.format(resultPillowcaseType4/100.00)+" метров");
+        titlePillowcaseType4Lable.setVisible(false);
 
         JLabel exeptionPillowcaseType4Lable = new JLabel("Наволочки "+
                 nvaluePillowcaseSideOne_4+" x "+nvaluePillowcaseSideTwo_4+" - стороны наволочки шире ткани");
@@ -287,6 +290,7 @@ public class ResultPage extends JFrame {
                 nvaluePillowcaseSideOne_5+" x "+nvaluePillowcaseSideTwo_5+" Количество: "+nvaluePillowcaseQuantityTextField_5
                 +" шт. Необходимо = "
                 +f.format(resultPillowcaseType5/100.00)+" метров");
+        titlePillowcaseType5Lable.setVisible(false);
 
         JLabel exeptionPillowcaseType5Lable = new JLabel("Наволочки "+
                 nvaluePillowcaseSideOne_5+" x "+nvaluePillowcaseSideTwo_5+" - стороны наволочки шире ткани");
