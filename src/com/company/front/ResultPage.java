@@ -1,14 +1,13 @@
 package com.company.front;
 
-import com.company.GetLastData;
-import com.company.GetPillowcaseData;
-import com.company.GetQuiltData;
-import com.company.GetSheetData;
+import com.company.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 
 public class ResultPage extends JFrame {
     // ------- информация по наволочкам -------
@@ -97,6 +96,11 @@ public class ResultPage extends JFrame {
 
     public void ResultPage() {
 
+        // ------- отображать 2 цифры после точки -------
+        DecimalFormatSymbols s = new DecimalFormatSymbols();
+        s.setDecimalSeparator('.');
+        DecimalFormat f = new DecimalFormat("#,##0.00", s);
+
         // ------- создаём форму и задаём основные параметры -------
         JFrame PageData = new JFrame("Результаты"); // создаём фрейм и задаём загаловок
         PageData.setResizable(false); // запретить менять размер окна
@@ -116,8 +120,84 @@ public class ResultPage extends JFrame {
         PillowcaseDataPanel.setLayout(new GridBagLayout()); // способ расположения элементов в панели загрузки
         PillowcaseDataPanel.setMinimumSize(PillowcaseDataPanel.getPreferredSize()); // оптимальный минимальный размер
 
+        // ------- выводим результаты по наволочкам тип 1 -------
+        Calculation PillowcaseType1 = new Calculation();
+
+        int resultPillowcaseType1 = PillowcaseType1.CalculationPillowcase(nvaluePillowcaseSideOne_1, nvaluePillowcaseSideTwo_1,
+                nvaluePillowcaseValveTextField_1, nvaluePillowcaseQuantityTextField_1,
+                seam, widthFabric);
+        //System.out.println(resultPillowcaseType1);
+
+        float fresultPillowcaseType1 = (float) resultPillowcaseType1;
+        //System.out.println(fresultPillowcaseType1);
+
+        //System.out.println(f.format(resultPillowcaseType1/100.00));
 
 
+        JLabel titlePillowcaseType1Lable = new JLabel("Размер наволочек: "+
+                nvaluePillowcaseSideOne_1+" x "+nvaluePillowcaseSideTwo_1+" Количество: "+nvaluePillowcaseQuantityTextField_1
+                +" шт. Необходимо = "
+                +f.format(resultPillowcaseType1/100.00)+" метров");
+
+        JLabel exeptionPillowcaseType1Lable = new JLabel("Наволочки "+
+                nvaluePillowcaseSideOne_1+" x "+nvaluePillowcaseSideTwo_1+" - стороны наволочки шире ткани");
+        exeptionPillowcaseType1Lable.setForeground(Color.RED);
+        exeptionPillowcaseType1Lable.setVisible(false);
+
+        if (nvaluePillowcaseSideOne_1 != 0 && nvaluePillowcaseSideTwo_1 !=0 && resultPillowcaseType1 != -1){
+            titlePillowcaseType1Lable.setVisible(true);
+        }
+        if (resultPillowcaseType1 == -1){
+            exeptionPillowcaseType1Lable.setVisible(true);
+        }
+
+        PillowcaseDataPanel.add(titlePillowcaseType1Lable, new GridBagConstraints(0, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(exeptionPillowcaseType1Lable, new GridBagConstraints(0, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        // ------- выводим результаты по наволочкам тип 2 -------
+        Calculation PillowcaseType2 = new Calculation();
+
+        int resultPillowcaseType2 = PillowcaseType2.CalculationPillowcase(nvaluePillowcaseSideOne_2, nvaluePillowcaseSideTwo_2,
+                nvaluePillowcaseValveTextField_2, nvaluePillowcaseQuantityTextField_2,
+                seam, widthFabric);
+        //System.out.println(resultPillowcaseType2);
+
+        float fresultPillowcaseType2 = (float) resultPillowcaseType2;
+        //System.out.println(fresultPillowcaseType2);
+
+        //System.out.println(f.format(resultPillowcaseType2/100.00));
+
+
+        JLabel titlePillowcaseType2Lable = new JLabel("Размер наволочек: "+
+                nvaluePillowcaseSideOne_2+" x "+nvaluePillowcaseSideTwo_2+" Количество: "+nvaluePillowcaseQuantityTextField_2
+                +" шт. Необходимо = "
+                +f.format(resultPillowcaseType2/100.00)+" метров");
+        titlePillowcaseType2Lable.setVisible(false);
+
+        JLabel exeptionPillowcaseType2Lable = new JLabel("Наволочки "+
+                nvaluePillowcaseSideOne_2+" x "+nvaluePillowcaseSideTwo_2+" - стороны наволочки шире ткани");
+        exeptionPillowcaseType2Lable.setForeground(Color.RED);
+        exeptionPillowcaseType2Lable.setVisible(false);
+
+        if (nvaluePillowcaseSideOne_2 != 0 && nvaluePillowcaseSideTwo_2 !=0 && resultPillowcaseType2 != -1){
+            titlePillowcaseType2Lable.setVisible(true);
+        }
+        if (resultPillowcaseType2 == -1){
+            exeptionPillowcaseType2Lable.setVisible(true);
+        }
+
+        PillowcaseDataPanel.add(titlePillowcaseType2Lable, new GridBagConstraints(0, 20, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(exeptionPillowcaseType2Lable, new GridBagConstraints(0, 20, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
 
         // ------- создаём панель для кнопок -------
         JPanel ButtonPanel = new JPanel();
