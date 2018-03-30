@@ -7,6 +7,8 @@ import com.company.GetSheetData;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ResultPage extends JFrame {
     // ------- информация по наволочкам -------
@@ -109,9 +111,35 @@ public class ResultPage extends JFrame {
         TitlePagePanel.add(TitlePageLable);
         TitlePagePanel.setVisible(true);
 
+        // ------- создаём панель вывода результатов -------
+        JPanel PillowcaseDataPanel = new JPanel();
+        PillowcaseDataPanel.setLayout(new GridBagLayout()); // способ расположения элементов в панели загрузки
+        PillowcaseDataPanel.setMinimumSize(PillowcaseDataPanel.getPreferredSize()); // оптимальный минимальный размер
 
-        PageData.add(TitlePagePanel);
-        PageData.setVisible(true);
-        PageData.pack();
+
+
+
+        // ------- создаём панель для кнопок -------
+        JPanel ButtonPanel = new JPanel();
+        ButtonPanel.setMinimumSize(TitlePagePanel.getPreferredSize()); // оптимальный минимальный размер
+        JButton NextButton = new JButton("Начать заново");
+        ButtonPanel.add(NextButton);
+        ButtonPanel.setVisible(true);
+
+        PageData.add(TitlePagePanel, BorderLayout.NORTH);
+        PageData.add(PillowcaseDataPanel, BorderLayout.CENTER); // добавить панель в окно
+        PageData.add(ButtonPanel, BorderLayout.SOUTH);
+        PageData.pack(); // оптимизировать размер окна
+        PageData.setVisible(true); // показать окно
+
+        NextButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PageData.setVisible(false); // скрыть окно
+
+                PillowcaseData restart = new PillowcaseData();
+                restart.PillowcaseData();
+            }
+        });
     }
 }
