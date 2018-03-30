@@ -271,6 +271,43 @@ public class ResultPage extends JFrame {
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
+        // ------- выводим результаты по наволочкам тип 5 -------
+        Calculation PillowcaseType5 = new Calculation();
+
+        int resultPillowcaseType5 = PillowcaseType5.CalculationPillowcase(nvaluePillowcaseSideOne_5, nvaluePillowcaseSideTwo_5,
+                nvaluePillowcaseValveTextField_5, nvaluePillowcaseQuantityTextField_5,
+                seam, widthFabric);
+        //System.out.println(resultPillowcaseType5);
+
+        float fresultPillowcaseType5 = (float) resultPillowcaseType5;
+        //System.out.println(fresultPillowcaseType5);
+        //System.out.println(f.format(resultPillowcaseType5/100.00));
+
+        JLabel titlePillowcaseType5Lable = new JLabel("Размер наволочек: "+
+                nvaluePillowcaseSideOne_5+" x "+nvaluePillowcaseSideTwo_5+" Количество: "+nvaluePillowcaseQuantityTextField_5
+                +" шт. Необходимо = "
+                +f.format(resultPillowcaseType5/100.00)+" метров");
+
+        JLabel exeptionPillowcaseType5Lable = new JLabel("Наволочки "+
+                nvaluePillowcaseSideOne_5+" x "+nvaluePillowcaseSideTwo_5+" - стороны наволочки шире ткани");
+        exeptionPillowcaseType5Lable.setForeground(Color.RED);
+        exeptionPillowcaseType5Lable.setVisible(false);
+
+        if (nvaluePillowcaseSideOne_5 != 0 && nvaluePillowcaseSideTwo_5 !=0 && resultPillowcaseType5 != -1){
+            titlePillowcaseType5Lable.setVisible(true);
+        }
+        if (resultPillowcaseType5 == -1){
+            exeptionPillowcaseType5Lable.setVisible(true);
+        }
+
+        PillowcaseDataPanel.add(titlePillowcaseType5Lable, new GridBagConstraints(0, 50, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(exeptionPillowcaseType5Lable, new GridBagConstraints(0, 50, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
         // ------- создаём панель для кнопок -------
         JPanel ButtonPanel = new JPanel();
         ButtonPanel.setMinimumSize(TitlePagePanel.getPreferredSize()); // оптимальный минимальный размер
