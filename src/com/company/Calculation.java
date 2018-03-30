@@ -20,11 +20,11 @@ public class Calculation {
         broadSide = broadSide+seam;
         narrowSide = narrowSide+seam;
 
-        if (broadSide <= widthFabric){
+        if (broadSide <= widthFabric && broadSide != 0 && narrowSide != 0){
             numberRow = widthFabric/broadSide;
             clothConsumption = narrowSide/numberRow*quantity;
         }
-        if (broadSide > widthFabric && narrowSide <= widthFabric){
+        if (broadSide > widthFabric && narrowSide <= widthFabric && broadSide != 0 && narrowSide != 0){
             numberRow = widthFabric/narrowSide;
             clothConsumption = broadSide/numberRow*quantity;
         }
@@ -52,11 +52,11 @@ public class Calculation {
         broadSide = broadSide+seam;
         narrowSide = narrowSide+seam;
 
-        if (broadSide <= widthFabric){
+        if (broadSide <= widthFabric && broadSide != 0 && narrowSide != 0){
             numberRow = widthFabric/broadSide;
             clothConsumption = narrowSide*2/numberRow*quantity;
         }
-        if (broadSide > widthFabric && narrowSide <= widthFabric){
+        if (broadSide > widthFabric && narrowSide <= widthFabric && broadSide != 0 && narrowSide != 0){
             numberRow = widthFabric/narrowSide;
             clothConsumption = broadSide*2/numberRow*quantity;
         }
@@ -84,11 +84,11 @@ public class Calculation {
         broadSide = broadSide+seam;
         narrowSide = narrowSide+seam;
 
-        if (broadSide <= widthFabric){
+        if (broadSide <= widthFabric && broadSide != 0 && narrowSide != 0){
             numberRow = widthFabric/broadSide;
             clothConsumption = (narrowSide*2+valveint)/numberRow*quantity;
         }
-        if (broadSide > widthFabric && narrowSide <= widthFabric){
+        if (broadSide > widthFabric && narrowSide <= widthFabric && broadSide != 0 && narrowSide != 0){
             numberRow = narrowSide/broadSide;
             clothConsumption = (broadSide*2+valveint)/numberRow*quantity;
         }
