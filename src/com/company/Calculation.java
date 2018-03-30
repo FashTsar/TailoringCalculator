@@ -6,6 +6,7 @@ public class Calculation {
         int broadSide = 0;
         int narrowSide = 0;
         int clothConsumption = 0;
+        int numberRow = 0;
 
         if (side1 > side2) {
             broadSide = side1;
@@ -20,10 +21,12 @@ public class Calculation {
         narrowSide = narrowSide+seam;
 
         if (broadSide <= widthFabric){
-            clothConsumption = narrowSide*quantity;
+            numberRow = widthFabric/broadSide;
+            clothConsumption = narrowSide/numberRow*quantity;
         }
         if (broadSide > widthFabric && narrowSide <= widthFabric){
-            clothConsumption = broadSide*quantity;
+            numberRow = widthFabric/narrowSide;
+            clothConsumption = broadSide/numberRow*quantity;
         }
         if (broadSide > widthFabric && narrowSide > widthFabric){
             clothConsumption = -1;
@@ -35,6 +38,7 @@ public class Calculation {
         int broadSide = 0;
         int narrowSide = 0;
         int clothConsumption = 0;
+        int numberRow = 0;
 
         if (side1 > side2) {
             broadSide = side1;
@@ -49,10 +53,12 @@ public class Calculation {
         narrowSide = narrowSide+seam;
 
         if (broadSide <= widthFabric){
-            clothConsumption = narrowSide*2*quantity;
+            numberRow = widthFabric/broadSide;
+            clothConsumption = narrowSide*2/numberRow*quantity;
         }
         if (broadSide > widthFabric && narrowSide <= widthFabric){
-            clothConsumption = broadSide*2*quantity;
+            numberRow = widthFabric/narrowSide;
+            clothConsumption = broadSide*2/numberRow*quantity;
         }
         if (broadSide > widthFabric && narrowSide > widthFabric){
             clothConsumption = -1;
@@ -64,6 +70,7 @@ public class Calculation {
         int broadSide = 0;
         int narrowSide = 0;
         int clothConsumption = 0;
+        int numberRow = 0;
 
         if (side1 > side2) {
             broadSide = side1;
@@ -78,10 +85,12 @@ public class Calculation {
         narrowSide = narrowSide+seam;
 
         if (broadSide <= widthFabric){
-            clothConsumption = (narrowSide*2+valveint)*quantity;
+            numberRow = widthFabric/broadSide;
+            clothConsumption = (narrowSide*2+valveint)/numberRow*quantity;
         }
         if (broadSide > widthFabric && narrowSide <= widthFabric){
-            clothConsumption = (broadSide*2+valveint)*quantity;
+            numberRow = narrowSide/broadSide;
+            clothConsumption = (broadSide*2+valveint)/numberRow*quantity;
         }
         if (broadSide > widthFabric && narrowSide > widthFabric){
             clothConsumption = -1;
