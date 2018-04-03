@@ -349,7 +349,7 @@ public class ResultPage extends JFrame {
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
-        // ------- выводим результаты по пододеяльникам тип 2 -------
+        // ------- выводим результаты по пододеяльникам тип 3 -------
         Calculation QuiltType3 = new Calculation();
 
         int resultQuiltType3 = QuiltType3.CalculationQuilt(nvalueQuiltSideOne_3, nvalueQuiltSideTwo_3,
@@ -378,6 +378,38 @@ public class ResultPage extends JFrame {
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(exeptionQuiltType3Lable, new GridBagConstraints(0, 80, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        // ------- выводим результаты по пододеяльникам тип 4 -------
+        Calculation QuiltType4 = new Calculation();
+
+        int resultQuiltType4 = QuiltType4.CalculationQuilt(nvalueQuiltSideOne_4, nvalueQuiltSideTwo_4,
+                nvalueQuiltQuantityTextField_4, seam, widthFabric);
+
+        JLabel titleresultQuiltType4Lable = new JLabel("Размер пододеяльника: "+
+                nvalueQuiltSideOne_4+" x "+nvalueQuiltSideTwo_4+" Количество: "+nvalueQuiltQuantityTextField_4
+                +" шт. Необходимо = "
+                +f.format(resultQuiltType4/100.00)+" метров");
+        titleresultQuiltType4Lable.setVisible(false);
+
+        JLabel exeptionQuiltType4Lable = new JLabel("Пододеяльники "+
+                nvalueQuiltSideOne_4+" x "+nvalueQuiltSideTwo_4+" - стороны пододеяльника шире ткани");
+        exeptionQuiltType4Lable.setForeground(Color.RED);
+        exeptionQuiltType4Lable.setVisible(false);
+
+        if (nvalueQuiltSideOne_4 != 0 && nvalueQuiltSideTwo_4 !=0 && resultQuiltType4 != -1){
+            titleresultQuiltType4Lable.setVisible(true);
+        }
+        if (resultQuiltType4 == -1){
+            exeptionQuiltType4Lable.setVisible(true);
+        }
+
+        PillowcaseDataPanel.add(titleresultQuiltType4Lable, new GridBagConstraints(0, 90, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(exeptionQuiltType4Lable, new GridBagConstraints(0, 90, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
