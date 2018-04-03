@@ -413,6 +413,38 @@ public class ResultPage extends JFrame {
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
+        // ------- выводим результаты по пододеяльникам тип 5 -------
+        Calculation QuiltType5 = new Calculation();
+
+        int resultQuiltType5 = QuiltType5.CalculationQuilt(nvalueQuiltSideOne_5, nvalueQuiltSideTwo_5,
+                nvalueQuiltQuantityTextField_5, seam, widthFabric);
+
+        JLabel titleresultQuiltType5Lable = new JLabel("Размер пододеяльника: "+
+                nvalueQuiltSideOne_5+" x "+nvalueQuiltSideTwo_5+" Количество: "+nvalueQuiltQuantityTextField_5
+                +" шт. Необходимо = "
+                +f.format(resultQuiltType5/100.00)+" метров");
+        titleresultQuiltType5Lable.setVisible(false);
+
+        JLabel exeptionQuiltType5Lable = new JLabel("Пододеяльники "+
+                nvalueQuiltSideOne_5+" x "+nvalueQuiltSideTwo_5+" - стороны пододеяльника шире ткани");
+        exeptionQuiltType5Lable.setForeground(Color.RED);
+        exeptionQuiltType5Lable.setVisible(false);
+
+        if (nvalueQuiltSideOne_5 != 0 && nvalueQuiltSideTwo_5 !=0 && resultQuiltType5 != -1){
+            titleresultQuiltType5Lable.setVisible(true);
+        }
+        if (resultQuiltType5 == -1){
+            exeptionQuiltType5Lable.setVisible(true);
+        }
+
+        PillowcaseDataPanel.add(titleresultQuiltType5Lable, new GridBagConstraints(0, 100, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(exeptionQuiltType5Lable, new GridBagConstraints(0, 100, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
         // ------- создаём панель для кнопок -------
         JPanel ButtonPanel = new JPanel();
         ButtonPanel.setMinimumSize(TitlePagePanel.getPreferredSize()); // оптимальный минимальный размер
