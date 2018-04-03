@@ -10,7 +10,7 @@ public class FirstDownload extends JFrame{
 
         // ------- создаём форму и задаём основные параметры -------
         JFrame downloadPage = new JFrame("Загрузка"); // создаём фрейм и задаём загаловок
-        downloadPage.setSize(150, 205); // размеры окна
+        //downloadPage.setSize(150, 205); // размеры окна
         downloadPage.setUndecorated(true); // убираем рамки
         downloadPage.setMinimumSize(downloadPage.getPreferredSize()); // оптимальный минимальный размер
         downloadPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // при нажатии на крестик заканчивать работу
@@ -48,13 +48,13 @@ public class FirstDownload extends JFrame{
         titlePartnersAndPartnersAndLinePanel.add(linkPanel, BorderLayout.PAGE_END); // прижимаем панель к низу
 
         // ------- создаём ссылку -------
-        com.company.front.SwingLink linkSwingLink = new com.company.front.SwingLink("www.bestchange.ru", "https://www.bestchange.ru/?p=33505");
+        com.company.front.SwingLink linkSwingLink = new com.company.front.SwingLink("Мониторинг обменных пунктов BestChange.ru", "https://www.bestchange.ru/?p=33505");
         linkPanel.add(linkSwingLink);
         linkSwingLink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR)); // меняем курсор на руку
 
         // ------- создаём баннер -------
-        PartnersBanner panel = new PartnersBanner();
-        partnersPanel.add(panel, BorderLayout.CENTER);
+        //PartnersBanner panel = new PartnersBanner();
+        //partnersPanel.add(panel, BorderLayout.CENTER);
 
         // ------- создаём прогрессбар (полоса загрузки) -------
         JProgressBar downloadProgressBar = new JProgressBar(); // создаём прогрессбар
@@ -64,6 +64,7 @@ public class FirstDownload extends JFrame{
         loadingPanel.add(downloadProgressBar, GridLayout.class); // добавляем прогрессбар на панель загрузки
 
         // ------- делаем окно видимым -------
+        downloadPage.pack(); // оптимизировать размер окна
         downloadPage.setVisible(true); // окно видно
 
         // ------- заполняем прогрессбар -------
