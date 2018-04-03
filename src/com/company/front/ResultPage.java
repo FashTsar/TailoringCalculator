@@ -541,6 +541,38 @@ public class ResultPage extends JFrame {
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
+        // ------- выводим результат по простыням тип 4 -------
+        Calculation SheetType4 = new Calculation();
+
+        int resultSheetType4 = SheetType4.CalculationSheet(nvalueSheetSideOne_4, nvalueSheetSideTwo_4,
+                nvalueSheetQuantityTextField_4, seam, widthFabric);
+
+        JLabel titleresultSheetType4Lable = new JLabel("Размер простыни: "+
+                nvalueSheetSideOne_4+" x "+nvalueSheetSideTwo_4+" Количество: "+nvalueSheetQuantityTextField_4
+                +" шт. Необходимо = "
+                +f.format(resultSheetType4/100.00)+" метров");
+        titleresultSheetType4Lable.setVisible(false);
+
+        JLabel exeptionSheetType4Lable = new JLabel("Простыни "+
+                nvalueSheetSideOne_4+" x "+nvalueSheetSideTwo_4+" - стороны простыни шире ткани");
+        exeptionSheetType4Lable.setForeground(Color.RED);
+        exeptionSheetType4Lable.setVisible(false);
+
+        if (nvalueSheetSideOne_4 != 0 && nvalueSheetSideTwo_4 !=0 && resultSheetType4 != -1){
+            titleresultSheetType4Lable.setVisible(true);
+        }
+        if (resultSheetType4 == -1){
+            exeptionSheetType4Lable.setVisible(true);
+        }
+
+        PillowcaseDataPanel.add(titleresultSheetType4Lable, new GridBagConstraints(0, 140, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(exeptionSheetType4Lable, new GridBagConstraints(0, 140, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
         // ------- создаём панель для кнопок -------
         JPanel ButtonPanel = new JPanel();
         ButtonPanel.setMinimumSize(TitlePagePanel.getPreferredSize()); // оптимальный минимальный размер
