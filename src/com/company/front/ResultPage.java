@@ -605,6 +605,33 @@ public class ResultPage extends JFrame {
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
+        // ------- сообщение о том, что данные не заполнены -------
+        JLabel exeptionNotData = new JLabel("Данные не были заполнены!");
+        exeptionNotData.setForeground(Color.RED);
+        exeptionNotData.setVisible(false);
+
+        if (nvaluePillowcaseSideOne_1 == 0 && nvaluePillowcaseSideTwo_1 == 0
+                && nvaluePillowcaseSideOne_2 == 0 && nvaluePillowcaseSideTwo_2 == 0
+                && nvaluePillowcaseSideOne_3 == 0 && nvaluePillowcaseSideTwo_3 == 0
+                && nvaluePillowcaseSideOne_4 == 0 && nvaluePillowcaseSideTwo_4 == 0
+                && nvaluePillowcaseSideOne_5 == 0 && nvaluePillowcaseSideTwo_5 == 0
+                && nvalueQuiltSideOne_1 == 0 && nvalueQuiltSideTwo_1 == 0
+                && nvalueQuiltSideOne_2 == 0 && nvalueQuiltSideTwo_2 == 0
+                && nvalueQuiltSideOne_3 == 0 && nvalueQuiltSideTwo_3 == 0
+                && nvalueQuiltSideOne_4 == 0 && nvalueQuiltSideTwo_4 == 0
+                && nvalueQuiltSideOne_5 == 0 && nvalueQuiltSideTwo_5 == 0
+                && nvalueSheetSideOne_1 == 0 && nvalueSheetSideTwo_1 == 0
+                && nvalueSheetSideOne_2 == 0 && nvalueSheetSideTwo_2 == 0
+                && nvalueSheetSideOne_3 == 0 && nvalueSheetSideTwo_3 == 0
+                && nvalueSheetSideOne_4 == 0 && nvalueSheetSideTwo_4 == 0
+                && nvalueSheetSideOne_5 == 0 && nvalueSheetSideTwo_5 == 0){
+            exeptionNotData.setVisible(true);
+        }
+
+        PillowcaseDataPanel.add(exeptionNotData, new GridBagConstraints(0, 160, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
         // ------- создаём панель для кнопок -------
         JPanel ButtonPanel = new JPanel();
         ButtonPanel.setMinimumSize(TitlePagePanel.getPreferredSize()); // оптимальный минимальный размер
