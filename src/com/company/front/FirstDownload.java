@@ -48,7 +48,7 @@ public class FirstDownload extends JFrame{
         titlePartnersAndPartnersAndLinePanel.add(linkPanel, BorderLayout.PAGE_END); // прижимаем панель к низу
 
         // ------- создаём ссылку -------
-        com.company.front.SwingLink linkSwingLink = new com.company.front.SwingLink("Мониторинг обменных пунктов BestChange.ru", "https://www.bestchange.ru/?p=33505");
+        com.company.front.SwingLink linkSwingLink = new com.company.front.SwingLink("Мониторинг обменных пунктов электронных валют BestChange.ru", "https://www.bestchange.ru/?p=33505");
         linkPanel.add(linkSwingLink);
         linkSwingLink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR)); // меняем курсор на руку
 
