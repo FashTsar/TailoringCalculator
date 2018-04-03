@@ -349,6 +349,38 @@ public class ResultPage extends JFrame {
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
+        // ------- выводим результаты по пододеяльникам тип 2 -------
+        Calculation QuiltType3 = new Calculation();
+
+        int resultQuiltType3 = QuiltType3.CalculationQuilt(nvalueQuiltSideOne_3, nvalueQuiltSideTwo_3,
+                nvalueQuiltQuantityTextField_3, seam, widthFabric);
+
+        JLabel titleresultQuiltType3Lable = new JLabel("Размер пододеяльника: "+
+                nvalueQuiltSideOne_3+" x "+nvalueQuiltSideTwo_3+" Количество: "+nvalueQuiltQuantityTextField_3
+                +" шт. Необходимо = "
+                +f.format(resultQuiltType3/100.00)+" метров");
+        titleresultQuiltType3Lable.setVisible(false);
+
+        JLabel exeptionQuiltType3Lable = new JLabel("Пододеяльники "+
+                nvalueQuiltSideOne_3+" x "+nvalueQuiltSideTwo_3+" - стороны пододеяльника шире ткани");
+        exeptionQuiltType3Lable.setForeground(Color.RED);
+        exeptionQuiltType3Lable.setVisible(false);
+
+        if (nvalueQuiltSideOne_3 != 0 && nvalueQuiltSideTwo_3 !=0 && resultQuiltType3 != -1){
+            titleresultQuiltType3Lable.setVisible(true);
+        }
+        if (resultQuiltType3 == -1){
+            exeptionQuiltType3Lable.setVisible(true);
+        }
+
+        PillowcaseDataPanel.add(titleresultQuiltType3Lable, new GridBagConstraints(0, 80, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(exeptionQuiltType3Lable, new GridBagConstraints(0, 80, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
         // ------- создаём панель для кнопок -------
         JPanel ButtonPanel = new JPanel();
         ButtonPanel.setMinimumSize(TitlePagePanel.getPreferredSize()); // оптимальный минимальный размер
