@@ -80,11 +80,11 @@ public class ResultPage extends JFrame {
     int nvalueSheetSideTwo_5 = arraySheet[0][9];
 
     // количество простыней
-    int nvalueQuantityTextField_1 = arraySheet[1][0];
-    int nvalueQuantityTextField_2 = arraySheet[1][1];
-    int nvalueQuantityTextField_3 = arraySheet[1][2];
-    int nvalueQuantityTextField_4 = arraySheet[1][3];
-    int nvalueQuantityTextField_5 = arraySheet[1][4];
+    int nvalueSheetQuantityTextField_1 = arraySheet[1][0];
+    int nvalueSheetQuantityTextField_2 = arraySheet[1][1];
+    int nvalueSheetQuantityTextField_3 = arraySheet[1][2];
+    int nvalueSheetQuantityTextField_4 = arraySheet[1][3];
+    int nvalueSheetQuantityTextField_5 = arraySheet[1][4];
 
     // ------- ширина ткани -------
     GetLastData WidthFabric = new GetLastData();
@@ -442,6 +442,38 @@ public class ResultPage extends JFrame {
                 new Insets(2, 2, 2, 2), 0, 0));
 
         PillowcaseDataPanel.add(exeptionQuiltType5Lable, new GridBagConstraints(0, 100, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        // ------- выводим результат по простыням тип 1 -------
+        Calculation SheetType1 = new Calculation();
+
+        int resultSheetType1 = SheetType1.CalculationSheet(nvalueSheetSideOne_1, nvalueSheetSideTwo_1,
+                nvalueSheetQuantityTextField_1, seam, widthFabric);
+
+        JLabel titleresultSheetType1Lable = new JLabel("Размер простыни: "+
+                nvalueSheetSideOne_1+" x "+nvalueSheetSideTwo_1+" Количество: "+nvalueSheetQuantityTextField_1
+                +" шт. Необходимо = "
+                +f.format(resultSheetType1/100.00)+" метров");
+        titleresultSheetType1Lable.setVisible(false);
+
+        JLabel exeptionSheetType1Lable = new JLabel("Простыни "+
+                nvalueSheetSideOne_1+" x "+nvalueSheetSideTwo_1+" - стороны простыни шире ткани");
+        exeptionSheetType1Lable.setForeground(Color.RED);
+        exeptionSheetType1Lable.setVisible(false);
+
+        if (nvalueSheetSideOne_1 != 0 && nvalueSheetSideTwo_1 !=0 && resultSheetType1 != -1){
+            titleresultSheetType1Lable.setVisible(true);
+        }
+        if (resultSheetType1 == -1){
+            exeptionSheetType1Lable.setVisible(true);
+        }
+
+        PillowcaseDataPanel.add(titleresultSheetType1Lable, new GridBagConstraints(0, 110, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(exeptionSheetType1Lable, new GridBagConstraints(0, 110, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
