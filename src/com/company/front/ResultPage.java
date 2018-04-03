@@ -605,6 +605,25 @@ public class ResultPage extends JFrame {
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
+        // ------- выводим общий объём ткани -------
+        Calculation totalValueInt = new Calculation();
+
+        int finishValueInt = totalValueInt.CalculationFinish(resultPillowcaseType1, resultPillowcaseType2, resultPillowcaseType3,
+        resultPillowcaseType4, resultPillowcaseType5,
+        resultQuiltType1, resultQuiltType2, resultQuiltType3,
+        resultQuiltType4, resultQuiltType5,
+        resultSheetType1, resultSheetType2, resultSheetType3,
+        resultSheetType4, resultSheetType5);
+
+        JLabel titlefinishValueLable = new JLabel("Общее количество ткани: "
+                +f.format(finishValueInt/100.00)+" метров");
+        titlefinishValueLable.setForeground(Color.BLUE);
+        titlefinishValueLable.setVisible(true);
+
+        PillowcaseDataPanel.add(titlefinishValueLable, new GridBagConstraints(0, 160, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
         // ------- сообщение о том, что данные не заполнены -------
         JLabel exeptionNotData = new JLabel("Данные не были заполнены!");
         exeptionNotData.setForeground(Color.RED);
@@ -628,7 +647,7 @@ public class ResultPage extends JFrame {
             exeptionNotData.setVisible(true);
         }
 
-        PillowcaseDataPanel.add(exeptionNotData, new GridBagConstraints(0, 160, 1, 1, 1, 1,
+        PillowcaseDataPanel.add(exeptionNotData, new GridBagConstraints(0, 170, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
