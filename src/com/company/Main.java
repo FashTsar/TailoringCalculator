@@ -20,6 +20,9 @@ public class Main {
         mainPage.setLayout(new BorderLayout()); // способ расположения элементов в окне
         mainPage.setResizable(false); // запретить менять размер окна
 
+        NumberFormat number = new DecimalFormat("#"); // формат ввода в поле (только цифры)
+        boolean bigHandSelection = false; // считат ли расход по болшой стороне
+
         // ------- создаём панель вкладок -------
         JTabbedPane tabbedPane = new JTabbedPane();
 
@@ -30,19 +33,23 @@ public class Main {
         // создаём панель для загаловка
         JPanel titlePagePanel = new JPanel();
         titlePagePanel.setMinimumSize(titlePagePanel.getPreferredSize()); // оптимальный минимальный размер
-        JLabel TitlePageLable = new JLabel("Размеры наволочек (в сантиметрах):");
-        titlePagePanel.add(TitlePageLable);
-        titlePagePanel.setVisible(true);
+        JLabel TitlePageLable = new JLabel("Количество типов размеров наволочек (в сантиметрах):");
 
-        NumberFormat number = new DecimalFormat("#"); // формат ввода в поле (только цифры)
-        boolean bigHandSelection = false; // считат ли расход по болшой стороне
+        JFormattedTextField numberPillowcaseSizes = new JFormattedTextField(
+                new NumberFormatter(number));
+        numberPillowcaseSizes.setColumns(5);
+        numberPillowcaseSizes.setValue(0);
+
+        titlePagePanel.add(TitlePageLable);
+        titlePagePanel.add(numberPillowcaseSizes);
+        titlePagePanel.setVisible(true);
 
         // создаём панель для полей
         JPanel PillowcaseDataPanel = new JPanel();
         PillowcaseDataPanel.setLayout(new GridBagLayout()); // способ расположения элементов в панели загрузки
         PillowcaseDataPanel.setMinimumSize(PillowcaseDataPanel.getPreferredSize()); // оптимальный минимальный размер
 
-        for (int x=1; x<=5; x++){
+        for (int x=1; x<=15; x++){
             JLabel titlePillowcaseLable = new JLabel("Размер №"+x);
             JCheckBox activePillowcaseCheckBox = new JCheckBox();
             JLabel typeSeparatorLable = new JLabel("x");
