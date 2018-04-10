@@ -26,7 +26,9 @@ public class Main {
         // ------- создаём панель вкладок -------
         JTabbedPane tabbedPane = new JTabbedPane();
 
-        // ------- наволочки -------
+
+
+        // ------- НАЧАЛО оформления страницы с наволочками -------
         JPanel pillowcaseDataPage = new JPanel();
         pillowcaseDataPage.setLayout(new BorderLayout());
 
@@ -233,6 +235,9 @@ public class Main {
 
         JScrollPane scrollPillowcase = new JScrollPane(pillowcaseDataPage);
         scrollPillowcase.setVisible(true);
+        // ------- КОНЕЦ оформления страницы с наволочками -------
+
+
 
         tabbedPane.addTab("наволочки", scrollPillowcase);
         tabbedPane.setVisible(true);
