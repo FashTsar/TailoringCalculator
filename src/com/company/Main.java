@@ -223,7 +223,11 @@ public class Main {
         pillowcaseDataPage.add(titlePagePanel, BorderLayout.NORTH);
         pillowcaseDataPage.add(PillowcaseDataPanel, BorderLayout.CENTER); // добавить панель в окно
         pillowcaseDataPage.setVisible(true);
-        tabbedPane.addTab("наволочки", pillowcaseDataPage);
+
+        JScrollPane scrollPillowcase = new JScrollPane(pillowcaseDataPage);
+        scrollPillowcase.setVisible(true);
+
+        tabbedPane.addTab("наволочки", scrollPillowcase);
         tabbedPane.setVisible(true);
 
         // ------- создаём панель для кнопок -------
