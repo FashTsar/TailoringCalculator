@@ -35,15 +35,9 @@ public class Main {
         // создаём панель для загаловка
         JPanel titlePagePanel = new JPanel();
         titlePagePanel.setMinimumSize(titlePagePanel.getPreferredSize()); // оптимальный минимальный размер
-        JLabel TitlePageLable = new JLabel("Количество типов размеров наволочек (в сантиметрах):");
-
-        JFormattedTextField numberPillowcaseSizes = new JFormattedTextField(
-                new NumberFormatter(number));
-        numberPillowcaseSizes.setColumns(5);
-        numberPillowcaseSizes.setValue(0);
+        JLabel TitlePageLable = new JLabel("Размеры наволочек (в сантиметрах):");
 
         titlePagePanel.add(TitlePageLable);
-        titlePagePanel.add(numberPillowcaseSizes);
         titlePagePanel.setVisible(true);
 
         // создаём панель для полей
@@ -51,7 +45,7 @@ public class Main {
         PillowcaseDataPanel.setLayout(new GridBagLayout()); // способ расположения элементов в панели загрузки
         PillowcaseDataPanel.setMinimumSize(PillowcaseDataPanel.getPreferredSize()); // оптимальный минимальный размер
 
-        for (int x=1; x<=15; x++){
+        for (int x=1; x<=5; x++){
             JLabel titlePillowcaseLable = new JLabel("Размер №"+x);
             JCheckBox activePillowcaseCheckBox = new JCheckBox();
             JLabel typeSeparatorLable = new JLabel("x");
