@@ -823,7 +823,7 @@ public class Main {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                boolean resultFillForm = true;
+                boolean resultFillFormAll = true;
                 boolean resultFillFormPillowcase_1_1 = true;
                 boolean resultFillFormPillowcase_1_2 = true;
                 boolean resultFillFormPillowcase_1_3 = true;
@@ -1146,9 +1146,58 @@ public class Main {
                         || resultFillFormPillowcase_4_3 != true || resultFillFormPillowcase_4_4 != true
                         || resultFillFormPillowcase_5_1 != true || resultFillFormPillowcase_5_2 != true
                         || resultFillFormPillowcase_5_3 != true || resultFillFormPillowcase_5_4 != true){
-                    resultFillForm = false;
+                    resultFillFormAll = false;
                 }
-                System.out.println(resultFillForm);
+                //System.out.println(resultFillFormPillowcase);
+
+                // ------- отправка данных если всё корректно -------
+                if (resultFillFormAll == true){
+
+                    // отправка информации по наволочкам
+                    int[] arraySideOnePillowcase = new int[]{
+                            nvsideOnePillowcase_1,
+                            nvsideOnePillowcase_2,
+                            nvsideOnePillowcase_3,
+                            nvsideOnePillowcase_4,
+                            nvsideOnePillowcase_5
+                    };
+                    int[] arraySideTwoPillowcase = new int[]{
+                            nvsideTwoPillowcase_1,
+                            nvsideTwoPillowcase_2,
+                            nvsideTwoPillowcase_3,
+                            nvsideTwoPillowcase_4,
+                            nvsideTwoPillowcase_5
+                    };
+                    int[] arrayQuantityPillowcaseTextField = new int[]{
+                            nvquantityPillowcaseTextField_1,
+                            nvquantityPillowcaseTextField_2,
+                            nvquantityPillowcaseTextField_3,
+                            nvquantityPillowcaseTextField_4,
+                            nvquantityPillowcaseTextField_5
+                    };
+                    int[] arrayValvePillowcaseTextField = new int[]{
+                            nvvalvePillowcaseTextField_1,
+                            nvvalvePillowcaseTextField_2,
+                            nvvalvePillowcaseTextField_3,
+                            nvvalvePillowcaseTextField_4,
+                            nvvalvePillowcaseTextField_5
+                    };
+                    int[] arraySeamPillowcaseTextField = new int[]{
+                            nvseamPillowcaseTextField_1,
+                            nvseamPillowcaseTextField_2,
+                            nvseamPillowcaseTextField_3,
+                            nvseamPillowcaseTextField_4,
+                            nvseamPillowcaseTextField_5
+                    };
+
+                    int[][] arrayPillowcaseData = new int[][]{
+                            arraySideOnePillowcase,
+                            arraySideTwoPillowcase,
+                            arrayQuantityPillowcaseTextField,
+                            arrayValvePillowcaseTextField,
+                            arraySeamPillowcaseTextField
+                    };
+                }
             }
         });
     }
