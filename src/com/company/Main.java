@@ -402,6 +402,184 @@ public class Main {
             }
         });
 
+        // -= наволочки размер 3 =-
+        JLabel titlePillowcaseLable_3 = new JLabel("Размер №3");
+        JCheckBox activePillowcaseCheckBox_3 = new JCheckBox();
+        JLabel typeSeparatorPillowcaseLable_3 = new JLabel("x");
+        JLabel quantityPillowcaseLable_3 = new JLabel("Количество:");
+        JLabel valvePillowcaseLable_3 = new JLabel("Клапан(см.):");
+        JLabel seamPillowcaseLable_3 = new JLabel("Шов(см.):");
+        JLabel handSelectionPillowcaseLable_3 = new JLabel("Расход по большой стороне:");
+        JCheckBox handSelectionPillowcaseCheckBox_3 = new JCheckBox();
+        boolean bigHandPillowcaseSelection_3 = false; // считат ли расход по болшой стороне
+
+        JFormattedTextField sideOnePillowcase_3 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideOnePillowcase_3.setColumns(3);
+        sideOnePillowcase_3.setValue(0);
+        JFormattedTextField sideTwoPillowcase_3 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideTwoPillowcase_3.setColumns(3);
+        sideTwoPillowcase_3.setValue(0);
+        JFormattedTextField quantityPillowcaseTextField_3 = new JFormattedTextField(
+                new NumberFormatter(number));
+        quantityPillowcaseTextField_3.setColumns(3);
+        quantityPillowcaseTextField_3.setValue(0);
+        JFormattedTextField valvePillowcaseTextField_3 = new JFormattedTextField(
+                new NumberFormatter(number));
+        valvePillowcaseTextField_3.setColumns(3);
+        valvePillowcaseTextField_3.setValue(0);
+        JFormattedTextField seamPillowcaseTextField_3 = new JFormattedTextField(
+                new NumberFormatter(number));
+        seamPillowcaseTextField_3.setColumns(3);
+        seamPillowcaseTextField_3.setValue(0);
+
+        JLabel ExceptionMessageOnePillowcaseLabe_3 = new JLabel("Ошибка: одна из сторон меньше или равна 0");
+        ExceptionMessageOnePillowcaseLabe_3.setForeground(Color.RED);
+        ExceptionMessageOnePillowcaseLabe_3.setVisible(false);
+        JLabel ExceptionMessageTwoPillowcaseLabel_3 = new JLabel("Ошибка: количество меньше 0");
+        ExceptionMessageTwoPillowcaseLabel_3.setForeground(Color.RED);
+        ExceptionMessageTwoPillowcaseLabel_3.setVisible(false);
+        JLabel ExceptionMessageThreePillowcaseLabel_3 = new JLabel("Ошибка: размер клапана меньше 0 или больше стороны изделия");
+        ExceptionMessageThreePillowcaseLabel_3.setForeground(Color.RED);
+        ExceptionMessageThreePillowcaseLabel_3.setVisible(false);
+        JLabel ExceptionMessageFourPillowcaseLabel_3 = new JLabel("Ошибка: шов меньше 0");
+        ExceptionMessageFourPillowcaseLabel_3.setForeground(Color.RED);
+        ExceptionMessageFourPillowcaseLabel_3.setVisible(false);
+
+        PillowcaseDataPanel.add(titlePillowcaseLable_3, new GridBagConstraints(10, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(activePillowcaseCheckBox_3, new GridBagConstraints(20, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(sideOnePillowcase_3, new GridBagConstraints(30, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(typeSeparatorPillowcaseLable_3, new GridBagConstraints(40, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(sideTwoPillowcase_3, new GridBagConstraints(50, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(quantityPillowcaseLable_3, new GridBagConstraints(60, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(quantityPillowcaseTextField_3, new GridBagConstraints(70, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valvePillowcaseLable_3, new GridBagConstraints(80, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(valvePillowcaseTextField_3, new GridBagConstraints(90, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(seamPillowcaseLable_3, new GridBagConstraints(100, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(seamPillowcaseTextField_3, new GridBagConstraints(110, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(handSelectionPillowcaseLable_3, new GridBagConstraints(120, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(handSelectionPillowcaseCheckBox_3, new GridBagConstraints(130, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        PillowcaseDataPanel.add(ExceptionMessageOnePillowcaseLabe_3, new GridBagConstraints(0, 31, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        PillowcaseDataPanel.add(ExceptionMessageTwoPillowcaseLabel_3, new GridBagConstraints(0, 32, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        PillowcaseDataPanel.add(ExceptionMessageThreePillowcaseLabel_3, new GridBagConstraints(0, 33, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        PillowcaseDataPanel.add(ExceptionMessageFourPillowcaseLabel_3, new GridBagConstraints(0, 34, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        // прописываем логику действия при клике на чекбокс заполнения
+        boolean valueActivePillowcaseCheckBox_3 = activePillowcaseCheckBox_3.isSelected();
+        if (valueActivePillowcaseCheckBox_3 == false){
+            sideOnePillowcase_3.setEditable(false);
+            sideTwoPillowcase_3.setEditable(false);
+            quantityPillowcaseTextField_3.setEditable(false);
+            valvePillowcaseTextField_3.setEditable(false);
+            seamPillowcaseTextField_3.setEditable(false);
+        }
+        if (valueActivePillowcaseCheckBox_3 == true){
+            sideOnePillowcase_3.setEditable(true);
+            sideTwoPillowcase_3.setEditable(true);
+            quantityPillowcaseTextField_3.setEditable(true);
+            valvePillowcaseTextField_3.setEditable(true);
+            seamPillowcaseTextField_3.setEditable(true);
+        }
+        activePillowcaseCheckBox_3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                boolean valueActivePillowcaseCheckBox_3 = activePillowcaseCheckBox_3.isSelected();
+                //System.out.println(valueActivePillowcaseType1CheckBox_1);
+                if (valueActivePillowcaseCheckBox_3 == false){
+                    sideOnePillowcase_3.setEditable(false);
+                    sideTwoPillowcase_3.setEditable(false);
+                    quantityPillowcaseTextField_3.setEditable(false);
+                    valvePillowcaseTextField_3.setEditable(false);
+                    seamPillowcaseTextField_3.setEditable(false);
+                }
+                if (valueActivePillowcaseCheckBox_3 == true){
+                    sideOnePillowcase_3.setEditable(true);
+                    sideTwoPillowcase_3.setEditable(true);
+                    quantityPillowcaseTextField_3.setEditable(true);
+                    valvePillowcaseTextField_3.setEditable(true);
+                    seamPillowcaseTextField_3.setEditable(true);
+                }
+            }
+        });
+
+        // прописываем логику действия при клике на чекбокс выбора стороны
+        boolean valueHandSelectionPillowcaseCheckBox_3 = handSelectionPillowcaseCheckBox_3.isSelected();
+        if (valueHandSelectionPillowcaseCheckBox_3 == false){
+            bigHandPillowcaseSelection_3 = false;
+            //System.out.println(bigHandPillowcaseSelection_3);
+        }
+        if (valueHandSelectionPillowcaseCheckBox_3 == true){
+            bigHandPillowcaseSelection_3 = true;
+            //System.out.println(bigHandPillowcaseSelection_3);
+        }
+        handSelectionPillowcaseCheckBox_3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                boolean bigHandPillowcaseSelection_3 = false; // считат ли расход по болшой стороне
+                boolean valueHandSelectionPillowcaseCheckBox_3 = handSelectionPillowcaseCheckBox_3.isSelected();
+                //System.out.println(valueHandSelectionPillowcaseCheckBox_3);
+                if (valueHandSelectionPillowcaseCheckBox_3 == false){
+                    bigHandPillowcaseSelection_3 = false;
+                    //System.out.println(bigHandPillowcaseSelection_3);
+                }
+                if (valueHandSelectionPillowcaseCheckBox_3 == true){
+                    bigHandPillowcaseSelection_3 = true;
+                    //System.out.println(bigHandPillowcaseSelection_3);
+                }
+            }
+        });
+
         pillowcaseDataPage.add(titlePagePanel, BorderLayout.NORTH);
         pillowcaseDataPage.add(PillowcaseDataPanel, BorderLayout.CENTER); // добавить панель в окно
         pillowcaseDataPage.setVisible(true);
@@ -438,6 +616,10 @@ public class Main {
                 boolean resultFillFormPillowcase_2_2 = true;
                 boolean resultFillFormPillowcase_2_3 = true;
                 boolean resultFillFormPillowcase_2_4 = true;
+                boolean resultFillFormPillowcase_3_1 = true;
+                boolean resultFillFormPillowcase_3_2 = true;
+                boolean resultFillFormPillowcase_3_3 = true;
+                boolean resultFillFormPillowcase_3_4 = true;
 
 
 
@@ -555,6 +737,67 @@ public class Main {
                     resultFillFormPillowcase_2_4 = true;
                     ExceptionMessageFourPillowcaseLabel_2.setVisible(false);
                 }
+
+                // -= проверка размера 3 =-
+                String vsideOnePillowcase_3 = sideOnePillowcase_3.getText();
+                int nvsideOnePillowcase_3 = parseInt(vsideOnePillowcase_3); // приводим к целому числу
+                //System.out.println(nvsideOnePillowcase_3);
+                String vsideTwoPillowcase_3 = sideTwoPillowcase_3.getText();
+                int nvsideTwoPillowcase_3 = parseInt(vsideTwoPillowcase_3); // приводим к целому числу
+                //System.out.println(nvsideTwoPillowcase_3);
+                if (nvsideOnePillowcase_3 != 0 && nvsideTwoPillowcase_3 == 0
+                        || nvsideOnePillowcase_3 == 0 && nvsideTwoPillowcase_3 != 0
+                        || nvsideOnePillowcase_3 < 0
+                        || nvsideTwoPillowcase_3 < 0){
+                    resultFillFormPillowcase_3_1 = false;
+                    ExceptionMessageOnePillowcaseLabe_3.setVisible(true);
+                }
+                if (nvsideOnePillowcase_3 == 0 && nvsideTwoPillowcase_3 == 0
+                        || nvsideOnePillowcase_3 > 0 && nvsideTwoPillowcase_3 > 0){
+                    resultFillFormPillowcase_3_1 = true;
+                    ExceptionMessageOnePillowcaseLabe_3.setVisible(false);
+                }
+                String vquantityPillowcaseTextField_3 = quantityPillowcaseTextField_3.getText();
+                int nvquantityPillowcaseTextField_3 = parseInt(vquantityPillowcaseTextField_3); // приводим к целому числу
+                //System.out.println(nvquantityPillowcaseTextField_3);
+                if (nvquantityPillowcaseTextField_3 < 0){
+                    resultFillFormPillowcase_3_2 = false;
+                    ExceptionMessageTwoPillowcaseLabel_3.setVisible(true);
+                }
+                if (nvquantityPillowcaseTextField_3 >= 0){
+                    resultFillFormPillowcase_3_2 = true;
+                    ExceptionMessageTwoPillowcaseLabel_3.setVisible(false);
+                }
+                String vvalvePillowcaseTextField_3 = valvePillowcaseTextField_3.getText();
+                int nvvalvePillowcaseTextField_3 = parseInt(vvalvePillowcaseTextField_3); // приводим к целому числу
+                //System.out.println(nvvalvePillowcaseTextField_3);
+                if (nvvalvePillowcaseTextField_3 < 0
+                        || nvvalvePillowcaseTextField_3 > nvsideOnePillowcase_3
+                        || nvvalvePillowcaseTextField_3 > nvsideTwoPillowcase_3){
+                    resultFillFormPillowcase_3_3 = false;
+                    ExceptionMessageThreePillowcaseLabel_3.setVisible(true);
+                }
+                if (nvvalvePillowcaseTextField_3 >= 0
+                        && nvvalvePillowcaseTextField_3 <= nvsideOnePillowcase_3
+                        && nvvalvePillowcaseTextField_3 <= nvsideTwoPillowcase_3){
+                    resultFillFormPillowcase_3_3 = true;
+                    ExceptionMessageThreePillowcaseLabel_3.setVisible(false);
+                }
+                String vseamPillowcaseTextField_3 = seamPillowcaseTextField_3.getText();
+                int nvseamPillowcaseTextField_3 = parseInt(vseamPillowcaseTextField_3); // приводим к целому числу
+                //System.out.println(nvseamPillowcaseTextField_3);
+                if (nvseamPillowcaseTextField_3 < 0){
+                    resultFillFormPillowcase_3_4 = false;
+                    ExceptionMessageFourPillowcaseLabel_3.setVisible(true);
+                }
+                if (nvseamPillowcaseTextField_3 >= 0){
+                    resultFillFormPillowcase_3_4 = true;
+                    ExceptionMessageFourPillowcaseLabel_3.setVisible(false);
+                }
+                // ------- КОНЕЦ проверок по наволочкам -------
+
+
+
             }
         });
     }
