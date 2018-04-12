@@ -55,7 +55,6 @@ public class Main {
         JLabel seamPillowcaseLable_1 = new JLabel("Шов(см.):");
         JLabel handSelectionPillowcaseLable_1 = new JLabel("Расход по большой стороне:");
         JCheckBox handSelectionPillowcaseCheckBox_1 = new JCheckBox();
-        boolean bigHandPillowcaseSelection_1 = false; // считат ли расход по болшой стороне
 
         JFormattedTextField sideOnePillowcase_1 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -197,33 +196,6 @@ public class Main {
             }
         });
 
-         // прописываем логику действия при клике на чекбокс выбора стороны
-         boolean valueHandSelectionPillowcaseCheckBox_1 = handSelectionPillowcaseCheckBox_1.isSelected();
-         if (valueHandSelectionPillowcaseCheckBox_1 == false){
-             bigHandPillowcaseSelection_1 = false;
-             //System.out.println(bigHandSelection_1);
-         }
-         if (valueHandSelectionPillowcaseCheckBox_1 == true){
-             bigHandPillowcaseSelection_1 = true;
-             //System.out.println(bigHandSelection_1);
-         }
-         handSelectionPillowcaseCheckBox_1.addActionListener(new ActionListener() {
-             @Override
-             public void actionPerformed(ActionEvent e) {
-                 boolean bigHandPillowcaseSelection_1 = false; // считат ли расход по болшой стороне
-                 boolean valueHandSelectionPillowcaseCheckBox_1 = handSelectionPillowcaseCheckBox_1.isSelected();
-                 //System.out.println(valueActivePillowcaseType1CheckBox_1);
-                 if (valueHandSelectionPillowcaseCheckBox_1 == false){
-                     bigHandPillowcaseSelection_1 = false;
-                     //System.out.println(bigHandSelection_1);
-                 }
-                 if (valueHandSelectionPillowcaseCheckBox_1 == true){
-                     bigHandPillowcaseSelection_1 = true;
-                     //System.out.println(bigHandSelection_1);
-                 }
-             }
-         });
-
         // -= наволочки размер 2 =-
         JLabel titlePillowcaseLable_2 = new JLabel("Размер №2");
         JCheckBox activePillowcaseCheckBox_2 = new JCheckBox();
@@ -233,7 +205,6 @@ public class Main {
         JLabel seamPillowcaseLable_2 = new JLabel("Шов(см.):");
         JLabel handSelectionPillowcaseLable_2 = new JLabel("Расход по большой стороне:");
         JCheckBox handSelectionPillowcaseCheckBox_2 = new JCheckBox();
-        boolean bigHandPillowcaseSelection_2 = false; // считат ли расход по болшой стороне
 
         JFormattedTextField sideOnePillowcase_2 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -375,33 +346,6 @@ public class Main {
             }
         });
 
-        // прописываем логику действия при клике на чекбокс выбора стороны
-        boolean valueHandSelectionPillowcaseCheckBox_2 = handSelectionPillowcaseCheckBox_2.isSelected();
-        if (valueHandSelectionPillowcaseCheckBox_2 == false){
-            bigHandPillowcaseSelection_2 = false;
-            //System.out.println(bigHandPillowcaseSelection_2);
-        }
-        if (valueHandSelectionPillowcaseCheckBox_2 == true){
-            bigHandPillowcaseSelection_2 = true;
-            //System.out.println(bigHandPillowcaseSelection_2);
-        }
-        handSelectionPillowcaseCheckBox_2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                boolean bigHandPillowcaseSelection_2 = false; // считат ли расход по болшой стороне
-                boolean valueHandSelectionPillowcaseCheckBox_2 = handSelectionPillowcaseCheckBox_2.isSelected();
-                //System.out.println(valueHandSelectionPillowcaseCheckBox_2);
-                if (valueHandSelectionPillowcaseCheckBox_2 == false){
-                    bigHandPillowcaseSelection_2 = false;
-                    //System.out.println(bigHandPillowcaseSelection_2);
-                }
-                if (valueHandSelectionPillowcaseCheckBox_2 == true){
-                    bigHandPillowcaseSelection_2 = true;
-                    //System.out.println(bigHandPillowcaseSelection_2);
-                }
-            }
-        });
-
         // -= наволочки размер 3 =-
         JLabel titlePillowcaseLable_3 = new JLabel("Размер №3");
         JCheckBox activePillowcaseCheckBox_3 = new JCheckBox();
@@ -411,7 +355,6 @@ public class Main {
         JLabel seamPillowcaseLable_3 = new JLabel("Шов(см.):");
         JLabel handSelectionPillowcaseLable_3 = new JLabel("Расход по большой стороне:");
         JCheckBox handSelectionPillowcaseCheckBox_3 = new JCheckBox();
-        boolean bigHandPillowcaseSelection_3 = false; // считат ли расход по болшой стороне
 
         JFormattedTextField sideOnePillowcase_3 = new JFormattedTextField(
                 new NumberFormatter(number));
@@ -549,33 +492,6 @@ public class Main {
                     quantityPillowcaseTextField_3.setEditable(true);
                     valvePillowcaseTextField_3.setEditable(true);
                     seamPillowcaseTextField_3.setEditable(true);
-                }
-            }
-        });
-
-        // прописываем логику действия при клике на чекбокс выбора стороны
-        boolean valueHandSelectionPillowcaseCheckBox_3 = handSelectionPillowcaseCheckBox_3.isSelected();
-        if (valueHandSelectionPillowcaseCheckBox_3 == false){
-            bigHandPillowcaseSelection_3 = false;
-            //System.out.println(bigHandPillowcaseSelection_3);
-        }
-        if (valueHandSelectionPillowcaseCheckBox_3 == true){
-            bigHandPillowcaseSelection_3 = true;
-            //System.out.println(bigHandPillowcaseSelection_3);
-        }
-        handSelectionPillowcaseCheckBox_3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                boolean bigHandPillowcaseSelection_3 = false; // считат ли расход по болшой стороне
-                boolean valueHandSelectionPillowcaseCheckBox_3 = handSelectionPillowcaseCheckBox_3.isSelected();
-                //System.out.println(valueHandSelectionPillowcaseCheckBox_3);
-                if (valueHandSelectionPillowcaseCheckBox_3 == false){
-                    bigHandPillowcaseSelection_3 = false;
-                    //System.out.println(bigHandPillowcaseSelection_3);
-                }
-                if (valueHandSelectionPillowcaseCheckBox_3 == true){
-                    bigHandPillowcaseSelection_3 = true;
-                    //System.out.println(bigHandPillowcaseSelection_3);
                 }
             }
         });
