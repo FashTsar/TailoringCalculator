@@ -55,26 +55,26 @@ public class Main {
             JLabel handSelectionLable = new JLabel("Расход по большой стороне:");
             JCheckBox handSelectionCheckBox = new JCheckBox();
 
-            JFormattedTextField sideOne = new JFormattedTextField(
+            JFormattedTextField sideOnePillowcase = new JFormattedTextField(
                     new NumberFormatter(number));
-            sideOne.setColumns(3);
-            sideOne.setValue(0);
-            JFormattedTextField sideTwo = new JFormattedTextField(
+            sideOnePillowcase.setColumns(3);
+            sideOnePillowcase.setValue(0);
+            JFormattedTextField sideTwoPillowcase = new JFormattedTextField(
                     new NumberFormatter(number));
-            sideTwo.setColumns(3);
-            sideTwo.setValue(0);
-            JFormattedTextField quantityTextField = new JFormattedTextField(
+            sideTwoPillowcase.setColumns(3);
+            sideTwoPillowcase.setValue(0);
+            JFormattedTextField quantityPillowcaseTextField = new JFormattedTextField(
                     new NumberFormatter(number));
-            quantityTextField.setColumns(3);
-            quantityTextField.setValue(0);
-            JFormattedTextField valveTextField = new JFormattedTextField(
+            quantityPillowcaseTextField.setColumns(3);
+            quantityPillowcaseTextField.setValue(0);
+            JFormattedTextField valvePillowcaseTextField = new JFormattedTextField(
                     new NumberFormatter(number));
-            valveTextField.setColumns(3);
-            valveTextField.setValue(0);
-            JFormattedTextField seamTextField = new JFormattedTextField(
+            valvePillowcaseTextField.setColumns(3);
+            valvePillowcaseTextField.setValue(0);
+            JFormattedTextField seamPillowcaseTextField = new JFormattedTextField(
                     new NumberFormatter(number));
-            seamTextField.setColumns(3);
-            seamTextField.setValue(0);
+            seamPillowcaseTextField.setColumns(3);
+            seamPillowcaseTextField.setValue(0);
 
             JLabel ExceptionMessageOneLabe = new JLabel("Ошибка: одна из сторон меньше или равна 0");
             ExceptionMessageOneLabe.setForeground(Color.RED);
@@ -97,7 +97,7 @@ public class Main {
                     GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                     new Insets(2, 2, 2, 2), 0, 0));
 
-            PillowcaseDataPanel.add(sideOne, new GridBagConstraints(30, x*10, 1, 1, 1, 1,
+            PillowcaseDataPanel.add(sideOnePillowcase, new GridBagConstraints(30, x*10, 1, 1, 1, 1,
                     GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                     new Insets(2, 2, 2, 2), 0, 0));
 
@@ -105,7 +105,7 @@ public class Main {
                     GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                     new Insets(2, 2, 2, 2), 0, 0));
 
-            PillowcaseDataPanel.add(sideTwo, new GridBagConstraints(50, x*10, 1, 1, 1, 1,
+            PillowcaseDataPanel.add(sideTwoPillowcase, new GridBagConstraints(50, x*10, 1, 1, 1, 1,
                     GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                     new Insets(2, 2, 2, 2), 0, 0));
 
@@ -113,7 +113,7 @@ public class Main {
                     GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                     new Insets(2, 2, 2, 2), 0, 0));
 
-            PillowcaseDataPanel.add(quantityTextField, new GridBagConstraints(70, x*10, 1, 1, 1, 1,
+            PillowcaseDataPanel.add(quantityPillowcaseTextField, new GridBagConstraints(70, x*10, 1, 1, 1, 1,
                     GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                     new Insets(2, 2, 2, 2), 0, 0));
 
@@ -121,7 +121,7 @@ public class Main {
                     GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                     new Insets(2, 2, 2, 2), 0, 0));
 
-            PillowcaseDataPanel.add(valveTextField, new GridBagConstraints(90, x*10, 1, 1, 1, 1,
+            PillowcaseDataPanel.add(valvePillowcaseTextField, new GridBagConstraints(90, x*10, 1, 1, 1, 1,
                     GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                     new Insets(2, 2, 2, 2), 0, 0));
 
@@ -129,7 +129,7 @@ public class Main {
                     GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                     new Insets(2, 2, 2, 2), 0, 0));
 
-            PillowcaseDataPanel.add(seamTextField, new GridBagConstraints(110, x*10, 1, 1, 1, 1,
+            PillowcaseDataPanel.add(seamPillowcaseTextField, new GridBagConstraints(110, x*10, 1, 1, 1, 1,
                     GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                     new Insets(2, 2, 2, 2), 0, 0));
 
@@ -160,18 +160,18 @@ public class Main {
             // прописываем логику действия при клике на чекбокс заполнения
             boolean valueActivePillowcaseCheckBox = activePillowcaseCheckBox.isSelected();
             if (valueActivePillowcaseCheckBox == false){
-                sideOne.setEditable(false);
-                sideTwo.setEditable(false);
-                quantityTextField.setEditable(false);
-                valveTextField.setEditable(false);
-                seamTextField.setEditable(false);
+                sideOnePillowcase.setEditable(false);
+                sideTwoPillowcase.setEditable(false);
+                quantityPillowcaseTextField.setEditable(false);
+                valvePillowcaseTextField.setEditable(false);
+                seamPillowcaseTextField.setEditable(false);
             }
             if (valueActivePillowcaseCheckBox == true){
-                sideOne.setEditable(true);
-                sideTwo.setEditable(true);
-                quantityTextField.setEditable(true);
-                valveTextField.setEditable(true);
-                seamTextField.setEditable(true);
+                sideOnePillowcase.setEditable(true);
+                sideTwoPillowcase.setEditable(true);
+                quantityPillowcaseTextField.setEditable(true);
+                valvePillowcaseTextField.setEditable(true);
+                seamPillowcaseTextField.setEditable(true);
             }
             activePillowcaseCheckBox.addActionListener(new ActionListener() {
                 @Override
@@ -179,18 +179,18 @@ public class Main {
                     boolean valueActivePillowcaseCheckBox = activePillowcaseCheckBox.isSelected();
                     //System.out.println(valueActivePillowcaseType1CheckBox_1);
                     if (valueActivePillowcaseCheckBox == false){
-                        sideOne.setEditable(false);
-                        sideTwo.setEditable(false);
-                        quantityTextField.setEditable(false);
-                        valveTextField.setEditable(false);
-                        seamTextField.setEditable(false);
+                        sideOnePillowcase.setEditable(false);
+                        sideTwoPillowcase.setEditable(false);
+                        quantityPillowcaseTextField.setEditable(false);
+                        valvePillowcaseTextField.setEditable(false);
+                        seamPillowcaseTextField.setEditable(false);
                     }
                     if (valueActivePillowcaseCheckBox == true){
-                        sideOne.setEditable(true);
-                        sideTwo.setEditable(true);
-                        quantityTextField.setEditable(true);
-                        valveTextField.setEditable(true);
-                        seamTextField.setEditable(true);
+                        sideOnePillowcase.setEditable(true);
+                        sideTwoPillowcase.setEditable(true);
+                        quantityPillowcaseTextField.setEditable(true);
+                        valvePillowcaseTextField.setEditable(true);
+                        seamPillowcaseTextField.setEditable(true);
                     }
                 }
             });
@@ -239,12 +239,19 @@ public class Main {
         // ------- создаём панель для кнопок -------
         JPanel ButtonPanel = new JPanel();
         ButtonPanel.setMinimumSize(ButtonPanel.getPreferredSize()); // оптимальный минимальный размер
-        JButton saveButton = new JButton("Сохранить");
+        JButton saveButton = new JButton("Рассчитать");
         ButtonPanel.add(saveButton);
         ButtonPanel.setVisible(true);
 
         mainPage.add(tabbedPane, BorderLayout.CENTER);
         mainPage.add(ButtonPanel, BorderLayout.SOUTH);
         mainPage.setVisible(true);
+
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 }
