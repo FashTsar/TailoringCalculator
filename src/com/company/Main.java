@@ -1135,7 +1135,20 @@ public class Main {
                 // ------- КОНЕЦ проверок по наволочкам -------
 
 
-
+                // ------- проверка статусов ошибок перед отправкой данных -------
+                if (resultFillFormPillowcase_1_1 != true || resultFillFormPillowcase_1_2 != true
+                        || resultFillFormPillowcase_1_3 != true || resultFillFormPillowcase_1_4 != true
+                        || resultFillFormPillowcase_2_1 != true || resultFillFormPillowcase_2_2 != true
+                        || resultFillFormPillowcase_2_3 != true || resultFillFormPillowcase_2_4 != true
+                        || resultFillFormPillowcase_3_1 != true || resultFillFormPillowcase_3_2 != true
+                        || resultFillFormPillowcase_3_3 != true || resultFillFormPillowcase_3_4 != true
+                        || resultFillFormPillowcase_4_1 != true || resultFillFormPillowcase_4_2 != true
+                        || resultFillFormPillowcase_4_3 != true || resultFillFormPillowcase_4_4 != true
+                        || resultFillFormPillowcase_5_1 != true || resultFillFormPillowcase_5_2 != true
+                        || resultFillFormPillowcase_5_3 != true || resultFillFormPillowcase_5_4 != true){
+                    resultFillForm = false;
+                }
+                System.out.println(resultFillForm);
             }
         });
     }
