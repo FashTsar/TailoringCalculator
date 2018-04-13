@@ -1201,6 +1201,132 @@ public class Main {
             }
         });
 
+        // -= пододеяльники размер 4 =-
+        JLabel titleQuiltLable_4 = new JLabel("Размер №4");
+        JCheckBox activeQuiltCheckBox_4 = new JCheckBox();
+        JLabel typeSeparatorQuiltLable_4 = new JLabel("x");
+        JLabel quantityQuiltLable_4 = new JLabel("Количество:");
+        JLabel seamQuiltLable_4 = new JLabel("Шов(см.):");
+        JLabel handSelectionQuiltLable_4 = new JLabel("Расход по большой стороне:");
+        JCheckBox handSelectionQuiltCheckBox_4 = new JCheckBox();
+
+        JFormattedTextField sideOneQuilt_4 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideOneQuilt_4.setColumns(6);
+        sideOneQuilt_4.setValue(0);
+        JFormattedTextField sideTwoQuilt_4 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideTwoQuilt_4.setColumns(6);
+        sideTwoQuilt_4.setValue(0);
+        JFormattedTextField quantityQuiltTextField_4 = new JFormattedTextField(
+                new NumberFormatter(number));
+        quantityQuiltTextField_4.setColumns(6);
+        quantityQuiltTextField_4.setValue(0);
+        JFormattedTextField seamQuiltTextField_4 = new JFormattedTextField(
+                new NumberFormatter(number));
+        seamQuiltTextField_4.setColumns(6);
+        seamQuiltTextField_4.setValue(0);
+
+        JLabel ExceptionMessageOneQuiltLabe_4 = new JLabel("Ошибка: одна из сторон меньше или равна 0");
+        ExceptionMessageOneQuiltLabe_4.setForeground(Color.RED);
+        ExceptionMessageOneQuiltLabe_4.setVisible(false);
+        JLabel ExceptionMessageTwoQuiltLabel_4 = new JLabel("Ошибка: количество меньше 0");
+        ExceptionMessageTwoQuiltLabel_4.setForeground(Color.RED);
+        ExceptionMessageTwoQuiltLabel_4.setVisible(false);
+        JLabel ExceptionMessageThreeQuiltLabel_4 = new JLabel("Ошибка: шов меньше 0");
+        ExceptionMessageThreeQuiltLabel_4.setForeground(Color.RED);
+        ExceptionMessageThreeQuiltLabel_4.setVisible(false);
+
+        QuiltDataPanel.add(titleQuiltLable_4, new GridBagConstraints(10, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        QuiltDataPanel.add(activeQuiltCheckBox_4, new GridBagConstraints(20, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        QuiltDataPanel.add(sideOneQuilt_4, new GridBagConstraints(30, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        QuiltDataPanel.add(typeSeparatorQuiltLable_4, new GridBagConstraints(40, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 6, 2, 2), 0, 0));
+
+        QuiltDataPanel.add(sideTwoQuilt_4, new GridBagConstraints(50, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        QuiltDataPanel.add(quantityQuiltLable_4, new GridBagConstraints(60, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        QuiltDataPanel.add(quantityQuiltTextField_4, new GridBagConstraints(70, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        QuiltDataPanel.add(seamQuiltLable_4, new GridBagConstraints(80, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        QuiltDataPanel.add(seamQuiltTextField_4, new GridBagConstraints(90, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        QuiltDataPanel.add(handSelectionQuiltLable_4, new GridBagConstraints(100, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        QuiltDataPanel.add(handSelectionQuiltCheckBox_4, new GridBagConstraints(110, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        QuiltDataPanel.add(ExceptionMessageOneQuiltLabe_4, new GridBagConstraints(0, 41, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        QuiltDataPanel.add(ExceptionMessageTwoQuiltLabel_4, new GridBagConstraints(0, 42, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        QuiltDataPanel.add(ExceptionMessageThreeQuiltLabel_4, new GridBagConstraints(0, 43, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        // прописываем логику действия при клике на чекбокс заполнения
+        boolean valueActiveQuiltCheckBox_4 = activeQuiltCheckBox_4.isSelected();
+        if (valueActiveQuiltCheckBox_4 == false){
+            sideOneQuilt_4.setEditable(false);
+            sideTwoQuilt_4.setEditable(false);
+            quantityQuiltTextField_4.setEditable(false);
+            seamQuiltTextField_4.setEditable(false);
+        }
+        if (valueActiveQuiltCheckBox_4 == true){
+            sideOneQuilt_4.setEditable(true);
+            sideTwoQuilt_4.setEditable(true);
+            quantityQuiltTextField_4.setEditable(true);
+            seamQuiltTextField_4.setEditable(true);
+        }
+        activeQuiltCheckBox_4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                boolean valueActiveQuiltCheckBox_4 = activeQuiltCheckBox_4.isSelected();
+                //System.out.println(valueActivePillowcaseType1CheckBox_4);
+                if (valueActiveQuiltCheckBox_4 == false){
+                    sideOneQuilt_4.setEditable(false);
+                    sideTwoQuilt_4.setEditable(false);
+                    quantityQuiltTextField_4.setEditable(false);
+                    seamQuiltTextField_4.setEditable(false);
+                }
+                if (valueActiveQuiltCheckBox_4 == true){
+                    sideOneQuilt_4.setEditable(true);
+                    sideTwoQuilt_4.setEditable(true);
+                    quantityQuiltTextField_4.setEditable(true);
+                    seamQuiltTextField_4.setEditable(true);
+                }
+            }
+        });
+
 
 
 
@@ -1267,6 +1393,9 @@ public class Main {
                 boolean resultFillFormQuilt_3_1 = true;
                 boolean resultFillFormQuilt_3_2 = true;
                 boolean resultFillFormQuilt_3_3 = true;
+                boolean resultFillFormQuilt_4_1 = true;
+                boolean resultFillFormQuilt_4_2 = true;
+                boolean resultFillFormQuilt_4_3 = true;
 
 
 
@@ -1684,6 +1813,48 @@ public class Main {
                 if (nvseamQuiltTextField_3 >= 0){
                     resultFillFormQuilt_3_3 = true;
                     ExceptionMessageThreeQuiltLabel_3.setVisible(false);
+                }
+
+                // -= проверка размера 4 =-
+                String vsideOneQuilt_4 = sideOneQuilt_4.getText();
+                int nvsideOneQuilt_4 = parseInt(vsideOneQuilt_4); // приводим к целому числу
+                //System.out.println(nvsideOneQuilt_4);
+                String vsideTwoQuilt_4 = sideTwoQuilt_4.getText();
+                int nvsideTwoQuilt_4 = parseInt(vsideTwoQuilt_4); // приводим к целому числу
+                //System.out.println(nvsideTwoQuilt_4);
+                if (nvsideOneQuilt_4 != 0 && nvsideTwoQuilt_4 == 0
+                        || nvsideOneQuilt_4 == 0 && nvsideTwoQuilt_4 != 0
+                        || nvsideOneQuilt_4 < 0
+                        || nvsideTwoQuilt_4 < 0){
+                    resultFillFormQuilt_4_1 = false;
+                    ExceptionMessageOneQuiltLabe_4.setVisible(true);
+                }
+                if (nvsideOneQuilt_4 == 0 && nvsideTwoQuilt_4 == 0
+                        || nvsideOneQuilt_4 > 0 && nvsideTwoQuilt_4 > 0){
+                    resultFillFormQuilt_4_1 = true;
+                    ExceptionMessageOneQuiltLabe_4.setVisible(false);
+                }
+                String vquantityQuiltTextField_4 = quantityQuiltTextField_4.getText();
+                int nvquantityQuiltTextField_4 = parseInt(vquantityQuiltTextField_4); // приводим к целому числу
+                //System.out.println(nvquantityQuiltTextField_4);
+                if (nvquantityQuiltTextField_4 < 0){
+                    resultFillFormQuilt_4_2 = false;
+                    ExceptionMessageTwoQuiltLabel_4.setVisible(true);
+                }
+                if (nvquantityQuiltTextField_4 >= 0){
+                    resultFillFormQuilt_4_2 = true;
+                    ExceptionMessageTwoQuiltLabel_4.setVisible(false);
+                }
+                String vseamQuiltTextField_4 = seamQuiltTextField_4.getText();
+                int nvseamQuiltTextField_4 = parseInt(vseamQuiltTextField_4); // приводим к целому числу
+                //System.out.println(nvseamQuiltTextField_4);
+                if (nvseamQuiltTextField_4 < 0){
+                    resultFillFormQuilt_4_3 = false;
+                    ExceptionMessageThreeQuiltLabel_4.setVisible(true);
+                }
+                if (nvseamQuiltTextField_4 >= 0){
+                    resultFillFormQuilt_4_3 = true;
+                    ExceptionMessageThreeQuiltLabel_4.setVisible(false);
                 }
                 // ------- КОНЕЦ проверок по пододеяльникам -------
 
