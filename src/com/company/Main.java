@@ -2112,6 +2112,52 @@ public class Main {
                             handSelectionPillowcaseCheckBox_4.isSelected(),
                             handSelectionPillowcaseCheckBox_5.isSelected()
                     };
+                    GetData.arrayHandSelectionPillowcase = arrayHandSelectionPillowcaseCheckBox;
+
+                    // отправка информации по пододеяльникам
+                    int[] arraySideOneQuilt = new int[]{
+                            nvsideOneQuilt_1,
+                            nvsideOneQuilt_2,
+                            nvsideOneQuilt_3,
+                            nvsideOneQuilt_4,
+                            nvsideOneQuilt_5
+                    };
+                    int[] arraySideTwoQuilt = new int[]{
+                            nvsideTwoQuilt_1,
+                            nvsideTwoQuilt_2,
+                            nvsideTwoQuilt_3,
+                            nvsideTwoQuilt_4,
+                            nvsideTwoQuilt_5
+                    };
+                    int[] arrayQuantityQuiltTextField = new int[]{
+                            nvquantityQuiltTextField_1,
+                            nvquantityQuiltTextField_2,
+                            nvquantityQuiltTextField_3,
+                            nvquantityQuiltTextField_4,
+                            nvquantityQuiltTextField_5
+                    };
+                    int[] arraySeamQuiltTextField = new int[]{
+                            nvseamQuiltTextField_1,
+                            nvseamQuiltTextField_2,
+                            nvseamQuiltTextField_3,
+                            nvseamQuiltTextField_4,
+                            nvseamQuiltTextField_5
+                    };
+                    int[][] arrayQuiltData = new int[][]{
+                            arraySideOneQuilt,
+                            arraySideTwoQuilt,
+                            arrayQuantityQuiltTextField,
+                            arraySeamQuiltTextField
+                    };
+                    GetData.arrayResultQuiltData = arrayPillowcaseData;
+                    boolean[] arrayHandSelectionQuiltCheckBox = new boolean[]{
+                            handSelectionQuiltCheckBox_1.isSelected(),
+                            handSelectionQuiltCheckBox_2.isSelected(),
+                            handSelectionQuiltCheckBox_3.isSelected(),
+                            handSelectionQuiltCheckBox_4.isSelected(),
+                            handSelectionQuiltCheckBox_5.isSelected()
+                    };
+                    GetData.arrayHandSelectionQuilt = arrayHandSelectionQuiltCheckBox;
                 }
             }
         });
