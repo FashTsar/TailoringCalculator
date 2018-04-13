@@ -823,7 +823,8 @@ public class Main {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                boolean resultFillFormAll = true;
+                boolean resultFillFormAll = true; // общий статус
+                // статусы по наволочкам
                 boolean resultFillFormPillowcase = true;
                 boolean resultFillFormPillowcase_1_1 = true;
                 boolean resultFillFormPillowcase_1_2 = true;
