@@ -824,6 +824,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 boolean resultFillFormAll = true;
+                boolean resultFillFormPillowcase = true;
                 boolean resultFillFormPillowcase_1_1 = true;
                 boolean resultFillFormPillowcase_1_2 = true;
                 boolean resultFillFormPillowcase_1_3 = true;
@@ -1136,6 +1137,7 @@ public class Main {
 
 
                 // ------- проверка статусов ошибок перед отправкой данных -------
+                // проверка статусов по наволочкам
                 if (resultFillFormPillowcase_1_1 != true || resultFillFormPillowcase_1_2 != true
                         || resultFillFormPillowcase_1_3 != true || resultFillFormPillowcase_1_4 != true
                         || resultFillFormPillowcase_2_1 != true || resultFillFormPillowcase_2_2 != true
@@ -1146,9 +1148,16 @@ public class Main {
                         || resultFillFormPillowcase_4_3 != true || resultFillFormPillowcase_4_4 != true
                         || resultFillFormPillowcase_5_1 != true || resultFillFormPillowcase_5_2 != true
                         || resultFillFormPillowcase_5_3 != true || resultFillFormPillowcase_5_4 != true){
-                    resultFillFormAll = false;
+                    resultFillFormPillowcase = false;
                 }
                 //System.out.println(resultFillFormPillowcase);
+
+                // проверка общего статуса
+                if (resultFillFormPillowcase != true){
+                    resultFillFormAll = false;
+                    ErrorMessage errorMessage = new ErrorMessage();
+                    errorMessage.getErrorMessage(resultFillFormPillowcase);
+                }
 
                 // ------- отправка данных если всё корректно -------
                 if (resultFillFormAll == true){
