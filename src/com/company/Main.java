@@ -1197,6 +1197,7 @@ public class Main {
                             arrayValvePillowcaseTextField,
                             arraySeamPillowcaseTextField
                     };
+                    GetData.arrayResultPillowcaseData = arrayPillowcaseData;
                 }
             }
         });
