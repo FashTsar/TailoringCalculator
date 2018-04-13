@@ -806,7 +806,41 @@ public class Main {
 
 
 
+        // ------- НАЧАЛО оформления страницы с пододеяльниками -------
+        JPanel quiltDataPage = new JPanel();
+        quiltDataPage.setLayout(new BorderLayout());
+
+        // создаём панель для загаловка
+        JPanel titleQuiltPagePanel = new JPanel();
+        titleQuiltPagePanel.setMinimumSize(titleQuiltPagePanel.getPreferredSize()); // оптимальный минимальный размер
+        JLabel TitlePageQuiltLable = new JLabel("Размеры пододеяльников (в сантиметрах):");
+
+        titleQuiltPagePanel.add(TitlePageQuiltLable);
+        titleQuiltPagePanel.setVisible(true);
+
+        // создаём панель для полей
+        JPanel QuiltDataPanel = new JPanel();
+        QuiltDataPanel.setLayout(new GridBagLayout()); // способ расположения элементов в панели загрузки
+        QuiltDataPanel.setMinimumSize(QuiltDataPanel.getPreferredSize()); // оптимальный минимальный размер
+
+
+
+
+
+
+
+        quiltDataPage.add(titleQuiltPagePanel, BorderLayout.NORTH);
+        quiltDataPage.add(QuiltDataPanel, BorderLayout.CENTER); // добавить панель в окно
+        quiltDataPage.setVisible(true);
+
+        JScrollPane scrollQuilt = new JScrollPane(quiltDataPage);
+        scrollQuilt.setVisible(true);
+        // ------- КОНЕЦ оформления вкладки с пододеяльниками -------
+
+
+
         tabbedPane.addTab("наволочки", scrollPillowcase);
+        tabbedPane.addTab("пододеяльники", scrollQuilt);
         tabbedPane.setVisible(true);
 
         // ------- создаём панель для кнопок -------
