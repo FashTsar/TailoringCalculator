@@ -2043,11 +2043,19 @@ public class Main {
                 }
                 //System.out.println(resultFillFormPillowcase);
 
+                // проверка статусов по пододеяльникам
+                if(resultFillFormQuilt_1_1 != true || resultFillFormQuilt_1_2 != true || resultFillFormQuilt_1_3 != true
+                   || resultFillFormQuilt_2_1 != true || resultFillFormQuilt_2_2 != true || resultFillFormQuilt_2_3 != true
+                   || resultFillFormQuilt_3_1 != true || resultFillFormQuilt_3_2 != true || resultFillFormQuilt_3_3 != true
+                   || resultFillFormQuilt_4_1 != true || resultFillFormQuilt_4_2 != true || resultFillFormQuilt_4_3 != true
+                   || resultFillFormQuilt_5_1 != true || resultFillFormQuilt_5_2 != true || resultFillFormQuilt_5_3 != true){
+                    resultFillFormQuilt = false;
+                }
                 // проверка общего статуса
-                if (resultFillFormPillowcase != true){
+                if (resultFillFormPillowcase != true || resultFillFormQuilt != true){
                     resultFillFormAll = false;
                     ErrorMessage errorMessage = new ErrorMessage();
-                    errorMessage.getErrorMessage(resultFillFormPillowcase);
+                    errorMessage.getErrorMessage(resultFillFormPillowcase, resultFillFormQuilt);
                 }
 
                 // ------- отправка данных если всё корректно -------
