@@ -1207,6 +1207,13 @@ public class Main {
                             arraySeamPillowcaseTextField
                     };
                     GetData.arrayResultPillowcaseData = arrayPillowcaseData;
+                    boolean[] arrayHandSelectionPillowcaseCheckBox = new boolean[]{
+                            handSelectionPillowcaseCheckBox_1.isSelected(),
+                            handSelectionPillowcaseCheckBox_2.isSelected(),
+                            handSelectionPillowcaseCheckBox_3.isSelected(),
+                            handSelectionPillowcaseCheckBox_4.isSelected(),
+                            handSelectionPillowcaseCheckBox_5.isSelected()
+                    };
                 }
             }
         });
