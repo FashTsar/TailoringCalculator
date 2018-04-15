@@ -1463,8 +1463,44 @@ public class Main {
 
 
 
+        // ------- НАЧАЛО оформления страницы с простынями -------
+        JPanel sheetDataPage = new JPanel();
+        sheetDataPage.setLayout(new BorderLayout());
+
+        // создаём панель для загаловка
+        JPanel titleSheetPagePanel = new JPanel();
+        titleSheetPagePanel.setMinimumSize(titleSheetPagePanel.getPreferredSize()); // оптимальный минимальный размер
+        JLabel TitlePageSheetLable = new JLabel("Размеры простыней (в сантиметрах):");
+
+        titleSheetPagePanel.add(TitlePageSheetLable);
+        titleSheetPagePanel.setVisible(true);
+
+        // создаём панель для полей
+        JPanel SheetDataPanel = new JPanel();
+        SheetDataPanel.setLayout(new GridBagLayout()); // способ расположения элементов в панели загрузки
+        SheetDataPanel.setMinimumSize(SheetDataPanel.getPreferredSize()); // оптимальный минимальный размер
+
+
+
+
+
+
+
+
+
+        sheetDataPage.add(titleSheetPagePanel, BorderLayout.NORTH);
+        sheetDataPage.add(SheetDataPanel, BorderLayout.CENTER); // добавить панель в окно
+        sheetDataPage.setVisible(true);
+
+        JScrollPane scrollSheet = new JScrollPane(sheetDataPage);
+        scrollSheet.setVisible(true);
+        // ------- КОНЕЦ оформления вкладки с простынями -------
+
+
+
         tabbedPane.addTab("наволочки", scrollPillowcase);
         tabbedPane.addTab("пододеяльники", scrollQuilt);
+        tabbedPane.addTab("простыни", scrollSheet);
         tabbedPane.setVisible(true);
 
         // ------- создаём панель для кнопок -------
