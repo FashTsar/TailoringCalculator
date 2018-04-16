@@ -1480,7 +1480,131 @@ public class Main {
         SheetDataPanel.setLayout(new GridBagLayout()); // способ расположения элементов в панели загрузки
         SheetDataPanel.setMinimumSize(SheetDataPanel.getPreferredSize()); // оптимальный минимальный размер
 
+        // -= пододеяльники размер 1 =-
+        JLabel titleSheetLable_1 = new JLabel("Размер №1");
+        JCheckBox activeSheetCheckBox_1 = new JCheckBox();
+        JLabel typeSeparatorSheetLable_1 = new JLabel("x");
+        JLabel quantitySheetLable_1 = new JLabel("Количество:");
+        JLabel seamSheetLable_1 = new JLabel("Шов(см.):");
+        JLabel handSelectionSheetLable_1 = new JLabel("Расход по большой стороне:");
+        JCheckBox handSelectionSheetCheckBox_1 = new JCheckBox();
 
+        JFormattedTextField sideOneSheet_1 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideOneSheet_1.setColumns(6);
+        sideOneSheet_1.setValue(0);
+        JFormattedTextField sideTwoSheet_1 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideTwoSheet_1.setColumns(6);
+        sideTwoSheet_1.setValue(0);
+        JFormattedTextField quantitySheetTextField_1 = new JFormattedTextField(
+                new NumberFormatter(number));
+        quantitySheetTextField_1.setColumns(6);
+        quantitySheetTextField_1.setValue(0);
+        JFormattedTextField seamSheetTextField_1 = new JFormattedTextField(
+                new NumberFormatter(number));
+        seamSheetTextField_1.setColumns(6);
+        seamSheetTextField_1.setValue(0);
+
+        JLabel ExceptionMessageOneSheetLabe_1 = new JLabel("Ошибка: одна из сторон меньше или равна 0");
+        ExceptionMessageOneSheetLabe_1.setForeground(Color.RED);
+        ExceptionMessageOneSheetLabe_1.setVisible(false);
+        JLabel ExceptionMessageTwoSheetLabel_1 = new JLabel("Ошибка: количество меньше 0");
+        ExceptionMessageTwoSheetLabel_1.setForeground(Color.RED);
+        ExceptionMessageTwoSheetLabel_1.setVisible(false);
+        JLabel ExceptionMessageThreeSheetLabel_1 = new JLabel("Ошибка: шов меньше 0");
+        ExceptionMessageThreeSheetLabel_1.setForeground(Color.RED);
+        ExceptionMessageThreeSheetLabel_1.setVisible(false);
+
+        SheetDataPanel.add(titleSheetLable_1, new GridBagConstraints(10, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(activeSheetCheckBox_1, new GridBagConstraints(20, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(sideOneSheet_1, new GridBagConstraints(30, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(typeSeparatorSheetLable_1, new GridBagConstraints(40, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 6, 2, 2), 0, 0));
+
+        SheetDataPanel.add(sideTwoSheet_1, new GridBagConstraints(50, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(quantitySheetLable_1, new GridBagConstraints(60, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(quantitySheetTextField_1, new GridBagConstraints(70, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(seamSheetLable_1, new GridBagConstraints(80, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(seamSheetTextField_1, new GridBagConstraints(90, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(handSelectionSheetLable_1, new GridBagConstraints(100, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(handSelectionSheetCheckBox_1, new GridBagConstraints(110, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(ExceptionMessageOneSheetLabe_1, new GridBagConstraints(0, 11, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        SheetDataPanel.add(ExceptionMessageTwoSheetLabel_1, new GridBagConstraints(0, 12, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        SheetDataPanel.add(ExceptionMessageThreeSheetLabel_1, new GridBagConstraints(0, 13, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        // прописываем логику действия при клике на чекбокс заполнения
+        boolean valueActiveSheetCheckBox_1 = activeSheetCheckBox_1.isSelected();
+        if (valueActiveSheetCheckBox_1 == false){
+            sideOneSheet_1.setEditable(false);
+            sideTwoSheet_1.setEditable(false);
+            quantitySheetTextField_1.setEditable(false);
+            seamSheetTextField_1.setEditable(false);
+        }
+        if (valueActiveSheetCheckBox_1 == true){
+            sideOneSheet_1.setEditable(true);
+            sideTwoSheet_1.setEditable(true);
+            quantitySheetTextField_1.setEditable(true);
+            seamSheetTextField_1.setEditable(true);
+        }
+        activeSheetCheckBox_1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                boolean valueActiveSheetCheckBox_1 = activeSheetCheckBox_1.isSelected();
+                //System.out.println(valueActivePillowcaseType1CheckBox_1);
+                if (valueActiveSheetCheckBox_1 == false){
+                    sideOneSheet_1.setEditable(false);
+                    sideTwoSheet_1.setEditable(false);
+                    quantitySheetTextField_1.setEditable(false);
+                    seamSheetTextField_1.setEditable(false);
+                }
+                if (valueActiveSheetCheckBox_1 == true){
+                    sideOneSheet_1.setEditable(true);
+                    sideTwoSheet_1.setEditable(true);
+                    quantitySheetTextField_1.setEditable(true);
+                    seamSheetTextField_1.setEditable(true);
+                }
+            }
+        });
 
 
 
@@ -1557,6 +1681,24 @@ public class Main {
                 boolean resultFillFormQuilt_5_1 = true;
                 boolean resultFillFormQuilt_5_2 = true;
                 boolean resultFillFormQuilt_5_3 = true;
+                // статусы по простыням
+                boolean resultFillFormSheet = true;
+                boolean resultFillFormSheet_1_1 = true;
+                boolean resultFillFormSheet_1_2 = true;
+                boolean resultFillFormSheet_1_3 = true;
+                boolean resultFillFormSheet_2_1 = true;
+                boolean resultFillFormSheet_2_2 = true;
+                boolean resultFillFormSheet_2_3 = true;
+                boolean resultFillFormSheet_3_1 = true;
+                boolean resultFillFormSheet_3_2 = true;
+                boolean resultFillFormSheet_3_3 = true;
+                boolean resultFillFormSheet_4_1 = true;
+                boolean resultFillFormSheet_4_2 = true;
+                boolean resultFillFormSheet_4_3 = true;
+                boolean resultFillFormSheet_5_1 = true;
+                boolean resultFillFormSheet_5_2 = true;
+                boolean resultFillFormSheet_5_3 = true;
+
 
 
 
@@ -2060,6 +2202,53 @@ public class Main {
                     ExceptionMessageThreeQuiltLabel_5.setVisible(false);
                 }
                 // ------- КОНЕЦ проверок по пододеяльникам -------
+
+
+
+
+                // ------- проверки по ПРОСТЫНЯМ -------
+                // -= проверка размера 1 =-
+                String vsideOneSheet_1 = sideOneSheet_1.getText();
+                int nvsideOneSheet_1 = parseInt(vsideOneSheet_1); // приводим к целому числу
+                //System.out.println(nvsideOneSheet_1);
+                String vsideTwoSheet_1 = sideTwoSheet_1.getText();
+                int nvsideTwoSheet_1 = parseInt(vsideTwoSheet_1); // приводим к целому числу
+                //System.out.println(nvsideTwoSheet_1);
+                if (nvsideOneSheet_1 != 0 && nvsideTwoSheet_1 == 0
+                        || nvsideOneSheet_1 == 0 && nvsideTwoSheet_1 != 0
+                        || nvsideOneSheet_1 < 0
+                        || nvsideTwoSheet_1 < 0){
+                    resultFillFormSheet_1_1 = false;
+                    ExceptionMessageOneSheetLabe_1.setVisible(true);
+                }
+                if (nvsideOneSheet_1 == 0 && nvsideTwoSheet_1 == 0
+                        || nvsideOneSheet_1 > 0 && nvsideTwoSheet_1 > 0){
+                    resultFillFormSheet_1_1 = true;
+                    ExceptionMessageOneSheetLabe_1.setVisible(false);
+                }
+                String vquantitySheetTextField_1 = quantitySheetTextField_1.getText();
+                int nvquantitySheetTextField_1 = parseInt(vquantitySheetTextField_1); // приводим к целому числу
+                //System.out.println(nvquantitySheetTextField_1);
+                if (nvquantitySheetTextField_1 < 0){
+                    resultFillFormSheet_1_2 = false;
+                    ExceptionMessageTwoSheetLabel_1.setVisible(true);
+                }
+                if (nvquantitySheetTextField_1 >= 0){
+                    resultFillFormSheet_1_2 = true;
+                    ExceptionMessageTwoSheetLabel_1.setVisible(false);
+                }
+                String vseamSheetTextField_1 = seamSheetTextField_1.getText();
+                int nvseamSheetTextField_1 = parseInt(vseamSheetTextField_1); // приводим к целому числу
+                //System.out.println(nvseamSheetTextField_1);
+                if (nvseamSheetTextField_1 < 0){
+                    resultFillFormSheet_1_3 = false;
+                    ExceptionMessageThreeSheetLabel_1.setVisible(true);
+                }
+                if (nvseamSheetTextField_1 >= 0){
+                    resultFillFormSheet_1_3 = true;
+                    ExceptionMessageThreeSheetLabel_1.setVisible(false);
+                }
+                // ------- КОНЕЦ проверок по простыням -------
 
 
 
