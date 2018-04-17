@@ -2939,11 +2939,21 @@ public class Main {
                    || resultFillFormQuilt_5_1 != true || resultFillFormQuilt_5_2 != true || resultFillFormQuilt_5_3 != true){
                     resultFillFormQuilt = false;
                 }
+
+                // проверка статусов по простыням
+                if(resultFillFormSheet_1_1 != true || resultFillFormSheet_1_2 != true || resultFillFormSheet_1_3 != true
+                        || resultFillFormSheet_2_1 != true || resultFillFormSheet_2_2 != true || resultFillFormSheet_2_3 != true
+                        || resultFillFormSheet_3_1 != true || resultFillFormSheet_3_2 != true || resultFillFormSheet_3_3 != true
+                        || resultFillFormSheet_4_1 != true || resultFillFormSheet_4_2 != true || resultFillFormSheet_4_3 != true
+                        || resultFillFormSheet_5_1 != true || resultFillFormSheet_5_2 != true || resultFillFormSheet_5_3 != true){
+                    resultFillFormSheet = false;
+                }
+
                 // проверка общего статуса
-                if (resultFillFormPillowcase != true || resultFillFormQuilt != true){
+                if (resultFillFormPillowcase != true || resultFillFormQuilt != true || resultFillFormSheet != true){
                     resultFillFormAll = false;
                     ErrorMessage errorMessage = new ErrorMessage();
-                    errorMessage.getErrorMessage(resultFillFormPillowcase, resultFillFormQuilt);
+                    errorMessage.getErrorMessage(resultFillFormPillowcase, resultFillFormQuilt, resultFillFormSheet);
                 }
 
                 // ------- отправка данных если всё корректно -------
