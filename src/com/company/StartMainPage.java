@@ -3185,7 +3185,9 @@ public class StartMainPage {
         rebootButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                mainPage.setVisible(false);
+                StartMainPage reboot = new StartMainPage();
+                reboot.start();
             }
         });
     }
