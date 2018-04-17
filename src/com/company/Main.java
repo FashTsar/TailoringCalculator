@@ -2134,8 +2134,28 @@ public class Main {
         ClothDataPanel.setLayout(new GridBagLayout()); // способ расположения элементов в панели загрузки
         ClothDataPanel.setMinimumSize(ClothDataPanel.getPreferredSize()); // оптимальный минимальный размер
 
+        JLabel titleClothLable = new JLabel("Ширина ткани (см.):");
 
+        JFormattedTextField widthCloth = new JFormattedTextField(
+                new NumberFormatter(number));
+        widthCloth.setColumns(3);
+        widthCloth.setValue(0);
 
+        JLabel ExceptionMessageOneClothLabe = new JLabel("Ошибка: ширина ткани меньше или равна 0");
+        ExceptionMessageOneClothLabe.setForeground(Color.RED);
+        ExceptionMessageOneClothLabe.setVisible(false);
+
+        ClothDataPanel.add(titleClothLable, new GridBagConstraints(10, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        ClothDataPanel.add(widthCloth, new GridBagConstraints(20, 10, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 650), 0, 0));
+
+        ClothDataPanel.add(ExceptionMessageOneClothLabe, new GridBagConstraints(0, 15, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
 
         clothDataPage.add(titleClothPagePanel, BorderLayout.NORTH);
         clothDataPage.add(ClothDataPanel, BorderLayout.CENTER); // добавить панель в окно
@@ -2224,6 +2244,8 @@ public class Main {
                 boolean resultFillFormSheet_5_1 = true;
                 boolean resultFillFormSheet_5_2 = true;
                 boolean resultFillFormSheet_5_3 = true;
+                // статус по ткани
+                boolean resultFillFormCloth = true;
 
 
 
@@ -2943,6 +2965,22 @@ public class Main {
                     ExceptionMessageThreeSheetLabel_5.setVisible(false);
                 }
                 // ------- КОНЕЦ проверок по простыням -------
+
+
+
+                // ------- проверка по ТКАНИ -------
+                String vwidthCloth = widthCloth.getText();
+                int nvwidthCloth = parseInt(vwidthCloth); // приводим к целому числу
+                //System.out.println(nvwidthCloth);
+                if (nvwidthCloth <= 0){
+                    resultFillFormCloth = false;
+                    ExceptionMessageOneClothLabe.setVisible(true);
+                }
+                if (nvwidthCloth > 0){
+                    resultFillFormCloth = true;
+                    ExceptionMessageOneClothLabe.setVisible(false);
+                }
+                // ------- КОНЕЦ проверки по ткани -------
 
 
 
