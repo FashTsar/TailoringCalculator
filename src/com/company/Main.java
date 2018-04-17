@@ -3019,10 +3019,13 @@ public class Main {
                 }
 
                 // проверка общего статуса
-                if (resultFillFormPillowcase != true || resultFillFormQuilt != true || resultFillFormSheet != true){
+                if (resultFillFormPillowcase != true
+                        || resultFillFormQuilt != true
+                        || resultFillFormSheet != true
+                        || resultFillFormCloth != true){
                     resultFillFormAll = false;
                     ErrorMessage errorMessage = new ErrorMessage();
-                    errorMessage.getErrorMessage(resultFillFormPillowcase, resultFillFormQuilt, resultFillFormSheet);
+                    errorMessage.getErrorMessage(resultFillFormPillowcase, resultFillFormQuilt, resultFillFormSheet, resultFillFormCloth);
                 }
 
                 // ------- отправка данных если всё корректно -------

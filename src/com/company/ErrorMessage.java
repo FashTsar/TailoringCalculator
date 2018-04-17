@@ -5,7 +5,10 @@ import java.awt.*;
 
 public class ErrorMessage {
 
-    public void getErrorMessage(boolean resultFillFormPillowcase, boolean resultFillFormQuilt, boolean resultFillFormSheet){
+    public void getErrorMessage(boolean resultFillFormPillowcase,
+                                boolean resultFillFormQuilt,
+                                boolean resultFillFormSheet,
+                                boolean resultFillFormCloth){
         JFrame errorPage = new JFrame("ОШИБКА"); // создаём фрейм и задаём загаловок
         errorPage.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // при нажатии на крестик заканчивать работу
         errorPage.setLocationRelativeTo(null); // окно появляется посередине
@@ -43,6 +46,15 @@ public class ErrorMessage {
             ExceptionMessageSheet.setVisible(true);
         }
 
+        JLabel ExceptionMessageCloth = new JLabel("Ошибка: некорректно заполнены данные по ткани");
+        ExceptionMessageCloth.setForeground(Color.RED);
+        if (resultFillFormCloth == true){
+            ExceptionMessageCloth.setVisible(false);
+        }
+        if (resultFillFormCloth == false){
+            ExceptionMessageCloth.setVisible(true);
+        }
+
         bodyErrorMessage.add(ExceptionMessagePillowcase, new GridBagConstraints(0, 10, 110, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(5, 5, 5, 5), 0, 0));
@@ -52,6 +64,10 @@ public class ErrorMessage {
                 new Insets(5, 5, 5, 5), 0, 0));
 
         bodyErrorMessage.add(ExceptionMessageSheet, new GridBagConstraints(0, 30, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(5, 5, 5, 5), 0, 0));
+
+        bodyErrorMessage.add(ExceptionMessageCloth, new GridBagConstraints(0, 40, 110, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(5, 5, 5, 5), 0, 0));
 
