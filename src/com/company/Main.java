@@ -2117,9 +2117,40 @@ public class Main {
 
 
 
+        // ------- НАЧАЛО оформления страницы с тканью -------
+        JPanel clothDataPage = new JPanel();
+        clothDataPage.setLayout(new BorderLayout());
+
+        // создаём панель для загаловка
+        JPanel titleClothPagePanel = new JPanel();
+        titleClothPagePanel.setMinimumSize(titleClothPagePanel.getPreferredSize()); // оптимальный минимальный размер
+        JLabel TitlePageClothLable = new JLabel("Информация по ткани:");
+
+        titleClothPagePanel.add(TitlePageClothLable);
+        titleClothPagePanel.setVisible(true);
+
+        // создаём панель для полей
+        JPanel ClothDataPanel = new JPanel();
+        ClothDataPanel.setLayout(new GridBagLayout()); // способ расположения элементов в панели загрузки
+        ClothDataPanel.setMinimumSize(ClothDataPanel.getPreferredSize()); // оптимальный минимальный размер
+
+
+
+
+        clothDataPage.add(titleClothPagePanel, BorderLayout.NORTH);
+        clothDataPage.add(ClothDataPanel, BorderLayout.CENTER); // добавить панель в окно
+        clothDataPage.setVisible(true);
+
+        JScrollPane scrollCloth = new JScrollPane(clothDataPage);
+        scrollCloth.setVisible(true);
+        // ------- КОНЕЦ оформления вкладки с тканью -------
+
+
+
         tabbedPane.addTab("наволочки", scrollPillowcase);
         tabbedPane.addTab("пододеяльники", scrollQuilt);
         tabbedPane.addTab("простыни", scrollSheet);
+        tabbedPane.addTab("ткань", scrollCloth);
         tabbedPane.setVisible(true);
 
         // ------- создаём панель для кнопок -------
