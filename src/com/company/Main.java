@@ -1857,6 +1857,131 @@ public class Main {
             }
         });
 
+        // -= пододеяльники размер 4 =-
+        JLabel titleSheetLable_4 = new JLabel("Размер №4");
+        JCheckBox activeSheetCheckBox_4 = new JCheckBox();
+        JLabel typeSeparatorSheetLable_4 = new JLabel("x");
+        JLabel quantitySheetLable_4 = new JLabel("Количество:");
+        JLabel seamSheetLable_4 = new JLabel("Шов(см.):");
+        JLabel handSelectionSheetLable_4 = new JLabel("Расход по большой стороне:");
+        JCheckBox handSelectionSheetCheckBox_4 = new JCheckBox();
+
+        JFormattedTextField sideOneSheet_4 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideOneSheet_4.setColumns(6);
+        sideOneSheet_4.setValue(0);
+        JFormattedTextField sideTwoSheet_4 = new JFormattedTextField(
+                new NumberFormatter(number));
+        sideTwoSheet_4.setColumns(6);
+        sideTwoSheet_4.setValue(0);
+        JFormattedTextField quantitySheetTextField_4 = new JFormattedTextField(
+                new NumberFormatter(number));
+        quantitySheetTextField_4.setColumns(6);
+        quantitySheetTextField_4.setValue(0);
+        JFormattedTextField seamSheetTextField_4 = new JFormattedTextField(
+                new NumberFormatter(number));
+        seamSheetTextField_4.setColumns(6);
+        seamSheetTextField_4.setValue(0);
+
+        JLabel ExceptionMessageOneSheetLabe_4 = new JLabel("Ошибка: одна из сторон меньше или равна 0");
+        ExceptionMessageOneSheetLabe_4.setForeground(Color.RED);
+        ExceptionMessageOneSheetLabe_4.setVisible(false);
+        JLabel ExceptionMessageTwoSheetLabel_4 = new JLabel("Ошибка: количество меньше 0");
+        ExceptionMessageTwoSheetLabel_4.setForeground(Color.RED);
+        ExceptionMessageTwoSheetLabel_4.setVisible(false);
+        JLabel ExceptionMessageThreeSheetLabel_4 = new JLabel("Ошибка: шов меньше 0");
+        ExceptionMessageThreeSheetLabel_4.setForeground(Color.RED);
+        ExceptionMessageThreeSheetLabel_4.setVisible(false);
+
+        SheetDataPanel.add(titleSheetLable_4, new GridBagConstraints(10, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(activeSheetCheckBox_4, new GridBagConstraints(20, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(sideOneSheet_4, new GridBagConstraints(30, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(typeSeparatorSheetLable_4, new GridBagConstraints(40, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 6, 2, 2), 0, 0));
+
+        SheetDataPanel.add(sideTwoSheet_4, new GridBagConstraints(50, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(quantitySheetLable_4, new GridBagConstraints(60, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(quantitySheetTextField_4, new GridBagConstraints(70, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(seamSheetLable_4, new GridBagConstraints(80, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(seamSheetTextField_4, new GridBagConstraints(90, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(handSelectionSheetLable_4, new GridBagConstraints(100, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(handSelectionSheetCheckBox_4, new GridBagConstraints(110, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        SheetDataPanel.add(ExceptionMessageOneSheetLabe_4, new GridBagConstraints(0, 41, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        SheetDataPanel.add(ExceptionMessageTwoSheetLabel_4, new GridBagConstraints(0, 42, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        SheetDataPanel.add(ExceptionMessageThreeSheetLabel_4, new GridBagConstraints(0, 43, 110, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+
+        // прописываем логику действия при клике на чекбокс заполнения
+        boolean valueActiveSheetCheckBox_4 = activeSheetCheckBox_4.isSelected();
+        if (valueActiveSheetCheckBox_4 == false){
+            sideOneSheet_4.setEditable(false);
+            sideTwoSheet_4.setEditable(false);
+            quantitySheetTextField_4.setEditable(false);
+            seamSheetTextField_4.setEditable(false);
+        }
+        if (valueActiveSheetCheckBox_4 == true){
+            sideOneSheet_4.setEditable(true);
+            sideTwoSheet_4.setEditable(true);
+            quantitySheetTextField_4.setEditable(true);
+            seamSheetTextField_4.setEditable(true);
+        }
+        activeSheetCheckBox_4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                boolean valueActiveSheetCheckBox_4 = activeSheetCheckBox_4.isSelected();
+                if (valueActiveSheetCheckBox_4 == false){
+                    sideOneSheet_4.setEditable(false);
+                    sideTwoSheet_4.setEditable(false);
+                    quantitySheetTextField_4.setEditable(false);
+                    seamSheetTextField_4.setEditable(false);
+                }
+                if (valueActiveSheetCheckBox_4 == true){
+                    sideOneSheet_4.setEditable(true);
+                    sideTwoSheet_4.setEditable(true);
+                    quantitySheetTextField_4.setEditable(true);
+                    seamSheetTextField_4.setEditable(true);
+                }
+            }
+        });
+
 
 
         sheetDataPage.add(titleSheetPagePanel, BorderLayout.NORTH);
@@ -2578,6 +2703,48 @@ public class Main {
                 if (nvseamSheetTextField_3 >= 0){
                     resultFillFormSheet_3_3 = true;
                     ExceptionMessageThreeSheetLabel_3.setVisible(false);
+                }
+
+                // -= проверка размера 4 =-
+                String vsideOneSheet_4 = sideOneSheet_4.getText();
+                int nvsideOneSheet_4 = parseInt(vsideOneSheet_4); // приводим к целому числу
+                //System.out.println(nvsideOneSheet_4);
+                String vsideTwoSheet_4 = sideTwoSheet_4.getText();
+                int nvsideTwoSheet_4 = parseInt(vsideTwoSheet_4); // приводим к целому числу
+                //System.out.println(nvsideTwoSheet_4);
+                if (nvsideOneSheet_4 != 0 && nvsideTwoSheet_4 == 0
+                        || nvsideOneSheet_4 == 0 && nvsideTwoSheet_4 != 0
+                        || nvsideOneSheet_4 < 0
+                        || nvsideTwoSheet_4 < 0){
+                    resultFillFormSheet_4_1 = false;
+                    ExceptionMessageOneSheetLabe_4.setVisible(true);
+                }
+                if (nvsideOneSheet_4 == 0 && nvsideTwoSheet_4 == 0
+                        || nvsideOneSheet_4 > 0 && nvsideTwoSheet_4 > 0){
+                    resultFillFormSheet_4_1 = true;
+                    ExceptionMessageOneSheetLabe_4.setVisible(false);
+                }
+                String vquantitySheetTextField_4 = quantitySheetTextField_4.getText();
+                int nvquantitySheetTextField_4 = parseInt(vquantitySheetTextField_4); // приводим к целому числу
+                //System.out.println(nvquantitySheetTextField_4);
+                if (nvquantitySheetTextField_4 < 0){
+                    resultFillFormSheet_4_2 = false;
+                    ExceptionMessageTwoSheetLabel_4.setVisible(true);
+                }
+                if (nvquantitySheetTextField_4 >= 0){
+                    resultFillFormSheet_4_2 = true;
+                    ExceptionMessageTwoSheetLabel_4.setVisible(false);
+                }
+                String vseamSheetTextField_4 = seamSheetTextField_4.getText();
+                int nvseamSheetTextField_4 = parseInt(vseamSheetTextField_4); // приводим к целому числу
+                //System.out.println(nvseamSheetTextField_4);
+                if (nvseamSheetTextField_4 < 0){
+                    resultFillFormSheet_4_3 = false;
+                    ExceptionMessageThreeSheetLabel_4.setVisible(true);
+                }
+                if (nvseamSheetTextField_4 >= 0){
+                    resultFillFormSheet_4_3 = true;
+                    ExceptionMessageThreeSheetLabel_4.setVisible(false);
                 }
                 // ------- КОНЕЦ проверок по простыням -------
 
