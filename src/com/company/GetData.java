@@ -43,4 +43,12 @@ public class GetData {
         boolean[] arrayHandSheet = arrayHandSelectionSheet;
         return arrayHandSheet;
     }
+
+    // ------- данные по ткани -------
+    public static int valueWidthCloth = 0;
+
+    public int getWidthCloth(){
+        int widthCloth = valueWidthCloth;
+        return widthCloth;
+    }
 }

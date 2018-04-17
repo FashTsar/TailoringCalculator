@@ -3173,6 +3173,9 @@ public class Main {
                             handSelectionSheetCheckBox_5.isSelected()
                     };
                     GetData.arrayHandSelectionSheet = arrayHandSelectionSheetCheckBox;
+
+                    // отправка онформации по ткани
+                    GetData.valueWidthCloth = nvwidthCloth;
                 }
             }
         });
