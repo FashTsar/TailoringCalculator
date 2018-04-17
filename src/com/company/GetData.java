@@ -29,4 +29,18 @@ public class GetData {
         boolean[] arrayHandQuilt = arrayHandSelectionQuilt;
         return arrayHandQuilt;
     }
+
+    // ------- данные по простыням -------
+    public static int[][] arrayResultSheetData = new int[4][5]; // информация по пододеяльникам
+    public static boolean[] arrayHandSelectionSheet = new boolean[5]; // считать ли расход наволочки по широкой стороне
+
+    public int[][] getSheetData(){
+        int[][] arraySheetData = arrayResultSheetData;
+        return arraySheetData;
+    }
+
+    public boolean[] getHandSelectionSheet(){
+        boolean[] arrayHandSheet = arrayHandSelectionSheet;
+        return arrayHandSheet;
+    }
 }

@@ -3047,7 +3047,7 @@ public class Main {
                             arrayQuantityQuiltTextField,
                             arraySeamQuiltTextField
                     };
-                    GetData.arrayResultQuiltData = arrayPillowcaseData;
+                    GetData.arrayResultQuiltData = arrayQuiltData;
                     boolean[] arrayHandSelectionQuiltCheckBox = new boolean[]{
                             handSelectionQuiltCheckBox_1.isSelected(),
                             handSelectionQuiltCheckBox_2.isSelected(),
@@ -3056,6 +3056,51 @@ public class Main {
                             handSelectionQuiltCheckBox_5.isSelected()
                     };
                     GetData.arrayHandSelectionQuilt = arrayHandSelectionQuiltCheckBox;
+
+                    // отправка информации по простыням
+                    int[] arraySideOneSheet = new int[]{
+                            nvsideOneSheet_1,
+                            nvsideOneSheet_2,
+                            nvsideOneSheet_3,
+                            nvsideOneSheet_4,
+                            nvsideOneSheet_5
+                    };
+                    int[] arraySideTwoSheet = new int[]{
+                            nvsideTwoSheet_1,
+                            nvsideTwoSheet_2,
+                            nvsideTwoSheet_3,
+                            nvsideTwoSheet_4,
+                            nvsideTwoSheet_5
+                    };
+                    int[] arrayQuantitySheetTextField = new int[]{
+                            nvquantitySheetTextField_1,
+                            nvquantitySheetTextField_2,
+                            nvquantitySheetTextField_3,
+                            nvquantitySheetTextField_4,
+                            nvquantitySheetTextField_5
+                    };
+                    int[] arraySeamSheetTextField = new int[]{
+                            nvseamSheetTextField_1,
+                            nvseamSheetTextField_2,
+                            nvseamSheetTextField_3,
+                            nvseamSheetTextField_4,
+                            nvseamSheetTextField_5
+                    };
+                    int[][] arraySheetData = new int[][]{
+                            arraySideOneSheet,
+                            arraySideTwoSheet,
+                            arrayQuantitySheetTextField,
+                            arraySeamSheetTextField
+                    };
+                    GetData.arrayResultSheetData = arraySheetData;
+                    boolean[] arrayHandSelectionSheetCheckBox = new boolean[]{
+                            handSelectionSheetCheckBox_1.isSelected(),
+                            handSelectionSheetCheckBox_2.isSelected(),
+                            handSelectionSheetCheckBox_3.isSelected(),
+                            handSelectionSheetCheckBox_4.isSelected(),
+                            handSelectionSheetCheckBox_5.isSelected()
+                    };
+                    GetData.arrayHandSelectionSheet = arrayHandSelectionSheetCheckBox;
                 }
             }
         });
