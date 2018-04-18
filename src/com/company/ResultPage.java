@@ -71,7 +71,7 @@ public class ResultPage extends JFrame {
         titlePillowcaseType1Lable.setVisible(false);
 
         JLabel exeptionPillowcaseType1Lable = new JLabel("Наволочки "+
-                PillowcaseData[0][0]+" x "+PillowcaseData[1][0]+" - стороны наволочки шире ткани");
+                PillowcaseData[0][0]+" x "+PillowcaseData[1][0]+" - стороны наволочки (с учётом швов) шире ткани");
         exeptionPillowcaseType1Lable.setForeground(Color.RED);
         exeptionPillowcaseType1Lable.setVisible(false);
 
@@ -86,7 +86,7 @@ public class ResultPage extends JFrame {
         if (resultPillowcaseType1 == -1){
             exeptionPillowcaseType1Lable.setVisible(true);
         }
-        if (fresultPillowcaseType1 < 0.01f && PillowcaseData[2][0] != 0){
+        if (fresultPillowcaseType1 < 0.01f && PillowcaseData[2][0] != 0 && resultPillowcaseType1 != -1){
             warningPillowcaseType1Lable.setVisible(true);
         }
 
@@ -117,7 +117,7 @@ public class ResultPage extends JFrame {
         titlePillowcaseType2Lable.setVisible(false);
 
         JLabel exeptionPillowcaseType2Lable = new JLabel("Наволочки "+
-                PillowcaseData[0][1]+" x "+PillowcaseData[1][1]+" - стороны наволочки шире ткани");
+                PillowcaseData[0][1]+" x "+PillowcaseData[1][1]+" - стороны наволочки (с учётом швов) шире ткани");
         exeptionPillowcaseType2Lable.setForeground(Color.RED);
         exeptionPillowcaseType2Lable.setVisible(false);
 
@@ -132,7 +132,7 @@ public class ResultPage extends JFrame {
         if (resultPillowcaseType2 == -1){
             exeptionPillowcaseType2Lable.setVisible(true);
         }
-        if (fresultPillowcaseType2 < 0.01f && PillowcaseData[2][1] != 0){
+        if (fresultPillowcaseType2 < 0.01f && PillowcaseData[2][1] != 0 && resultPillowcaseType2 != -1){
             warningPillowcaseType2Lable.setVisible(true);
         }
 
@@ -163,7 +163,7 @@ public class ResultPage extends JFrame {
         titlePillowcaseType3Lable.setVisible(false);
 
         JLabel exeptionPillowcaseType3Lable = new JLabel("Наволочки "+
-                PillowcaseData[0][2]+" x "+PillowcaseData[1][2]+" - стороны наволочки шире ткани");
+                PillowcaseData[0][2]+" x "+PillowcaseData[1][2]+" - стороны наволочки (с учётом швов) шире ткани");
         exeptionPillowcaseType3Lable.setForeground(Color.RED);
         exeptionPillowcaseType3Lable.setVisible(false);
 
@@ -178,7 +178,7 @@ public class ResultPage extends JFrame {
         if (resultPillowcaseType3 == -1){
             exeptionPillowcaseType3Lable.setVisible(true);
         }
-        if (fresultPillowcaseType3 < 0.01f && PillowcaseData[2][2] != 0){
+        if (fresultPillowcaseType3 < 0.01f && PillowcaseData[2][2] != 0 && resultPillowcaseType3 != -1){
             warningPillowcaseType3Lable.setVisible(true);
         }
 
@@ -209,7 +209,7 @@ public class ResultPage extends JFrame {
         titlePillowcaseType4Lable.setVisible(false);
 
         JLabel exeptionPillowcaseType4Lable = new JLabel("Наволочки "+
-                PillowcaseData[0][3]+" x "+PillowcaseData[1][3]+" - стороны наволочки шире ткани");
+                PillowcaseData[0][3]+" x "+PillowcaseData[1][3]+" - стороны наволочки (с учётом швов) шире ткани");
         exeptionPillowcaseType4Lable.setForeground(Color.RED);
         exeptionPillowcaseType4Lable.setVisible(false);
 
@@ -224,7 +224,7 @@ public class ResultPage extends JFrame {
         if (resultPillowcaseType4 == -1){
             exeptionPillowcaseType4Lable.setVisible(true);
         }
-        if (fresultPillowcaseType4 < 0.01f && PillowcaseData[2][3] != 0){
+        if (fresultPillowcaseType4 < 0.01f && PillowcaseData[2][3] != 0 && resultPillowcaseType4 != -1){
             warningPillowcaseType4Lable.setVisible(true);
         }
 
@@ -255,7 +255,7 @@ public class ResultPage extends JFrame {
         titlePillowcaseType5Lable.setVisible(false);
 
         JLabel exeptionPillowcaseType5Lable = new JLabel("Наволочки "+
-                PillowcaseData[0][4]+" x "+PillowcaseData[1][4]+" - стороны наволочки шире ткани");
+                PillowcaseData[0][4]+" x "+PillowcaseData[1][4]+" - стороны наволочки (с учётом швов) шире ткани");
         exeptionPillowcaseType5Lable.setForeground(Color.RED);
         exeptionPillowcaseType5Lable.setVisible(false);
 
@@ -270,7 +270,7 @@ public class ResultPage extends JFrame {
         if (resultPillowcaseType5 == -1){
             exeptionPillowcaseType5Lable.setVisible(true);
         }
-        if (fresultPillowcaseType5 < 0.01f && PillowcaseData[2][4] != 0){
+        if (fresultPillowcaseType5 < 0.01f && PillowcaseData[2][4] != 0 && resultPillowcaseType5 != -1){
             warningPillowcaseType5Lable.setVisible(true);
         }
 
@@ -301,7 +301,7 @@ public class ResultPage extends JFrame {
         titleresultQuiltType1Lable.setVisible(false);
 
         JLabel exeptionQuiltType1Lable = new JLabel("Пододеяльники "+
-                QuiltData[0][0]+" x "+QuiltData[1][0]+" - стороны пододеяльника шире ткани");
+                QuiltData[0][0]+" x "+QuiltData[1][0]+" - стороны пододеяльника (с учётом швов) шире ткани");
         exeptionQuiltType1Lable.setForeground(Color.RED);
         exeptionQuiltType1Lable.setVisible(false);
 
@@ -316,7 +316,7 @@ public class ResultPage extends JFrame {
         if (resultQuiltType1 == -1){
             exeptionQuiltType1Lable.setVisible(true);
         }
-        if (fresultQuiltType1 < 0.01f && QuiltData[2][0] != 0){
+        if (fresultQuiltType1 < 0.01f && QuiltData[2][0] != 0 && resultQuiltType1 != -1){
             warningresultQuiltType1Lable.setVisible(true);
         }
 
@@ -347,7 +347,7 @@ public class ResultPage extends JFrame {
         titleresultQuiltType2Lable.setVisible(false);
 
         JLabel exeptionQuiltType2Lable = new JLabel("Пододеяльники "+
-                QuiltData[0][1]+" x "+QuiltData[1][1]+" - стороны пододеяльника шире ткани");
+                QuiltData[0][1]+" x "+QuiltData[1][1]+" - стороны пододеяльника (с учётом швов) шире ткани");
         exeptionQuiltType2Lable.setForeground(Color.RED);
         exeptionQuiltType2Lable.setVisible(false);
 
@@ -362,7 +362,7 @@ public class ResultPage extends JFrame {
         if (resultQuiltType2 == -1){
             exeptionQuiltType2Lable.setVisible(true);
         }
-        if (fresultQuiltType2 < 0.01f && QuiltData[2][1] != 0){
+        if (fresultQuiltType2 < 0.01f && QuiltData[2][1] != 0 && resultQuiltType2 != -1){
             warningresultQuiltType2Lable.setVisible(true);
         }
 
@@ -393,7 +393,7 @@ public class ResultPage extends JFrame {
         titleresultQuiltType3Lable.setVisible(false);
 
         JLabel exeptionQuiltType3Lable = new JLabel("Пододеяльники "+
-                QuiltData[0][2]+" x "+QuiltData[1][2]+" - стороны пододеяльника шире ткани");
+                QuiltData[0][2]+" x "+QuiltData[1][2]+" - стороны пододеяльника (с учётом швов) шире ткани");
         exeptionQuiltType3Lable.setForeground(Color.RED);
         exeptionQuiltType3Lable.setVisible(false);
 
@@ -408,7 +408,7 @@ public class ResultPage extends JFrame {
         if (resultQuiltType3 == -1){
             exeptionQuiltType3Lable.setVisible(true);
         }
-        if (fresultQuiltType3 < 0.01f && QuiltData[2][2] != 0){
+        if (fresultQuiltType3 < 0.01f && QuiltData[2][2] != 0 && resultQuiltType3 != -1){
             warningresultQuiltType3Lable.setVisible(true);
         }
 
@@ -439,7 +439,7 @@ public class ResultPage extends JFrame {
         titleresultQuiltType4Lable.setVisible(false);
 
         JLabel exeptionQuiltType4Lable = new JLabel("Пододеяльники "+
-                QuiltData[0][3]+" x "+QuiltData[1][3]+" - стороны пододеяльника шире ткани");
+                QuiltData[0][3]+" x "+QuiltData[1][3]+" - стороны пододеяльника (с учётом швов) шире ткани");
         exeptionQuiltType4Lable.setForeground(Color.RED);
         exeptionQuiltType4Lable.setVisible(false);
 
@@ -454,7 +454,7 @@ public class ResultPage extends JFrame {
         if (resultQuiltType4 == -1){
             exeptionQuiltType4Lable.setVisible(true);
         }
-        if (fresultQuiltType4 < 0.01f && QuiltData[2][3] != 0){
+        if (fresultQuiltType4 < 0.01f && QuiltData[2][3] != 0 && resultQuiltType4 != -1){
             warningresultQuiltType4Lable.setVisible(true);
         }
 
@@ -485,7 +485,7 @@ public class ResultPage extends JFrame {
         titleresultQuiltType5Lable.setVisible(false);
 
         JLabel exeptionQuiltType5Lable = new JLabel("Пододеяльники "+
-                QuiltData[0][4]+" x "+QuiltData[1][4]+" - стороны пододеяльника шире ткани");
+                QuiltData[0][4]+" x "+QuiltData[1][4]+" - стороны пододеяльника (с учётом швов) шире ткани");
         exeptionQuiltType5Lable.setForeground(Color.RED);
         exeptionQuiltType5Lable.setVisible(false);
 
@@ -500,7 +500,7 @@ public class ResultPage extends JFrame {
         if (resultQuiltType5 == -1){
             exeptionQuiltType5Lable.setVisible(true);
         }
-        if (fresultQuiltType5 < 0.01f && QuiltData[2][4] != 0){
+        if (fresultQuiltType5 < 0.01f && QuiltData[2][4] != 0 && resultQuiltType5 != -1){
             warningresultQuiltType5Lable.setVisible(true);
         }
 
@@ -531,7 +531,7 @@ public class ResultPage extends JFrame {
         titleresultSheetType1Lable.setVisible(false);
 
         JLabel exeptionSheetType1Lable = new JLabel("Простыни "+
-                SheetData[0][0]+" x "+SheetData[1][0]+" - стороны простыни шире ткани");
+                SheetData[0][0]+" x "+SheetData[1][0]+" - стороны простыни (с учётом швов) шире ткани");
         exeptionSheetType1Lable.setForeground(Color.RED);
         exeptionSheetType1Lable.setVisible(false);
 
@@ -546,7 +546,7 @@ public class ResultPage extends JFrame {
         if (resultSheetType1 == -1){
             exeptionSheetType1Lable.setVisible(true);
         }
-        if (fresultSheetType1 < 0.01f && SheetData[2][0] != 0){
+        if (fresultSheetType1 < 0.01f && SheetData[2][0] != 0 && resultSheetType1 != -1){
             warningresultSheetType1Lable.setVisible(true);
         }
 
@@ -577,7 +577,7 @@ public class ResultPage extends JFrame {
         titleresultSheetType2Lable.setVisible(false);
 
         JLabel exeptionSheetType2Lable = new JLabel("Простыни "+
-                SheetData[0][1]+" x "+SheetData[1][1]+" - стороны простыни шире ткани");
+                SheetData[0][1]+" x "+SheetData[1][1]+" - стороны простыни (с учётом швов) шире ткани");
         exeptionSheetType2Lable.setForeground(Color.RED);
         exeptionSheetType2Lable.setVisible(false);
 
@@ -592,7 +592,7 @@ public class ResultPage extends JFrame {
         if (resultSheetType2 == -1){
             exeptionSheetType2Lable.setVisible(true);
         }
-        if (fresultSheetType2 < 0.01f && SheetData[2][1] != 0){
+        if (fresultSheetType2 < 0.01f && SheetData[2][1] != 0 && resultSheetType2 != -1){
             warningresultSheetType2Lable.setVisible(false);
         }
 
@@ -623,7 +623,7 @@ public class ResultPage extends JFrame {
         titleresultSheetType3Lable.setVisible(false);
 
         JLabel exeptionSheetType3Lable = new JLabel("Простыни "+
-                SheetData[0][2]+" x "+SheetData[1][2]+" - стороны простыни шире ткани");
+                SheetData[0][2]+" x "+SheetData[1][2]+" - стороны простыни (с учётом швов) шире ткани");
         exeptionSheetType3Lable.setForeground(Color.RED);
         exeptionSheetType3Lable.setVisible(false);
 
@@ -638,7 +638,7 @@ public class ResultPage extends JFrame {
         if (resultSheetType3 == -1){
             exeptionSheetType3Lable.setVisible(true);
         }
-        if (fresultSheetType3 < 0.01f && SheetData[2][2] != 0){
+        if (fresultSheetType3 < 0.01f && SheetData[2][2] != 0 && resultSheetType3 != -1){
             warningresultSheetType3Lable.setVisible(true);
         }
 
@@ -669,7 +669,7 @@ public class ResultPage extends JFrame {
         titleresultSheetType4Lable.setVisible(false);
 
         JLabel exeptionSheetType4Lable = new JLabel("Простыни "+
-                SheetData[0][3]+" x "+SheetData[1][3]+" - стороны простыни шире ткани");
+                SheetData[0][3]+" x "+SheetData[1][3]+" - стороны простыни (с учётом швов) шире ткани");
         exeptionSheetType4Lable.setForeground(Color.RED);
         exeptionSheetType4Lable.setVisible(false);
 
@@ -684,7 +684,7 @@ public class ResultPage extends JFrame {
         if (resultSheetType4 == -1){
             exeptionSheetType4Lable.setVisible(true);
         }
-        if (fresultSheetType4 < 0.01f && SheetData[2][3] != 0){
+        if (fresultSheetType4 < 0.01f && SheetData[2][3] != 0 && resultSheetType4 != -1){
             warningresultSheetType4Lable.setVisible(true);
         }
 
@@ -715,7 +715,7 @@ public class ResultPage extends JFrame {
         titleresultSheetType5Lable.setVisible(false);
 
         JLabel exeptionSheetType5Lable = new JLabel("Простыни "+
-                SheetData[0][4]+" x "+SheetData[1][4]+" - стороны простыни шире ткани");
+                SheetData[0][4]+" x "+SheetData[1][4]+" - стороны простыни (с учётом швов) шире ткани");
         exeptionSheetType5Lable.setForeground(Color.RED);
         exeptionSheetType5Lable.setVisible(false);
 
@@ -730,7 +730,7 @@ public class ResultPage extends JFrame {
         if (resultSheetType5 == -1){
             exeptionSheetType5Lable.setVisible(true);
         }
-        if (fresultSheetType5 < 0.01f && SheetData[2][4] != 0){
+        if (fresultSheetType5 < 0.01f && SheetData[2][4] != 0 && resultSheetType5 != -1){
             warningresultSheetType5Lable.setVisible(true);
         }
 
