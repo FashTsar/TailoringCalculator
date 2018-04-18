@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
+import static java.awt.Cursor.HAND_CURSOR;
 import static java.lang.Integer.parseInt;
 
 public class StartMainPage {
@@ -2151,11 +2152,25 @@ public class StartMainPage {
 
         ClothDataPanel.add(widthCloth, new GridBagConstraints(20, 10, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                new Insets(2, 2, 2, 650), 0, 0));
+                new Insets(2, 2, 2, 600), 0, 0));
 
         ClothDataPanel.add(ExceptionMessageOneClothLabe, new GridBagConstraints(0, 15, 110, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
+
+        // рекламные материалы
+        // реклама 1
+        JLabel bestchangeLable = new JLabel("Ищете самый удобный обменный сервис электронных денег? Тогда это здесь —");
+        SwingLink bestchangeLink = new SwingLink("bestchange.ru", "https://www.bestchange.ru/?p=33505");
+        bestchangeLink.setCursor(Cursor.getPredefinedCursor(HAND_CURSOR)); // меняем курсор на руку
+
+        ClothDataPanel.add(bestchangeLable, new GridBagConstraints(10, 20, 20, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        ClothDataPanel.add(bestchangeLink, new GridBagConstraints(21, 20, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, -282, 2, 2), 0, 0));
 
         clothDataPage.add(titleClothPagePanel, BorderLayout.NORTH);
         clothDataPage.add(ClothDataPanel, BorderLayout.CENTER); // добавить панель в окно
