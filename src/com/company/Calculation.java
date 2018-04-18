@@ -17,8 +17,8 @@ public class Calculation {
             narrowSide = side1;
         }
 
-        broadSide = broadSide+seam;
-        narrowSide = narrowSide+seam;
+        broadSide = broadSide+seam + 1;
+        narrowSide = narrowSide+seam + 1;
 
         if (handSelection != true) {
             if (broadSide <= widthFabric && broadSide != 0 && narrowSide != 0) {
@@ -60,8 +60,8 @@ public class Calculation {
             narrowSide = side1;
         }
 
-        broadSide = broadSide+seam;
-        narrowSide = narrowSide+seam;
+        broadSide = broadSide+seam + 1;
+        narrowSide = narrowSide+seam + 1;
 
         if (handSelection != true) {
             if (broadSide <= widthFabric && broadSide != 0 && narrowSide != 0) {
@@ -103,8 +103,8 @@ public class Calculation {
             narrowSide = side1;
         }
 
-        broadSide = broadSide+seam;
-        narrowSide = narrowSide+seam;
+        broadSide = broadSide+seam + 1;
+        narrowSide = narrowSide+seam + 1;
         if (handSelection == false) {
             if (broadSide <= widthFabric && broadSide != 0 && narrowSide != 0) {
                 numberRow = widthFabric / broadSide;
