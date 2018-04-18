@@ -2160,17 +2160,52 @@ public class StartMainPage {
 
         // рекламные материалы
         // реклама 1
-        JLabel bestchangeLable = new JLabel("Ищете самый удобный обменный сервис электронных денег? Тогда это здесь —");
         SwingLink bestchangeLink = new SwingLink("bestchange.ru", "https://www.bestchange.ru/?p=33505");
-        bestchangeLink.setCursor(Cursor.getPredefinedCursor(HAND_CURSOR)); // меняем курсор на руку
+        JLabel bestchangeLable = new JLabel("- мониторинг обменников, лучшие курсы от надежных обменных пунктов");
 
-        ClothDataPanel.add(bestchangeLable, new GridBagConstraints(10, 20, 20, 1, 1, 1,
+        ClothDataPanel.add(bestchangeLink, new GridBagConstraints(10, 20, 10, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
-        ClothDataPanel.add(bestchangeLink, new GridBagConstraints(21, 20, 1, 1, 1, 1,
+        ClothDataPanel.add(bestchangeLable, new GridBagConstraints(20, 20, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                new Insets(2, -282, 2, 2), 0, 0));
+                new Insets(2, -40, 2, 2), 0, 0));
+
+        // реклама 2
+        SwingLink surfearnerCompLink = new SwingLink("surfearner.com", "http://surfearner.org/240126");
+        JLabel surfearnerCompLable = new JLabel("- привлечение потенциальных клиентов на полнов автомате (для рекламодателей)");
+
+        ClothDataPanel.add(surfearnerCompLink, new GridBagConstraints(10, 30, 10, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        ClothDataPanel.add(surfearnerCompLable, new GridBagConstraints(20, 30, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, -33, 2, 2), 0, 0));
+
+        // реклама 3
+        SwingLink surfearnerPeopleLink = new SwingLink("surfearner.com", "http://surfearner.pw/240126");
+        JLabel surfearnerPeopleLable = new JLabel("- заработок в интернете на автомате без вложений (для работников)");
+
+        ClothDataPanel.add(surfearnerPeopleLink, new GridBagConstraints(10, 40, 10, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        ClothDataPanel.add(surfearnerPeopleLable, new GridBagConstraints(20, 40, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, -33, 2, 2), 0, 0));
+
+        // реклама 4
+        SwingLink rucaptchaLink = new SwingLink("rucaptcha.com", "https://rucaptcha.com?from=5693668");
+        JLabel rucaptchaLable = new JLabel("- заработок в интернете без вложений (для работников)");
+
+        ClothDataPanel.add(rucaptchaLink, new GridBagConstraints(10, 50, 10, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, 2, 2, 2), 0, 0));
+
+        ClothDataPanel.add(rucaptchaLable, new GridBagConstraints(20, 50, 1, 1, 1, 1,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(2, -37, 2, 2), 0, 0));
 
         clothDataPage.add(titleClothPagePanel, BorderLayout.NORTH);
         clothDataPage.add(ClothDataPanel, BorderLayout.CENTER); // добавить панель в окно
