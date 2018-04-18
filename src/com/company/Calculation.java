@@ -88,7 +88,7 @@ public class Calculation {
         return clothConsumption;
     }
 
-    public int CalculationPillowcase(int side1, int side2, int valveint, int quantity, int seam, int widthFabric, boolean handSelection){
+    public int CalculationPillowcase(int side1, int side2, int valve, int quantity, int seam, int widthFabric, boolean handSelection){
         int broadSide = 0;
         int narrowSide = 0;
         int clothConsumption = 0;
@@ -108,11 +108,11 @@ public class Calculation {
         if (handSelection != true) {
             if (broadSide <= widthFabric && broadSide != 0 && narrowSide != 0) {
                 numberRow = widthFabric / broadSide;
-                clothConsumption = (narrowSide * 2 + valveint) / numberRow * quantity;
+                clothConsumption = (narrowSide * 2 + valve) / numberRow * quantity;
             }
             if (broadSide > widthFabric && narrowSide <= widthFabric && broadSide != 0 && narrowSide != 0) {
                 numberRow = narrowSide / broadSide;
-                clothConsumption = (broadSide * 2 + valveint) / numberRow * quantity;
+                clothConsumption = (broadSide * 2 + valve) / numberRow * quantity;
             }
             if (broadSide > widthFabric && narrowSide > widthFabric) {
                 clothConsumption = -1;
@@ -121,7 +121,7 @@ public class Calculation {
         if (handSelection != false) {
             if (narrowSide <= widthFabric && broadSide != 0 && narrowSide != 0) {
                 numberRow = narrowSide / broadSide;
-                clothConsumption = (broadSide * 2 + valveint) / numberRow * quantity;
+                clothConsumption = (broadSide * 2 + valve) / numberRow * quantity;
             }
             if (broadSide > widthFabric && narrowSide > widthFabric) {
                 clothConsumption = -1;

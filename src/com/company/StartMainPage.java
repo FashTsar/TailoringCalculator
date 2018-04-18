@@ -3178,6 +3178,9 @@ public class StartMainPage {
 
                     // отправка онформации по ткани
                     GetData.valueWidthCloth = nvwidthCloth;
+
+                    ResultPage startResultPage = new ResultPage();
+                    startResultPage.startResultPage();
                 }
             }
         });
