@@ -756,29 +756,12 @@ public class ResultPage extends JFrame {
                 resultSheetType1, resultSheetType2, resultSheetType3,
                 resultSheetType4, resultSheetType5);
 
-        float ffinishValueInt = finishValueInt/100.00f;
-
         JLabel titlefinishValueLable = new JLabel("Общее количество ткани: "
-                +f.format(ffinishValueInt)+" метров");
+                +f.format(finishValueInt/100.00)+" метров");
         titlefinishValueLable.setForeground(Color.BLUE);
-        titlefinishValueLable.setVisible(false);
-
-        JLabel warningfinishValueLable = new JLabel("Общее количество ткани: менее 0,01 метра");
-        warningfinishValueLable.setForeground(Color.BLUE);
-        warningfinishValueLable.setVisible(false);
-
-        if (ffinishValueInt >= 0.01f){
-            titlefinishValueLable.setVisible(true);
-        }
-        if (ffinishValueInt < 0.01f){
-            warningfinishValueLable.setVisible(true);
-        }
+        titlefinishValueLable.setVisible(true);
 
         DataPanel.add(titlefinishValueLable, new GridBagConstraints(0, 160, 1, 1, 1, 1,
-                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                new Insets(2, 2, 2, 2), 0, 0));
-
-        DataPanel.add(warningfinishValueLable, new GridBagConstraints(0, 160, 1, 1, 1, 1,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(2, 2, 2, 2), 0, 0));
 
