@@ -105,22 +105,22 @@ public class Calculation {
 
         broadSide = broadSide+seam;
         narrowSide = narrowSide+seam;
-        if (handSelection != true) {
+        if (handSelection == false) {
             if (broadSide <= widthFabric && broadSide != 0 && narrowSide != 0) {
                 numberRow = widthFabric / broadSide;
                 clothConsumption = (narrowSide * 2 + valve) / numberRow * quantity;
             }
             if (broadSide > widthFabric && narrowSide <= widthFabric && broadSide != 0 && narrowSide != 0) {
-                numberRow = narrowSide / broadSide;
+                numberRow = widthFabric / narrowSide;
                 clothConsumption = (broadSide * 2 + valve) / numberRow * quantity;
             }
             if (broadSide > widthFabric && narrowSide > widthFabric) {
                 clothConsumption = -1;
             }
         }
-        if (handSelection != false) {
+        if (handSelection == true) {
             if (narrowSide <= widthFabric && broadSide != 0 && narrowSide != 0) {
-                numberRow = narrowSide / broadSide;
+                numberRow = widthFabric / narrowSide;
                 clothConsumption = (broadSide * 2 + valve) / numberRow * quantity;
             }
             if (broadSide > widthFabric && narrowSide > widthFabric) {
